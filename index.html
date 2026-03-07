@@ -1,766 +1,1566 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Think It For Me - FOSSASIA 2026</title>
-  
-  <!-- Core reveal.js styles -->
-  <link rel="stylesheet" href="dist/reset.css">
-  <link rel="stylesheet" href="dist/reveal.css">
-  <link rel="stylesheet" href="dist/theme/dracula.css">
-  
-  <!-- Plugin styles -->
-  <link rel="stylesheet" href="plugin/highlight/monokai.css">
-  
-  <!-- Custom styles -->
-  <style>
-    :root {
-      --fossasia-orange: #ff6b35;
-      --fossasia-blue: #00a9e0;
-      --fossasia-green: #00c853;
-    }
-    
-    .reveal h1, .reveal h2, .reveal h3 {
-      text-transform: none;
-      font-weight: 700;
-    }
-    
-    .reveal h1 {
-      font-size: 2.2em;
-      color: var(--fossasia-orange);
-    }
-    
-    .reveal h2 {
-      font-size: 1.6em;
-      color: var(--fossasia-blue);
-    }
-    
-    .reveal h3 {
-      font-size: 1.3em;
-      color: var(--fossasia-green);
-    }
-    
-    .reveal .speaker-info {
-      font-size: 0.8em;
-      color: #888;
-      margin-top: 20px;
-    }
-    
-    .reveal table {
-      font-size: 0.6em;
-      width: 100%;
-    }
-    
-    .reveal table th {
-      background: rgba(255,255,255,0.1);
-      padding: 10px;
-    }
-    
-    .reveal table td {
-      padding: 8px;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-    
-    .reveal code {
-      background: rgba(0,0,0,0.3);
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-size: 0.85em;
-    }
-    
-    .reveal pre {
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
-      border-radius: 8px;
-    }
-    
-    .reveal blockquote {
-      background: rgba(255,255,255,0.05);
-      border-left: 5px solid var(--fossasia-orange);
-      padding: 20px;
-      font-style: italic;
-    }
-    
-    .reveal .highlight-box {
-      background: rgba(0, 169, 224, 0.15);
-      border: 1px solid var(--fossasia-blue);
-      border-radius: 8px;
-      padding: 20px;
-      margin: 20px 0;
-    }
-    
-    .reveal .two-column {
-      display: flex;
-      gap: 40px;
-      justify-content: center;
-    }
-    
-    .reveal .two-column > div {
-      flex: 1;
-    }
-    
-    .reveal ul {
-      font-size: 0.85em;
-    }
-    
-    .reveal li {
-      margin-bottom: 10px;
-    }
-    
-    .reveal .emoji-large {
-      font-size: 3em;
-      display: block;
-      margin: 20px 0;
-    }
-    
-    .reveal .demo-badge {
-      background: var(--fossasia-green);
-      color: #000;
-      padding: 5px 15px;
-      border-radius: 20px;
-      font-size: 0.7em;
-      font-weight: bold;
-      display: inline-block;
-      margin-bottom: 20px;
-    }
-    
-    .reveal .architecture-diagram {
-      font-family: monospace;
-      font-size: 0.5em;
-      background: rgba(0,0,0,0.3);
-      padding: 20px;
-      border-radius: 8px;
-      line-height: 1.6;
-    }
-    
-    .reveal .step-list {
-      counter-reset: step;
-      list-style: none;
-      padding-left: 0;
-    }
-    
-    .reveal .step-list li {
-      counter-increment: step;
-      position: relative;
-      padding-left: 50px;
-      margin-bottom: 20px;
-    }
-    
-    .reveal .step-list li::before {
-      content: counter(step);
-      position: absolute;
-      left: 0;
-      top: 0;
-      background: var(--fossasia-orange);
-      color: #000;
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-    }
-    
-    .reveal .success { color: var(--fossasia-green); }
-    .reveal .error { color: #ff5252; }
-    
-    .reveal section.has-light-background h1,
-    .reveal section.has-light-background h2 {
-      color: #333;
-    }
-    
-    .reveal .title-slide h1 {
-      font-size: 3em;
-      margin-bottom: 0.3em;
-    }
-    
-    .reveal .title-slide h2 {
-      font-size: 1.4em;
-      color: #fff;
-      font-weight: 300;
-    }
-    
-    .reveal .fragment.highlight-current-blue {
-      color: var(--fossasia-blue);
-    }
-  </style>
-</head>
-<body>
-  <div class="reveal">
-    <div class="slides">
-      
-      <!-- SLIDE 1: Title -->
-      <section class="title-slide" data-background-gradient="linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)">
-        <h1>🚀 Think It For Me</h1>
-        <h2>Bridging Vibe Coding & AI-Powered Productivity</h2>
-        <div class="speaker-info">
-          <p><strong>Aung Myo Kyaw</strong> | FOSSASIA Summit 2026</p>
-          <p style="font-size: 0.7em; margin-top: 30px;">
-            <span class="fragment">💻 Vibe Coding</span> 
-            <span class="fragment"> 🤖 AI Agents</span> 
-            <span class="fragment"> ⚡ Life Automation</span>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Think It For Me — FOSSASIA 2026</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/theme/black.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <style>
+      /* ─── RESET & BASE ─────────────────────────────────────── */
+      :root {
+        --bg:        #0d1117;
+        --surface:   #161b22;
+        --surface2:  #21262d;
+        --border:    #30363d;
+        --accent:    #7aa2f7;
+        --accent2:   #bb9af7;
+        --green:     #9ece6a;
+        --orange:    #ff9e64;
+        --red:       #f7768e;
+        --cyan:      #7dcfff;
+        --text:      #e6edf3;
+        --text2:     #8b949e;
+        --text3:     #484f58;
+        --mono:      'JetBrains Mono', monospace;
+        --sans:      'Outfit', system-ui, sans-serif;
+      }
+
+      .reveal-viewport { background: var(--bg); }
+
+      .reveal {
+        font-family: var(--sans);
+        font-size: 28px;
+        color: var(--text);
+      }
+
+      /* ─── TYPOGRAPHY ───────────────────────────────────────── */
+      .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+        font-family: var(--sans);
+        text-transform: none;
+        letter-spacing: -0.02em;
+        line-height: 1.15;
+        color: var(--text);
+        margin: 0 0 0.5em;
+        font-weight: 700;
+      }
+
+      .reveal h1 { font-size: 2.6em; font-weight: 800; letter-spacing: -0.03em; }
+      .reveal h2 { font-size: 1.9em; font-weight: 700; }
+      .reveal h3 { font-size: 1.25em; font-weight: 600; }
+      .reveal h4 { font-size: 1em; font-weight: 600; color: var(--text2); }
+
+      .reveal p {
+        font-size: 0.85em;
+        line-height: 1.75;
+        color: var(--text2);
+        margin: 0 0 0.75em;
+      }
+
+      .reveal strong { color: var(--text); font-weight: 600; }
+
+      .reveal a {
+        color: var(--accent);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(122,162,247,0.3);
+      }
+
+      /* ─── SLIDE BASE ───────────────────────────────────────── */
+      .reveal .slides section {
+        height: 100%;
+        padding: 60px 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+        text-align: left;
+        background: var(--bg);
+      }
+
+      /* ─── SLIDE LABEL ──────────────────────────────────────── */
+      .slide-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--mono);
+        font-size: 0.42em;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        background: rgba(122,162,247,0.08);
+        border: 1px solid rgba(122,162,247,0.2);
+        padding: 6px 14px;
+        border-radius: 999px;
+        margin-bottom: 28px;
+        width: fit-content;
+      }
+
+      .slide-label.green  { color: var(--green);  background: rgba(158,206,106,0.08);  border-color: rgba(158,206,106,0.2);  }
+      .slide-label.orange { color: var(--orange); background: rgba(255,158,100,0.08); border-color: rgba(255,158,100,0.2); }
+      .slide-label.purple { color: var(--accent2); background: rgba(187,154,247,0.08); border-color: rgba(187,154,247,0.2); }
+      .slide-label.red    { color: var(--red);    background: rgba(247,118,142,0.08);  border-color: rgba(247,118,142,0.2);  }
+      .slide-label.cyan   { color: var(--cyan);   background: rgba(125,207,255,0.08);  border-color: rgba(125,207,255,0.2);  }
+
+      /* ─── DIVIDER ──────────────────────────────────────────── */
+      .divider {
+        width: 48px;
+        height: 3px;
+        background: linear-gradient(90deg, var(--accent), var(--accent2));
+        border-radius: 999px;
+        margin: 20px 0 32px;
+      }
+
+      /* ─── CARDS GRID ───────────────────────────────────────── */
+      .cards {
+        display: grid;
+        gap: 16px;
+      }
+      .cards.col2 { grid-template-columns: 1fr 1fr; }
+      .cards.col3 { grid-template-columns: 1fr 1fr 1fr; }
+
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px 28px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--accent), var(--accent2));
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      .card:hover::before { opacity: 1; }
+
+      .card-label {
+        font-family: var(--mono);
+        font-size: 0.4em;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 12px;
+      }
+
+      .card h3 {
+        font-size: 0.95em;
+        margin-bottom: 8px;
+        color: var(--text);
+      }
+
+      .card p {
+        font-size: 0.72em;
+        margin: 0;
+        color: var(--text2);
+        line-height: 1.6;
+      }
+
+      .card .price {
+        display: inline-block;
+        margin-top: 12px;
+        font-family: var(--mono);
+        font-size: 0.6em;
+        padding: 3px 10px;
+        border-radius: 999px;
+        background: rgba(122,162,247,0.1);
+        border: 1px solid rgba(122,162,247,0.2);
+        color: var(--accent);
+      }
+
+      .card .price.free {
+        background: rgba(158,206,106,0.1);
+        border-color: rgba(158,206,106,0.2);
+        color: var(--green);
+      }
+
+      /* ─── TWO-COL LAYOUT ───────────────────────────────────── */
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: start;
+      }
+
+      .two-col.wide { grid-template-columns: 1.4fr 1fr; }
+
+      /* ─── STAT BLOCKS ──────────────────────────────────────── */
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin: 24px 0;
+      }
+
+      .stat {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px 20px;
+        text-align: center;
+      }
+
+      .stat-num {
+        font-size: 1.8em;
+        font-weight: 800;
+        color: var(--accent);
+        line-height: 1;
+        letter-spacing: -0.03em;
+      }
+
+      .stat-label {
+        font-size: 0.55em;
+        color: var(--text2);
+        margin-top: 8px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      /* ─── STEP LIST ────────────────────────────────────────── */
+      .steps {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        counter-reset: step;
+      }
+
+      .step {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        counter-increment: step;
+      }
+
+      .step-num {
+        flex-shrink: 0;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--accent), var(--accent2));
+        color: var(--bg);
+        font-family: var(--mono);
+        font-size: 0.6em;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .step-body h4 {
+        font-size: 0.8em;
+        font-weight: 600;
+        color: var(--text);
+        margin: 0 0 4px;
+      }
+
+      .step-body p {
+        font-size: 0.68em;
+        color: var(--text2);
+        margin: 0;
+        line-height: 1.5;
+      }
+
+      /* ─── PILL LIST ────────────────────────────────────────── */
+      .pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 16px 0;
+      }
+
+      .pill {
+        font-size: 0.55em;
+        padding: 6px 14px;
+        border-radius: 999px;
+        background: var(--surface2);
+        border: 1px solid var(--border);
+        color: var(--text2);
+        font-family: var(--mono);
+        letter-spacing: 0.03em;
+      }
+
+      .pill.accent { background: rgba(122,162,247,0.1); border-color: rgba(122,162,247,0.25); color: var(--accent); }
+
+      /* ─── CODE BLOCK ───────────────────────────────────────── */
+      .code-block {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 22px 28px;
+        font-family: var(--mono);
+        font-size: 0.58em;
+        line-height: 1.75;
+        color: var(--text2);
+        overflow: auto;
+      }
+
+      .code-block .c-accent { color: var(--accent); }
+      .code-block .c-green  { color: var(--green);  }
+      .code-block .c-orange { color: var(--orange); }
+      .code-block .c-purple { color: var(--accent2); }
+      .code-block .c-cyan   { color: var(--cyan);   }
+      .code-block .c-red    { color: var(--red);    }
+      .code-block .c-dim    { color: var(--text3);  }
+
+      /* ─── QUOTE ────────────────────────────────────────────── */
+      .quote {
+        border-left: 3px solid var(--accent);
+        padding: 18px 28px;
+        background: rgba(122,162,247,0.05);
+        border-radius: 0 10px 10px 0;
+        margin: 24px 0;
+      }
+
+      .quote p {
+        font-size: 0.85em;
+        color: var(--text);
+        font-style: italic;
+        line-height: 1.65;
+        margin: 0;
+      }
+
+      /* ─── COMPARISON TABLE ─────────────────────────────────── */
+      .compare {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.65em;
+      }
+
+      .compare th {
+        text-align: left;
+        padding: 10px 16px;
+        font-weight: 600;
+        color: var(--text2);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        font-size: 0.85em;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .compare td {
+        padding: 12px 16px;
+        border-bottom: 1px solid rgba(48,54,61,0.5);
+        color: var(--text2);
+        vertical-align: top;
+        line-height: 1.5;
+      }
+
+      .compare td:first-child {
+        color: var(--text);
+        font-weight: 600;
+        font-family: var(--mono);
+        white-space: nowrap;
+      }
+
+      .compare tr:last-child td { border-bottom: none; }
+
+      /* ─── FLOW DIAGRAM ─────────────────────────────────────── */
+      .flow {
+        display: flex;
+        align-items: center;
+        gap: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 20px 0;
+      }
+
+      .flow-node {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 14px 20px;
+        font-size: 0.62em;
+        font-weight: 600;
+        color: var(--text);
+        text-align: center;
+        min-width: 120px;
+        line-height: 1.4;
+      }
+
+      .flow-node.accent {
+        background: rgba(122,162,247,0.12);
+        border-color: rgba(122,162,247,0.35);
+        color: var(--accent);
+      }
+
+      .flow-node small {
+        display: block;
+        font-size: 0.85em;
+        font-weight: 400;
+        color: var(--text3);
+        margin-top: 3px;
+      }
+
+      .flow-arrow {
+        color: var(--text3);
+        font-size: 0.7em;
+        padding: 0 8px;
+        flex-shrink: 0;
+      }
+
+      /* ─── CHECK/CROSS LIST ─────────────────────────────────── */
+      .checklist {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .checklist li {
+        font-size: 0.72em;
+        color: var(--text2);
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        line-height: 1.5;
+      }
+
+      .checklist li .icon {
+        flex-shrink: 0;
+        margin-top: 1px;
+        font-size: 1em;
+      }
+
+      .checklist li .icon.yes { color: var(--green); }
+      .checklist li .icon.no  { color: var(--red);   }
+
+      .checklist li strong { color: var(--text); }
+
+      /* ─── TIMELINE ─────────────────────────────────────────── */
+      .timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .timeline-item {
+        display: flex;
+        gap: 20px;
+        position: relative;
+      }
+
+      .timeline-line {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-shrink: 0;
+      }
+
+      .timeline-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--accent);
+        flex-shrink: 0;
+        margin-top: 4px;
+      }
+
+      .timeline-bar {
+        width: 2px;
+        flex: 1;
+        background: var(--border);
+        margin: 4px 0;
+        min-height: 20px;
+      }
+
+      .timeline-body {
+        padding-bottom: 24px;
+        flex: 1;
+      }
+
+      .timeline-body h4 {
+        font-size: 0.78em;
+        color: var(--text);
+        margin: 0 0 4px;
+      }
+
+      .timeline-body p {
+        font-size: 0.65em;
+        margin: 0;
+        color: var(--text2);
+      }
+
+      /* ─── HERO SLIDE ───────────────────────────────────────── */
+      .hero-slide {
+        justify-content: center;
+        align-items: flex-start;
+        background: var(--bg) !important;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-slide::before {
+        content: '';
+        position: absolute;
+        top: -200px; right: -200px;
+        width: 600px; height: 600px;
+        background: radial-gradient(circle, rgba(122,162,247,0.08) 0%, transparent 70%);
+        pointer-events: none;
+      }
+
+      .hero-slide::after {
+        content: '';
+        position: absolute;
+        bottom: -150px; left: -100px;
+        width: 400px; height: 400px;
+        background: radial-gradient(circle, rgba(187,154,247,0.06) 0%, transparent 70%);
+        pointer-events: none;
+      }
+
+      .hero-eyebrow {
+        font-family: var(--mono);
+        font-size: 0.45em;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 24px;
+      }
+
+      .hero-title {
+        font-size: 3.4em !important;
+        font-weight: 900 !important;
+        letter-spacing: -0.04em !important;
+        line-height: 1.05 !important;
+        background: linear-gradient(135deg, var(--text) 0%, var(--accent) 50%, var(--accent2) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 24px !important;
+      }
+
+      .hero-subtitle {
+        font-size: 0.85em !important;
+        color: var(--text2) !important;
+        font-weight: 400;
+        line-height: 1.6;
+        max-width: 580px;
+        margin-bottom: 48px !important;
+      }
+
+      .hero-meta {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+
+      .hero-author {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .hero-avatar {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--accent), var(--accent2));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.55em;
+        font-weight: 700;
+        color: var(--bg);
+        letter-spacing: 0.02em;
+      }
+
+      .hero-author-text h4 {
+        font-size: 0.72em;
+        margin: 0;
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      .hero-author-text p {
+        font-size: 0.58em;
+        margin: 0;
+        color: var(--text2);
+      }
+
+      .hero-badge {
+        font-family: var(--mono);
+        font-size: 0.42em;
+        padding: 6px 14px;
+        border-radius: 999px;
+        background: rgba(158,206,106,0.1);
+        border: 1px solid rgba(158,206,106,0.25);
+        color: var(--green);
+        letter-spacing: 0.05em;
+      }
+
+      /* ─── SECTION DIVIDER SLIDE ────────────────────────────── */
+      .divider-slide {
+        justify-content: center;
+        align-items: flex-start;
+        background: var(--surface) !important;
+      }
+
+      .divider-slide h2 {
+        font-size: 2.4em;
+        font-weight: 800;
+        letter-spacing: -0.03em;
+      }
+
+      /* ─── CALLOUT BOX ──────────────────────────────────────── */
+      .callout {
+        background: rgba(122,162,247,0.06);
+        border: 1px solid rgba(122,162,247,0.2);
+        border-radius: 12px;
+        padding: 20px 24px;
+        margin: 20px 0;
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+      }
+
+      .callout-icon {
+        font-size: 0.9em;
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
+
+      .callout-body h4 {
+        font-size: 0.72em;
+        font-weight: 600;
+        color: var(--text);
+        margin: 0 0 6px;
+      }
+
+      .callout-body p {
+        font-size: 0.65em;
+        color: var(--text2);
+        margin: 0;
+        line-height: 1.55;
+      }
+
+      .callout.green  { background: rgba(158,206,106,0.06); border-color: rgba(158,206,106,0.2); }
+      .callout.orange { background: rgba(255,158,100,0.06); border-color: rgba(255,158,100,0.2); }
+
+      /* ─── REVEAL OVERRIDES ─────────────────────────────────── */
+      .reveal .progress { background: rgba(255,255,255,0.05); height: 3px; }
+      .reveal .progress span { background: var(--accent); }
+
+      .reveal .controls button { color: var(--text3); }
+      .reveal .controls button:hover { color: var(--accent); }
+
+      .reveal .slide-number {
+        font-family: var(--mono);
+        font-size: 0.55em;
+        color: var(--text3);
+        background: transparent;
+        bottom: 18px;
+        right: 24px;
+      }
+
+      .reveal section img {
+        border: none;
+        box-shadow: none;
+        background: transparent;
+      }
+
+      /* ─── UTILITY ──────────────────────────────────────────── */
+      .mt-0 { margin-top: 0 !important; }
+      .mb-0 { margin-bottom: 0 !important; }
+      .op-60 { opacity: 0.6; }
+      .mono { font-family: var(--mono); }
+      .text-accent  { color: var(--accent) !important; }
+      .text-green   { color: var(--green)  !important; }
+      .text-orange  { color: var(--orange) !important; }
+      .text-red     { color: var(--red)    !important; }
+      .text-cyan    { color: var(--cyan)   !important; }
+      .text-purple  { color: var(--accent2)!important; }
+      .text-muted   { color: var(--text2)  !important; }
+      .text-dim     { color: var(--text3)  !important; }
+
+      .w-full { width: 100%; }
+      .small  { font-size: 0.65em; color: var(--text2); line-height: 1.5; }
+    </style>
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <!-- ─── 01 TITLE ──────────────────────────────────────── -->
+        <section class="hero-slide">
+          <p class="hero-eyebrow">FOSSASIA Summit 2026</p>
+          <h1 class="hero-title">Think It<br />For Me</h1>
+          <p class="hero-subtitle">
+            From vibe coding at the terminal to AI agents that run your digital life —
+            a practical journey through the tools, patterns, and philosophy behind
+            full-stack personal automation.
           </p>
-        </div>
-      </section>
-
-      <!-- SLIDE 2: The Journey -->
-      <section>
-        <h2>📍 The Journey</h2>
-        <p style="font-size: 0.8em; margin-bottom: 30px;">My presentation evolved through three phases:</p>
-        
-        <div class="step-list">
-          <li class="fragment"><strong>Original Plan:</strong> Vibe coding & CLI setup demonstration</li>
-          <li class="fragment"><strong>The Pivot:</strong> OpenClaw as agent orchestrator for full automation</li>
-          <li class="fragment"><strong>Final Focus:</strong> Practical workflow combining both worlds</li>
-        </div>
-        
-        <div class="highlight-box fragment">
-          <strong>💡 Key Insight:</strong> OpenClaw (personal assistant) + Vibe Coding CLI (builder) = Complete AI workflow
-        </div>
-      </section>
-
-      <!-- SLIDE 3: My Vibe Coding Setup -->
-      <section>
-        <h2>🎯 My Vibe Coding Setup</h2>
-        <div class="highlight-box">
-          <h3>How I Enter the Flow:</h3>
-          <ul>
-            <li class="fragment">📟 <strong>Terminal-first</strong> approach</li>
-            <li class="fragment">🔧 <strong>CLI tools</strong> for everything</li>
-            <li class="fragment">🎯 <strong>Minimal</strong> context switching</li>
-            <li class="fragment">⚡ <strong>Maximum</strong> efficiency</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- SLIDE 4: Complete Tool Stack -->
-      <section>
-        <h2>🛠️ My Complete Tool Stack</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Tool</th>
-              <th>Purpose</th>
-              <th>Cost</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="fragment">
-              <td><strong>GitHub Copilot CLI</strong></td>
-              <td>Fast CLI coding</td>
-              <td>$10/month</td>
-            </tr>
-            <tr class="fragment">
-              <td><strong>Claude Code</strong></td>
-              <td>Complex architecture</td>
-              <td>Pro subscription</td>
-            </tr>
-            <tr class="fragment">
-              <td><strong>Kimi CLI</strong></td>
-              <td>Web interface power</td>
-              <td>Coding plan</td>
-            </tr>
-            <tr class="fragment">
-              <td><strong>OpenCode</strong></td>
-              <td>Open-source alternative</td>
-              <td><span class="success">FREE</span></td>
-            </tr>
-            <tr class="fragment">
-              <td><strong>Crush CLI</strong></td>
-              <td>Lightweight tasks</td>
-              <td><span class="success">FREE</span></td>
-            </tr>
-            <tr class="fragment">
-              <td><strong>Pi Coding Agent</strong></td>
-              <td>Token-efficient coding</td>
-              <td>Self-hosted (<span class="success">FREE</span>)</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <!-- SLIDE 5: Coding Agents Compared -->
-      <section>
-        <section>
-          <h2>🤖 Coding Agents Compared</h2>
-          <p style="font-size: 0.8em;">Press <strong>↓</strong> for detailed breakdown</p>
-        </section>
-        
-        <section>
-          <h3>1️⃣ GitHub Copilot CLI</h3>
-          <ul>
-            <li class="fragment"><strong>Why:</strong> Fast, token-efficient, native GitHub integration</li>
-            <li class="fragment"><strong>Best for:</strong> Quick edits, familiar codebases</li>
-            <li class="fragment"><strong>💡 Tip:</strong> Craft prompts carefully - aim for 15+ minutes per request</li>
-          </ul>
-        </section>
-        
-        <section>
-          <h3>2️⃣ Claude Code (Anthropic)</h3>
-          <ul>
-            <li class="fragment"><strong>Why:</strong> Best for complex architecture and reasoning</li>
-            <li class="fragment"><strong>Requirements:</strong> Claude Pro subscription</li>
-            <li class="fragment"><strong>Alternative:</strong> Use with GLM or Kimi coding plans</li>
-          </ul>
-        </section>
-        
-        <section>
-          <h3>3️⃣ Kimi CLI</h3>
-          <ul>
-            <li class="fragment"><strong>Why:</strong> Excellent web interface, amazing for long documents</li>
-            <li class="fragment"><strong>Best for:</strong> Context up to 200K tokens</li>
-            <li class="fragment"><strong>Speed:</strong> Very fast response time</li>
-          </ul>
-        </section>
-        
-        <section>
-          <h3>4️⃣ OpenCode</h3>
-          <ul>
-            <li class="fragment"><strong>Why:</strong> Open-source, highly extensible</li>
-            <li class="fragment"><strong>Power-up:</strong> Oh My OpenCode plugin</li>
-            <li class="fragment">🔗 <code>github.com/code-yeongyu/oh-my-openagent</code></li>
-          </ul>
-        </section>
-        
-        <section>
-          <h3>5️⃣ Crush CLI & 6️⃣ Pi Coding Agent</h3>
-          <div class="two-column">
-            <div>
-              <h4>Crush CLI</h4>
-              <ul style="font-size: 0.8em;">
-                <li>Lightning fast</li>
-                <li>Minimal overhead</li>
-                <li>Quick queries</li>
-              </ul>
+          <div class="hero-meta">
+            <div class="hero-author">
+              <div class="hero-avatar">AMK</div>
+              <div class="hero-author-text">
+                <h4>Aung Myo Kyaw</h4>
+                <p>Software Engineer</p>
+              </div>
             </div>
-            <div>
-              <h4>Pi Coding Agent</h4>
-              <ul style="font-size: 0.8em;">
-                <li>Token-efficient</li>
-                <li>Highly configurable</li>
-                <li>Power users choice</li>
-              </ul>
+            <span class="hero-badge">◉ Live Demo</span>
+          </div>
+        </section>
+
+        <!-- ─── 02 AGENDA ─────────────────────────────────────── -->
+        <section>
+          <div class="slide-label">Overview</div>
+          <h2>What We'll Cover</h2>
+          <div class="divider"></div>
+          <div class="cards col2" style="gap:14px; margin-top:8px;">
+            <div class="card">
+              <div class="card-label">Part 01</div>
+              <h3>Vibe Coding</h3>
+              <p>Terminal-first philosophy, the AI CLI landscape, and how to build software faster by staying in flow.</p>
+            </div>
+            <div class="card">
+              <div class="card-label">Part 02</div>
+              <h3>Agent Setup</h3>
+              <p>MCP servers, skills, and the architecture that turns a coding assistant into a powerful multi-tool agent.</p>
+            </div>
+            <div class="card">
+              <div class="card-label">Part 03</div>
+              <h3>The Gap</h3>
+              <p>Why coding tools stop at code — and what's missing when you want to automate your entire digital life.</p>
+            </div>
+            <div class="card">
+              <div class="card-label">Part 04</div>
+              <h3>Life Automation</h3>
+              <p>A real system that manages tasks, calendar, and servers via Telegram and natural language.</p>
             </div>
           </div>
         </section>
-      </section>
 
-      <!-- SLIDE 6: The Winner Is... -->
-      <section>
-        <h2>🏆 The Winner Is...</h2>
-        <div class="highlight-box fragment">
-          <h3>No Single Winner - Each Excels Differently!</h3>
-        </div>
-        <table class="fragment">
-          <thead>
-            <tr>
-              <th>Model</th>
-              <th>Best Environment</th>
-              <th>Why</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Claude models</strong></td>
-              <td>Claude Code CLI</td>
-              <td>Optimized for it</td>
-            </tr>
-            <tr>
-              <td><strong>Kimi models</strong></td>
-              <td>Kimi CLI</td>
-              <td>Native integration</td>
-            </tr>
-            <tr>
-              <td><strong>GPT-4 models</strong></td>
-              <td>Copilot CLI</td>
-              <td>Microsoft's tuning</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="fragment" style="margin-top: 30px; font-size: 0.75em; background: rgba(0,0,0,0.3); padding: 15px; border-radius: 8px;">
-          <strong>My Current Daily Setup:</strong><br>
-          Primary: Claude CLI + Pro | Fallback: GitHub Copilot CLI | Experiment: Kimi + OpenCode
-        </div>
-      </section>
-
-      <!-- SLIDE 7: Live Demo -->
-      <section>
-        <h2>📱 Live Demo</h2>
-        <div class="demo-badge">DEMO</div>
-        <h3>Porting Eventyay to Mobile</h3>
-        
-        <div class="two-column">
-          <div>
-            <h4>Approach:</h4>
-            <ol style="font-size: 0.75em;">
-              <li class="fragment">Provide URL + credentials</li>
-              <li class="fragment">Agent analyzes API structure</li>
-              <li class="fragment">Agent ports with tests</li>
-              <li class="fragment">Human reviews decisions</li>
-            </ol>
-          </div>
-          <div>
-            <h4>Methodology:</h4>
-            <ul style="font-size: 0.75em;">
-              <li class="fragment"><strong>SDD</strong> - docs before code</li>
-              <li class="fragment"><strong>TDD</strong> - tests first</li>
-              <li class="fragment"><strong>Human-in-the-loop</strong></li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="highlight-box fragment" style="font-size: 0.75em;">
-          <strong>Tools:</strong> Kimi 2.5 + OpenCode + Oh My OpenCode | <strong>Results:</strong> github.com/yourusername/eventyay-mobile
-        </div>
-      </section>
-
-      <!-- SLIDE 8: Coding Agent Setup -->
-      <section>
-        <h2>⚙️ My Coding Agent Setup</h2>
-        
-        <div class="step-list">
-          <li class="fragment">
-            <strong>Step 1: Install MCP Servers</strong><br>
-            <span style="font-size: 0.8em;">Context7 • Sequential thinking • Exa.ai • Chrome DevTools</span>
-          </li>
-          <li class="fragment">
-            <strong>Step 2: Install Skills</strong><br>
-            <span style="font-size: 0.8em;">Frontend Design • Azure DevOps CLI • SDD + TDD workflow</span>
-          </li>
-          <li class="fragment">
-            <strong>Step 3: Configure Agent</strong><br>
-            <span style="font-size: 0.8em;">"Create a skill for [your workflow]" → Auto-generated!</span>
-          </li>
-        </div>
-      </section>
-
-      <!-- SLIDE 9: The Gap -->
-      <section>
-        <h2>🔍 The Gap - What's Missing?</h2>
-        
-        <div class="two-column">
-          <div>
-            <h3>✅ Coding Tools Excel At:</h3>
-            <ul style="font-size: 0.8em;">
-              <li class="fragment">Writing code efficiently</li>
-              <li class="fragment">Debugging complex issues</li>
-              <li class="fragment">Architecture and design</li>
-            </ul>
-          </div>
-          <div>
-            <h3>❌ But What About Life?</h3>
-            <ul style="font-size: 0.8em;">
-              <li class="fragment">Managing emails</li>
-              <li class="fragment">Calendar scheduling</li>
-              <li class="fragment">Task organization</li>
-              <li class="fragment">Server backups</li>
-              <li class="fragment">Meeting follow-ups</li>
-            </ul>
-          </div>
-        </div>
-        
-        <blockquote class="fragment" style="margin-top: 30px;">
-          No AI bridge exists between coding productivity tools and life productivity management
-        </blockquote>
-      </section>
-
-      <!-- SLIDE 10: Enter OpenClaw -->
-      <section>
-        <h2>🦾 Enter OpenClaw</h2>
-        <h3>The Missing Link</h3>
-        
-        <div class="highlight-box fragment">
-          <strong>What is OpenClaw?</strong><br>
-          An AI agent framework that extends coding AI assistants to manage your <strong>entire digital life</strong>.
-        </div>
-        
-        <blockquote class="fragment">
-          "If AI can help write code via CLI, why not manage life via chat?"
-        </blockquote>
-        
-        <div class="architecture-diagram fragment">
-┌─────────────┐     ┌──────────────┐     ┌─────────────────┐
-│  Telegram   │────▶│  OpenClaw    │────▶│   Google APIs   │
-│  (Chat UI)  │     │  (AI Agent)  │     │  (Workspace)    │
-└─────────────┘     └──────────────┘     └─────────────────┘
-                              │
-                              ▼
-                       ┌──────────────┐
-                       │ Google Drive │
-                       │   Calendar   │
-                       │    Tasks     │
-                       │    Gmail     │
-                       └──────────────┘
-        </div>
-      </section>
-
-      <!-- SLIDE 11-13: Live Demos -->
-      <section>
+        <!-- ─── 03 WHO AM I ───────────────────────────────────── -->
         <section>
-          <h2>🎬 Live Demos</h2>
-          <p style="font-size: 0.8em;">Press <strong>↓</strong> to see three demos</p>
-        </section>
-        
-        <section>
-          <div class="demo-badge">DEMO 1</div>
-          <h3>Task Management Automation</h3>
-          <ul>
-            <li class="fragment">Migrated <strong>511 tasks</strong> from Apple Reminders</li>
-            <li class="fragment">Created full <strong>GTD system</strong> in Google Tasks</li>
-            <li class="fragment"><strong>7 organized lists:</strong> Inbox, Next Actions, Scheduled, Waiting For, Projects, Someday, Done</li>
-          </ul>
-        </section>
-        
-        <section>
-          <div class="demo-badge">DEMO 2</div>
-          <h3>Calendar Integration</h3>
-          <ul>
-            <li class="fragment">Auto-created FOSSASIA prep tasks</li>
-            <li class="fragment">Time blocked <strong>2-hour focus sessions</strong></li>
-            <li class="fragment">Automatically rescheduled non-urgent tasks</li>
-          </ul>
-        </section>
-        
-        <section>
-          <div class="demo-badge">DEMO 3</div>
-          <h3>Server Automation</h3>
-          <ul>
-            <li class="fragment">Created backup script running every <strong>3 hours</strong></li>
-            <li class="fragment">Automatically uploads to Google Drive</li>
-            <li class="fragment">Retention policy: keeps last <strong>10 versions</strong></li>
-          </ul>
-        </section>
-      </section>
-
-      <!-- SLIDE 14: Architecture Deep Dive -->
-      <section>
-        <h2>🔧 Architecture Deep Dive</h2>
-        
-        <h3 class="fragment">How It Works - Step by Step:</h3>
-        <div class="architecture-diagram fragment" style="text-align: left; font-size: 0.55em;">
-1. USER sends natural language message via Telegram
-              ↓
-2. OPENCLAW receives webhook and parses intent
-              ↓
-3. GWS CLI executes the appropriate command
-              ↓
-4. GOOGLE APIs perform the requested action
-              ↓
-5. RESPONSE sent back to user with results
-        </div>
-        
-        <div class="highlight-box fragment">
-          <strong>Key Technical Insight:</strong> <code>gws CLI</code> acts as the bridge between natural language and Google Workspace APIs
-        </div>
-      </section>
-
-      <!-- SLIDE 15: Before & After -->
-      <section>
-        <h2>📊 Real Results</h2>
-        <h3>Before & After</h3>
-        
-        <div class="two-column" style="font-size: 0.65em;">
-          <div>
-            <h4>❌ Before OpenClaw</h4>
-            <table>
-              <tr><td>Tasks</td><td class="error">500+ scattered across 5 apps</td></tr>
-              <tr><td>Organization</td><td class="error">No prioritization</td></tr>
-              <tr><td>Backups</td><td class="error">Manual (forgotten)</td></tr>
-              <tr><td>Calendar</td><td class="error">Empty but overwhelmed</td></tr>
-              <tr><td>Context</td><td class="error">Constant tool switching</td></tr>
-            </table>
+          <div class="slide-label">About</div>
+          <h2>Who Am I?</h2>
+          <div class="divider"></div>
+          <div class="two-col wide" style="margin-top: 8px;">
+            <div>
+              <p style="font-size:0.8em; color: var(--text);">Software engineer who became obsessed with one question:</p>
+              <div class="quote" style="margin: 20px 0;">
+                <p>"If AI can write my code, why can't it also manage my inbox, plan my week, and back up my server?"</p>
+              </div>
+              <p>What started as a talk about coding tools evolved into a full exploration of AI-powered personal automation. This is that story.</p>
+            </div>
+            <div>
+              <div class="card" style="margin-bottom: 14px;">
+                <div class="card-label">Currently</div>
+                <h3>Building with AI daily</h3>
+                <p>Using coding agents as the primary interface for software development.</p>
+              </div>
+              <div class="card">
+                <div class="card-label">Experimenting</div>
+                <h3>Life automation via AI agents</h3>
+                <p>Telegram-based assistant connected to Google Workspace, calendar, and task systems.</p>
+              </div>
+            </div>
           </div>
-          <div>
-            <h4>✅ After OpenClaw</h4>
-            <table>
-              <tr><td>Interface</td><td class="success">Single unified (Telegram)</td></tr>
-              <tr><td>Methodology</td><td class="success">GTD enforced</td></tr>
-              <tr><td>Backups</td><td class="success">Automated every 3h</td></tr>
-              <tr><td>Calendar</td><td class="success">Time-blocked priorities</td></tr>
-              <tr><td>Commands</td><td class="success">Natural language</td></tr>
-            </table>
+        </section>
+
+        <!-- ─── 04 VIBE CODING ────────────────────────────────── -->
+        <section>
+          <div class="slide-label green">Part 01 — Vibe Coding</div>
+          <h2>The Terminal is Home</h2>
+          <div class="divider"></div>
+          <div class="two-col" style="margin-top: 8px;">
+            <div>
+              <p style="font-size:0.78em; color: var(--text); margin-bottom: 20px;">Vibe coding isn't about the tools — it's a philosophy. Stay in flow. Think in systems. Let the AI handle the syntax.</p>
+              <div class="steps" style="gap: 16px;">
+                <div class="step">
+                  <div class="step-num">1</div>
+                  <div class="step-body">
+                    <h4>Terminal-first</h4>
+                    <p>No mouse. No GUI. Everything through the keyboard.</p>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-num">2</div>
+                  <div class="step-body">
+                    <h4>Minimal context switching</h4>
+                    <p>Stay in the editor. Stay in the shell. Stay in the flow.</p>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-num">3</div>
+                  <div class="step-body">
+                    <h4>AI as pair programmer</h4>
+                    <p>Describe intent. Review output. Iterate in seconds.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="code-block">
+<span class="c-dim"># The vibe coding loop</span>
+
+<span class="c-cyan">$</span> <span class="c-green">describe</span> what you need
+<span class="c-dim">  "add auth middleware to all /api routes"</span>
+
+<span class="c-cyan">$</span> <span class="c-green">let the agent</span> plan the work
+<span class="c-dim">  → reads existing code</span>
+<span class="c-dim">  → understands patterns</span>
+<span class="c-dim">  → proposes implementation</span>
+
+<span class="c-cyan">$</span> <span class="c-green">review</span> and approve
+<span class="c-dim">  → files changed: 4</span>
+<span class="c-dim">  → tests added: 6</span>
+<span class="c-dim">  → ✓ all passing</span>
+
+<span class="c-accent"># You never left the terminal.</span>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- SLIDE 16: Extending The System -->
-      <section>
-        <h2>🚀 Extending The System</h2>
-        
-        <h3 class="fragment">Current Stack:</h3>
-        <p class="fragment" style="font-size: 0.8em;">
-          Google Workspace • Telegram • Cron jobs • gws CLI
-        </p>
-        
-        <h3 class="fragment" style="margin-top: 30px;">Future Extensions:</h3>
-        <table class="fragment" style="font-size: 0.65em;">
-          <thead>
-            <tr><th>Category</th><th>Current</th><th>Future</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><strong>Workspace</strong></td><td>Google</td><td>+Notion, +Feishu, +Slack</td></tr>
-            <tr><td><strong>Chat</strong></td><td>Telegram</td><td>+WhatsApp, +Discord, +Signal</td></tr>
-            <tr><td><strong>Automation</strong></td><td>Cron</td><td>+n8n, +Zapier</td></tr>
-            <tr><td><strong>AI</strong></td><td>gws CLI</td><td>+Custom MCP servers</td></tr>
-          </tbody>
-        </table>
-        
-        <div class="highlight-box fragment" style="font-size: 0.8em;">
-          <strong>Core Pattern:</strong> <code>Natural Language → AI Agent → Tool Execution</code>
-        </div>
-      </section>
+        <!-- ─── 05 THE AI CLI LANDSCAPE ──────────────────────── -->
+        <section>
+          <div class="slide-label green">Part 01 — Tools</div>
+          <h2>The AI CLI Landscape</h2>
+          <div class="divider"></div>
+          <div class="cards col3" style="margin-top: 8px; gap: 12px;">
+            <div class="card">
+              <div class="card-label">GitHub</div>
+              <h3>Copilot CLI</h3>
+              <p>Terminal-native agent. Builds plans, executes multi-step workflows, integrates with PRs and issues. GA February 2026.</p>
+              <span class="price">$10 / month Pro</span>
+            </div>
+            <div class="card">
+              <div class="card-label">Anthropic</div>
+              <h3>Claude Code</h3>
+              <p>Agentic coding with deep reasoning. Best for complex architecture, refactoring, and multi-file changes. Runs in your terminal.</p>
+              <span class="price">$20 / month Pro</span>
+            </div>
+            <div class="card">
+              <div class="card-label">Moonshot AI</div>
+              <h3>Kimi CLI</h3>
+              <p>256K token context window. Agent Swarm: up to 100 parallel sub-agents. Excellent for large codebases and long context tasks.</p>
+              <span class="price">Pay-per-use API</span>
+            </div>
+            <div class="card">
+              <div class="card-label">Charmbracelet</div>
+              <h3>Crush</h3>
+              <p>Direct successor to OpenCode. Built by the Bubble Tea &amp; Glow team. Multi-model, session persistence, LSP + MCP support. MIT licensed.</p>
+              <span class="price free">Free + Open Source</span>
+            </div>
+            <div class="card">
+              <div class="card-label">Community</div>
+              <h3>OpenCode</h3>
+              <p>The original open-source coding agent (archived late 2025). Its DNA lives on in Crush. Extensible via Oh My OpenCode plugin system.</p>
+              <span class="price free">Archived / MIT</span>
+            </div>
+            <div class="card">
+              <div class="card-label">Self-hosted</div>
+              <h3>Local Models</h3>
+              <p>Ollama, LM Studio, or any OpenAI-compatible endpoint. Maximum privacy, zero cost per token, full control.</p>
+              <span class="price free">Free (hardware cost)</span>
+            </div>
+          </div>
+        </section>
 
-      <!-- SLIDE 17: Security & Privacy -->
-      <section>
-        <h2>🔒 Security & Privacy First</h2>
-        
-        <h3>Privacy-First Design:</h3>
-        <table style="font-size: 0.7em;">
-          <thead>
-            <tr><th>Feature</th><th>Benefit</th></tr>
-          </thead>
-          <tbody>
-            <tr class="fragment">
-              <td>✅ <strong>Self-Hosted</strong></td>
-              <td>Your server, your data, complete control</td>
-            </tr>
-            <tr class="fragment">
-              <td>✅ <strong>Local Tokens</strong></td>
-              <td>OAuth stored locally, never cloud-synced</td>
-            </tr>
-            <tr class="fragment">
-              <td>✅ <strong>No Third-Party AI</strong></td>
-              <td>Data never leaves your infrastructure</td>
-            </tr>
-            <tr class="fragment">
-              <td>✅ <strong>Audit Trail</strong></td>
-              <td>Every command logged for transparency</td>
-            </tr>
-          </tbody>
-        </table>
-        
-        <blockquote class="fragment" style="font-size: 0.8em; margin-top: 30px;">
-          <strong>Bottom Line:</strong> You own everything. Always.
-        </blockquote>
-      </section>
+        <!-- ─── 06 HOW TO CHOOSE ──────────────────────────────── -->
+        <section>
+          <div class="slide-label green">Part 01 — Strategy</div>
+          <h2>Picking the Right Tool</h2>
+          <div class="divider"></div>
+          <div class="two-col" style="margin-top: 8px;">
+            <div>
+              <table class="compare">
+                <thead>
+                  <tr>
+                    <th>If you need…</th>
+                    <th>Use</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="color:var(--text2); font-family: var(--sans);">Complex architecture decisions</td>
+                    <td><span class="text-accent">Claude Code</span></td>
+                  </tr>
+                  <tr>
+                    <td style="color:var(--text2); font-family: var(--sans);">Fast inline code changes</td>
+                    <td><span class="text-green">Copilot CLI</span></td>
+                  </tr>
+                  <tr>
+                    <td style="color:var(--text2); font-family: var(--sans);">Reviewing a huge codebase</td>
+                    <td><span class="text-cyan">Kimi CLI</span></td>
+                  </tr>
+                  <tr>
+                    <td style="color:var(--text2); font-family: var(--sans);">Experimenting freely</td>
+                    <td><span class="text-purple">Crush / OpenCode</span></td>
+                  </tr>
+                  <tr>
+                    <td style="color:var(--text2); font-family: var(--sans);">Privacy-critical work</td>
+                    <td><span class="text-orange">Local Models</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <div class="callout" style="margin-top: 0;">
+                <span class="callout-icon">💡</span>
+                <div class="callout-body">
+                  <h4>There is no winner</h4>
+                  <p>Each tool is optimized for its own context. Senior engineers switch tools like surgeons switch instruments.</p>
+                </div>
+              </div>
+              <div class="card" style="margin-top: 14px;">
+                <div class="card-label">My Daily Stack</div>
+                <ul class="checklist" style="margin-top: 8px;">
+                  <li><span class="icon yes">→</span> <span><strong>Primary:</strong> Claude Code + Pro</span></li>
+                  <li><span class="icon yes">→</span> <span><strong>Fallback:</strong> Copilot CLI</span></li>
+                  <li><span class="icon yes">→</span> <span><strong>Long context:</strong> Kimi CLI</span></li>
+                  <li><span class="icon yes">→</span> <span><strong>OSS experiment:</strong> Crush</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
 
-      <!-- SLIDE 18: 5 Key Lessons -->
-      <section>
-        <h2>💡 5 Key Lessons Learned</h2>
-        
-        <div class="step-list" style="font-size: 0.85em;">
-          <li class="fragment"><strong>Terminal is King</strong><br><span style="font-size: 0.8em; color: #888;">CLI-first works for coding AND productivity</span></li>
-          <li class="fragment"><strong>AI is the Interface</strong><br><span style="font-size: 0.8em; color: #888;">Natural language beats endless menus</span></li>
-          <li class="fragment"><strong>Integration Beats Features</strong><br><span style="font-size: 0.8em; color: #888;">One connected system > 10 isolated apps</span></li>
-          <li class="fragment"><strong>Automation is Compounding</strong><br><span style="font-size: 0.8em; color: #888;">10 minutes setup saves hours every week</span></li>
-          <li class="fragment"><strong>Coding Tools Inspired Life Tools</strong><br><span style="font-size: 0.8em; color: #888;">If <code>gh copilot</code> works for code, why can't <code>gws</code> work for life?</span></li>
-        </div>
-      </section>
+        <!-- ─── 07 MCP & AGENT SETUP ──────────────────────────── -->
+        <section>
+          <div class="slide-label purple">Part 02 — Agent Architecture</div>
+          <h2>MCP: USB-C for AI</h2>
+          <div class="divider"></div>
+          <div class="two-col wide" style="margin-top: 8px;">
+            <div>
+              <p style="font-size:0.78em; color:var(--text); margin-bottom:18px;">
+                <strong>Model Context Protocol (MCP)</strong> is an open standard created by Anthropic, now backed by OpenAI and under the Linux Foundation. It gives any AI agent a universal way to connect to tools, databases, APIs, and file systems.
+              </p>
+              <div class="flow" style="justify-content: flex-start; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
+                <div class="flow-node accent">AI Agent</div>
+                <span class="flow-arrow">⟶</span>
+                <div class="flow-node">MCP Server<small>JSON-RPC</small></div>
+                <span class="flow-arrow">⟶</span>
+                <div class="flow-node">Tool / API<small>Any service</small></div>
+              </div>
+              <div class="pills">
+                <span class="pill accent">Context7</span>
+                <span class="pill accent">Exa Search</span>
+                <span class="pill accent">Chrome DevTools</span>
+                <span class="pill accent">Sequential Thinking</span>
+                <span class="pill">GitHub</span>
+                <span class="pill">Linear</span>
+                <span class="pill">Filesystem</span>
+                <span class="pill">PostgreSQL</span>
+              </div>
+            </div>
+            <div>
+              <div class="card" style="margin-bottom: 12px;">
+                <div class="card-label">Context7</div>
+                <h3>Always-fresh docs</h3>
+                <p>MCP server by Upstash. Gives your AI agent current library documentation and code samples instead of stale training data.</p>
+              </div>
+              <div class="card">
+                <div class="card-label">Sequential Thinking</div>
+                <h3>Structured reasoning</h3>
+                <p>Forces the agent to think step-by-step before acting. Dramatically reduces hallucination on complex tasks.</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-      <!-- SLIDE 19: Resources & Links -->
-      <section>
-        <h2>📚 Resources & Links</h2>
-        
-        <h3>Essential Links:</h3>
-        <table style="font-size: 0.6em;">
-          <tr class="fragment"><td><strong>OpenClaw</strong></td><td>github.com/openclaw/openclaw</td></tr>
-          <tr class="fragment"><td><strong>Google Workspace CLI</strong></td><td>github.com/googleworkspace/cli</td></tr>
-          <tr class="fragment"><td><strong>Skill Repository</strong></td><td>skills.sh</td></tr>
-        </table>
-        
-        <h3 style="margin-top: 30px;">Tools Mentioned:</h3>
-        <table style="font-size: 0.5em;">
-          <tr class="fragment">
-            <td>GitHub Copilot CLI</td>
-            <td>Claude Code</td>
-            <td>Kimi CLI</td>
-            <td>OpenCode</td>
-          </tr>
-          <tr class="fragment">
-            <td>Oh My OpenCode</td>
-            <td>Crush CLI</td>
-            <td>Context7</td>
-            <td>Exa.ai</td>
-          </tr>
-        </table>
-      </section>
+        <!-- ─── 08 BUILDING YOUR AGENT ────────────────────────── -->
+        <section>
+          <div class="slide-label purple">Part 02 — Configuration</div>
+          <h2>Building Your Agent</h2>
+          <div class="divider"></div>
+          <div class="two-col" style="margin-top: 8px;">
+            <div class="steps">
+              <div class="step">
+                <div class="step-num">1</div>
+                <div class="step-body">
+                  <h4>Install MCP Servers</h4>
+                  <p>Context7 for live docs · Exa for web search · Chrome DevTools for frontend · Sequential thinking for reasoning</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-num">2</div>
+                <div class="step-body">
+                  <h4>Load Domain Skills</h4>
+                  <p>Pre-built skill packs: Frontend Design · Azure DevOps CLI · SDD+TDD workflow · Security Audit</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-num">3</div>
+                <div class="step-body">
+                  <h4>Write Custom Skills</h4>
+                  <p>"Create a skill for my deployment workflow" → agent auto-generates a reusable skill from your patterns</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-num">4</div>
+                <div class="step-body">
+                  <h4>Tune Behavior</h4>
+                  <p>AGENTS.md files per-project · methodology preferences · coding standards · forbidden patterns</p>
+                </div>
+              </div>
+            </div>
+            <div class="code-block">
+<span class="c-dim"># claude.json — example agent config</span>
+{
+  <span class="c-accent">"mcpServers"</span>: {
+    <span class="c-green">"context7"</span>: {
+      <span class="c-orange">"command"</span>: <span class="c-cyan">"npx"</span>,
+      <span class="c-orange">"args"</span>: [<span class="c-cyan">"-y @upstash/context7-mcp"</span>]
+    },
+    <span class="c-green">"exa"</span>: {
+      <span class="c-orange">"command"</span>: <span class="c-cyan">"npx"</span>,
+      <span class="c-orange">"args"</span>: [<span class="c-cyan">"-y exa-mcp-server"</span>]
+    },
+    <span class="c-green">"sequential"</span>: {
+      <span class="c-orange">"command"</span>: <span class="c-cyan">"npx"</span>,
+      <span class="c-orange">"args"</span>: [<span class="c-cyan">"-y @modelcontextprotocol/server-sequential-thinking"</span>]
+    }
+  }
+}
+            </div>
+          </div>
+        </section>
 
-      <!-- SLIDE 20: Thank You -->
-      <section data-background-gradient="linear-gradient(135deg, #0f3460 0%, #16213e 50%, #1a1a2e 100%)">
-        <h1>🙏 Thank You!</h1>
-        <h2>Questions? Let's Connect!</h2>
-        
-        <table style="font-size: 0.8em; margin-top: 40px;">
-          <tr class="fragment">
-            <td>🐙 <strong>GitHub</strong></td>
-            <td>github.com/MgAungMyoKyaw</td>
-          </tr>
-          <tr class="fragment">
-            <td>✈️ <strong>Telegram</strong></td>
-            <td>@MgAungMyoKyaw</td>
-          </tr>
-          <tr class="fragment">
-            <td>📧 <strong>Email</strong></td>
-            <td>realaungmyokyaw@gmail.com</td>
-          </tr>
-        </table>
-        
-        <div style="margin-top: 50px; font-size: 0.7em; color: #888;">
-          <p>FOSSASIA Summit 2026 | Think It For Me</p>
-          <p style="font-size: 0.8em;">From Vibe Coding to AI-Powered Life Automation</p>
-        </div>
-      </section>
+        <!-- ─── 09 LIVE DEMO: EVENTYAY ────────────────────────── -->
+        <section>
+          <div class="slide-label cyan">Part 02 — Live Demo</div>
+          <h2>Porting Eventyay to Mobile</h2>
+          <div class="divider"></div>
+          <div class="two-col" style="margin-top: 8px;">
+            <div>
+              <p style="font-size:0.78em; color:var(--text); margin-bottom: 20px;">A real project: taking the FOSSASIA Eventyay event management system and building a mobile client from scratch — driven entirely by AI agents.</p>
+              <div class="callout green" style="margin-bottom: 14px;">
+                <span class="callout-icon">🛠</span>
+                <div class="callout-body">
+                  <h4>Tools Used</h4>
+                  <p>Kimi 2.5 CLI + OpenCode (Oh My OpenCode plugin system)</p>
+                </div>
+              </div>
+              <div class="steps" style="gap: 14px;">
+                <div class="step">
+                  <div class="step-num">1</div>
+                  <div class="step-body">
+                    <h4>Provide API docs + base URL</h4>
+                    <p>Agent reads and maps the full API surface automatically.</p>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-num">2</div>
+                  <div class="step-body">
+                    <h4>SDD: write specs first</h4>
+                    <p>Specs become the ground truth. No code without a spec.</p>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-num">3</div>
+                  <div class="step-body">
+                    <h4>TDD: tests before implementation</h4>
+                    <p>Agent writes tests → implements until green → refactors.</p>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-num">4</div>
+                  <div class="step-body">
+                    <h4>Human reviews key decisions</h4>
+                    <p>Architecture choices, auth flow, data model — human approves each.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="card" style="margin-bottom: 12px;">
+                <div class="card-label">Methodology</div>
+                <h3>SDD + TDD</h3>
+                <p><strong>Spec-Driven Development:</strong> intent defines the what before the how. Specs are executable artifacts.<br/><br/><strong>Test-Driven Development:</strong> Red → Green → Refactor. Quality baked in from the start.</p>
+              </div>
+              <div class="callout orange">
+                <span class="callout-icon">⚠️</span>
+                <div class="callout-body">
+                  <h4>Key insight</h4>
+                  <p>AI doesn't replace human judgment — it accelerates execution. You still own every architectural decision.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
+        <!-- ─── 10 THE GAP ────────────────────────────────────── -->
+        <section>
+          <div class="slide-label orange">Part 03 — The Problem</div>
+          <h2>Coding Tools Stop at Code</h2>
+          <div class="divider"></div>
+          <div class="two-col" style="margin-top: 8px;">
+            <div>
+              <p style="font-size:0.78em; color:var(--text); margin-bottom: 20px;">AI coding tools are extraordinarily capable inside a repository. But the moment you close the terminal, you're back to juggling ten apps manually.</p>
+              <ul class="checklist">
+                <li><span class="icon yes">✓</span> <span><strong>Writing code</strong> — fully automated</span></li>
+                <li><span class="icon yes">✓</span> <span><strong>Debugging</strong> — fully automated</span></li>
+                <li><span class="icon yes">✓</span> <span><strong>Architecture reviews</strong> — AI handles it</span></li>
+                <li><span class="icon no">✗</span> <span><strong>Inbox zero</strong> — still manual</span></li>
+                <li><span class="icon no">✗</span> <span><strong>Calendar planning</strong> — still manual</span></li>
+                <li><span class="icon no">✗</span> <span><strong>Task management</strong> — still manual</span></li>
+                <li><span class="icon no">✗</span> <span><strong>Server backups</strong> — still manual</span></li>
+                <li><span class="icon no">✗</span> <span><strong>Meeting follow-ups</strong> — still manual</span></li>
+              </ul>
+            </div>
+            <div>
+              <div class="quote">
+                <p>"We've automated our build pipelines. We've automated our deployments. We've automated code review.<br/><br/>But we haven't automated <em>ourselves</em>."</p>
+              </div>
+              <div class="callout" style="margin-top: 14px;">
+                <span class="callout-icon">🔍</span>
+                <div class="callout-body">
+                  <h4>The Missing Bridge</h4>
+                  <p>No AI system connects coding-world tools to life-management tools via a single natural language interface.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── 11 ENTER THE SYSTEM ──────────────────────────── -->
+        <section>
+          <div class="slide-label orange">Part 04 — Life Automation</div>
+          <h2>The System I Built</h2>
+          <div class="divider"></div>
+          <div class="two-col wide" style="margin-top: 8px;">
+            <div>
+              <p style="font-size:0.78em; color:var(--text); margin-bottom: 20px;">
+                <strong>Model Context Protocol (MCP)</strong> was created by Anthropic in November 2024, then donated to the Linux Foundation's Agentic AI Foundation in December 2025. It gives any AI agent a universal way to connect to tools, databases, APIs, and file systems.
+              </p>
+              <div class="flow" style="flex-direction: column; align-items: flex-start; gap: 10px; margin-bottom: 20px;">
+                <div class="flow" style="margin: 0;">
+                  <div class="flow-node accent">Telegram<small>Your interface</small></div>
+                  <span class="flow-arrow">⟶</span>
+                  <div class="flow-node accent">AI Agent<small>Parses intent</small></div>
+                </div>
+                <div style="padding-left: 60px;">
+                  <span class="flow-arrow" style="transform: rotate(90deg); display:inline-block;">⟶</span>
+                </div>
+                <div class="flow" style="margin: 0;">
+                  <div class="flow-node">GWS CLI<small>Executes</small></div>
+                  <span class="flow-arrow">⟶</span>
+                  <div class="flow-node">Google APIs<small>Drive, Calendar, Gmail, Tasks</small></div>
+                </div>
+              </div>
+              <div class="callout green">
+                <span class="callout-icon">🔑</span>
+                <div class="callout-body">
+                  <h4>The bridge: gws CLI</h4>
+                  <p>Open-sourced March 2026 (github.com/googleworkspace/cli). Rust-based. 40+ AI agent skills for Drive, Gmail, Calendar, and Sheets. Translates natural language commands into real API calls.</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="stats" style="grid-template-columns: 1fr 1fr; gap: 12px; margin: 0 0 14px;">
+                <div class="stat">
+                  <div class="stat-num">511</div>
+                  <div class="stat-label">Tasks migrated</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-num">7</div>
+                  <div class="stat-label">GTD lists</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-num">3h</div>
+                  <div class="stat-label">Backup interval</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-num">1</div>
+                  <div class="stat-label">Interface</div>
+                </div>
+              </div>
+              <div class="code-block" style="font-size: 0.52em;">
+<span class="c-dim"># Examples — all via Telegram</span>
+
+<span class="c-cyan">You:</span> "Schedule my FOSSASIA prep"
+<span class="c-green">Agent:</span> Created 3 focus blocks this week
+
+<span class="c-cyan">You:</span> "Back up the server now"
+<span class="c-green">Agent:</span> Uploaded to Drive, 10 versions kept
+
+<span class="c-cyan">You:</span> "What's on my plate today?"
+<span class="c-green">Agent:</span> 4 next actions, 1 waiting-for
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── 12 THREE DEMOS ────────────────────────────────── -->
+        <section>
+          <div class="slide-label orange">Part 04 — Demos</div>
+          <h2>Three Real Automations</h2>
+          <div class="divider"></div>
+          <div class="cards col3" style="margin-top: 8px; gap: 14px;">
+            <div class="card">
+              <div class="card-label">Demo 01 — Tasks</div>
+              <h3>GTD Migration</h3>
+              <p>511 tasks scattered across 5 apps. The agent read them all, classified each by context and energy, and created a complete GTD system in Google Tasks.</p>
+              <div style="margin-top: 16px;">
+                <div class="pills">
+                  <span class="pill">📥 Inbox</span>
+                  <span class="pill">⚡ Next Actions</span>
+                  <span class="pill">📅 Scheduled</span>
+                  <span class="pill">⏳ Waiting For</span>
+                  <span class="pill">📁 Projects</span>
+                  <span class="pill">💭 Someday</span>
+                  <span class="pill">✅ Done</span>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-label">Demo 02 — Calendar</div>
+              <h3>Intelligent Scheduling</h3>
+              <p>Asked the agent: "Plan my FOSSASIA preparation." It scanned my calendar, identified free blocks, scheduled 2-hour deep-work sessions, and rescheduled low-priority tasks automatically.</p>
+              <div class="callout green" style="margin-top: 14px; padding: 12px 16px;">
+                <span class="callout-icon" style="font-size:0.8em;">⏱</span>
+                <div class="callout-body">
+                  <p style="font-size: 0.9em;">2-hour focus blocks · Smart rescheduling · Zero manual calendar work</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-label">Demo 03 — Server</div>
+              <h3>Automated Backups</h3>
+              <p>One message: "Set up automated backups for my server." The agent wrote the script, set up the cron job, tested it, and configured a Google Drive sync with a 10-version retention policy.</p>
+              <div class="callout" style="margin-top: 14px; padding: 12px 16px;">
+                <span class="callout-icon" style="font-size:0.8em;">🔄</span>
+                <div class="callout-body">
+                  <p style="font-size: 0.9em;">Every 3 hours · Drive upload · 10 versions kept · Verified working</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── 13 HOW IT WORKS ───────────────────────────────── -->
+        <section>
+          <div class="slide-label orange">Part 04 — Architecture</div>
+          <h2>How It Works</h2>
+          <div class="divider"></div>
+          <div class="two-col" style="margin-top: 8px;">
+            <div>
+              <div class="steps">
+                <div class="step">
+                  <div class="step-num">1</div>
+                  <div class="step-body">
+                    <h4>You send a message via Telegram</h4>
+                    <p>Natural language, no special syntax. Treat it like texting a capable colleague.</p>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-num">2</div>
+                  <div class="step-body">
+                    <h4>Agent receives and parses intent</h4>
+                    <p>The AI agent classifies the request: is this a task, a calendar event, a query, or a system action?</p>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-num">3</div>
+                  <div class="step-body">
+                    <h4>GWS CLI executes the command</h4>
+                    <p>The CLI tool translates the agent's plan into real Google Workspace API calls.</p>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-num">4</div>
+                  <div class="step-body">
+                    <h4>Confirmation sent back</h4>
+                    <p>Result summary returned via Telegram. Everything logged for your audit trail.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="code-block">
+<span class="c-dim"># Message → Action pipeline</span>
+
+<span class="c-cyan">INPUT</span>
+"Schedule my FOSSASIA talk prep"
+
+<span class="c-cyan">AGENT</span>
+→ intent: <span class="c-green">calendar_schedule</span>
+→ context: <span class="c-orange">FOSSASIA talk</span>
+→ action: <span class="c-accent">block_time + create_tasks</span>
+
+<span class="c-cyan">GWS CLI</span>
+$ gws calendar create \
+  --title "FOSSASIA Prep" \
+  --duration 2h \
+  --find-free-slot
+
+<span class="c-cyan">RESULT</span>
+<span class="c-green">✓</span> Blocked Tue 14:00–16:00
+<span class="c-green">✓</span> Created 4 prep tasks
+<span class="c-green">✓</span> Reminder set for tomorrow
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── 14 BEFORE & AFTER ─────────────────────────────── -->
+        <section>
+          <div class="slide-label orange">Part 04 — Results</div>
+          <h2>Before & After</h2>
+          <div class="divider"></div>
+          <div class="two-col" style="margin-top: 8px;">
+            <div>
+              <h3 style="color: var(--red); margin-bottom: 16px; font-size: 1em;">Before</h3>
+              <ul class="checklist">
+                <li><span class="icon no">✗</span> <span>500+ tasks across 5 different apps</span></li>
+                <li><span class="icon no">✗</span> <span>No consistent prioritization system</span></li>
+                <li><span class="icon no">✗</span> <span>Manual server backups (frequently forgotten)</span></li>
+                <li><span class="icon no">✗</span> <span>Calendar full of conflicts, no focus time</span></li>
+                <li><span class="icon no">✗</span> <span>Constant context switching between tools</span></li>
+                <li><span class="icon no">✗</span> <span>Separate logins, separate UIs, separate mental models</span></li>
+              </ul>
+            </div>
+            <div>
+              <h3 style="color: var(--green); margin-bottom: 16px; font-size: 1em;">After</h3>
+              <ul class="checklist">
+                <li><span class="icon yes">✓</span> <span><strong>One interface:</strong> Telegram for everything</span></li>
+                <li><span class="icon yes">✓</span> <span><strong>GTD enforced:</strong> system handles the methodology</span></li>
+                <li><span class="icon yes">✓</span> <span><strong>Automated backups:</strong> every 3 hours, zero thought</span></li>
+                <li><span class="icon yes">✓</span> <span><strong>Time-blocked calendar:</strong> deep work protected</span></li>
+                <li><span class="icon yes">✓</span> <span><strong>Natural language:</strong> describe it, it's done</span></li>
+                <li><span class="icon yes">✓</span> <span><strong>Self-hosted:</strong> all data stays on your server</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="callout green" style="margin-top: 24px;">
+            <span class="callout-icon">📊</span>
+            <div class="callout-body">
+              <h4>The compounding effect</h4>
+              <p>Setup took one weekend. Every week since, the system saves 3–4 hours of manual task management, scheduling, and operational overhead.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── 15 PRIVACY & SECURITY ─────────────────────────── -->
+        <section>
+          <div class="slide-label red">Part 04 — Trust</div>
+          <h2>Privacy by Design</h2>
+          <div class="divider"></div>
+          <div class="two-col" style="margin-top: 8px;">
+            <div>
+              <p style="font-size:0.78em; color:var(--text); margin-bottom: 20px;">Giving an AI access to your entire life's data is a serious commitment. The architecture is designed to keep you in full control.</p>
+              <div class="steps" style="gap: 16px;">
+                <div class="step">
+                  <div class="step-num">1</div>
+                  <div class="step-body">
+                    <h4>Self-hosted</h4>
+                    <p>Your server, your hardware. No data ever touches a third-party cloud.</p>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-num">2</div>
+                  <div class="step-body">
+                    <h4>Local OAuth tokens</h4>
+                    <p>Google credentials stored on-device only. Never cloud-synced.</p>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-num">3</div>
+                  <div class="step-body">
+                    <h4>No external AI calls for your data</h4>
+                    <p>Intent parsing can run locally. Your personal data never leaves your infrastructure.</p>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-num">4</div>
+                  <div class="step-body">
+                    <h4>Full audit trail</h4>
+                    <p>Every command logged. You can replay the exact history of what the agent did and when.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="quote">
+                <p>"You should own every byte of your personal data. Not rent it from a SaaS. Not trust a vendor not to get breached.<br/><br/>Own it."</p>
+              </div>
+              <div class="card" style="margin-top: 14px;">
+                <div class="card-label">Bottom Line</div>
+                <h3>You own everything. Always.</h3>
+                <p>The agent has access to your data because you gave it access. You can revoke that access instantly. You control the logs. You control the retention. You control the hardware.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── 16 LESSONS ────────────────────────────────────── -->
+        <section>
+          <div class="slide-label purple">Takeaways</div>
+          <h2>5 Lessons Worth Taking Home</h2>
+          <div class="divider"></div>
+          <div class="cards col2" style="margin-top: 8px; gap: 12px;">
+            <div class="card">
+              <div class="card-label">Lesson 01</div>
+              <h3>The terminal is the best UI</h3>
+              <p>Every tool you build, wrap in a CLI first. Scriptable, composable, automatable. GUIs are for discovery. CLIs are for production.</p>
+            </div>
+            <div class="card">
+              <div class="card-label">Lesson 02</div>
+              <h3>Language is the interface</h3>
+              <p>Natural language commands beat menus, forms, and dashboards. If you can describe what you want, you can automate it.</p>
+            </div>
+            <div class="card">
+              <div class="card-label">Lesson 03</div>
+              <h3>Integration beats features</h3>
+              <p>One connected system that does 80% is worth more than 10 perfect apps that don't talk to each other.</p>
+            </div>
+            <div class="card">
+              <div class="card-label">Lesson 04</div>
+              <h3>Automation compounds</h3>
+              <p>10 minutes of setup saves 10 minutes every week. That's 8+ hours a year — per automation. Stack 20 automations.</p>
+            </div>
+            <div class="card" style="grid-column: 1 / -1;">
+              <div class="card-label">Lesson 05</div>
+              <h3>Coding tools inspired life tools — and that's the key insight</h3>
+              <p>The pattern <strong class="mono text-accent">gh copilot suggest</strong> taught me everything. If AI can suggest a git command, why not a calendar event? Why not a backup script? The interface — natural language over CLI — works everywhere. The leap from coding to life automation is smaller than you think.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── 17 ROADMAP ────────────────────────────────────── -->
+        <section>
+          <div class="slide-label cyan">What's Next</div>
+          <h2>The Roadmap</h2>
+          <div class="divider"></div>
+          <div class="two-col" style="margin-top: 8px;">
+            <div>
+              <h3 style="font-size: 0.95em; color: var(--text2); margin-bottom: 20px;">Today's system</h3>
+              <div class="pills" style="margin-bottom: 24px;">
+                <span class="pill accent">Google Workspace</span>
+                <span class="pill accent">Telegram</span>
+                <span class="pill accent">Cron Jobs</span>
+                <span class="pill accent">GWS CLI</span>
+              </div>
+              <h3 style="font-size: 0.95em; color: var(--text2); margin-bottom: 16px;">Tomorrow's vision</h3>
+              <table class="compare" style="font-size: 0.7em;">
+                <thead>
+                  <tr><th>Category</th><th>Expand To</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Workspace</td><td style="color:var(--text2); font-family: var(--sans);">Notion, Feishu, Slack</td></tr>
+                  <tr><td>Chat</td><td style="color:var(--text2); font-family: var(--sans);">WhatsApp, Discord, Signal</td></tr>
+                  <tr><td>Automation</td><td style="color:var(--text2); font-family: var(--sans);">n8n, Zapier, Make</td></tr>
+                  <tr><td>AI Layer</td><td style="color:var(--text2); font-family: var(--sans);">Custom MCP servers per-domain</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <div class="quote" style="margin-bottom: 14px;">
+                <p>The pattern always stays the same:<br/><br/><strong>Natural language → AI agent → any tool</strong><br/><br/>Only the connectors change.</p>
+              </div>
+              <div class="callout" style="margin-top: 0;">
+                <span class="callout-icon">🔮</span>
+                <div class="callout-body">
+                  <h4>Open question</h4>
+                  <p>As MCP becomes the universal integration standard, every SaaS tool will expose an AI-accessible interface. The agent layer will become the operating system of your digital life.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── 18 RESOURCES ──────────────────────────────────── -->
+        <section>
+          <div class="slide-label">Resources</div>
+          <h2>Go Build Something</h2>
+          <div class="divider"></div>
+          <div class="two-col" style="margin-top: 8px;">
+            <div>
+              <h3 style="font-size: 0.85em; color: var(--text2); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.08em;">AI Coding Tools</h3>
+              <table class="compare" style="margin-bottom: 24px;">
+                <tbody>
+                  <tr><td>GitHub Copilot</td><td style="color:var(--text2); font-family:var(--sans);">github.com/features/copilot</td></tr>
+                  <tr><td>Claude Code</td><td style="color:var(--text2); font-family:var(--sans);">claude.ai/code</td></tr>
+                  <tr><td>Kimi CLI</td><td style="color:var(--text2); font-family:var(--sans);">platform.moonshot.cn</td></tr>
+                  <tr><td>Crush</td><td style="color:var(--text2); font-family:var(--sans);">charm.sh/crush</td></tr>
+                </tbody>
+              </table>
+              <h3 style="font-size: 0.85em; color: var(--text2); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.08em;">MCP Ecosystem</h3>
+              <table class="compare">
+                <tbody>
+                  <tr><td>MCP Spec</td><td style="color:var(--text2); font-family:var(--sans);">modelcontextprotocol.io</td></tr>
+                  <tr><td>Context7</td><td style="color:var(--text2); font-family:var(--sans);">github.com/upstash/context7</td></tr>
+                  <tr><td>MCP Servers</td><td style="color:var(--text2); font-family:var(--sans);">github.com/modelcontextprotocol/servers</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <h3 style="font-size: 0.85em; color: var(--text2); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.08em;">Life Automation</h3>
+              <table class="compare" style="margin-bottom: 24px;">
+                <tbody>
+                  <tr><td>GTD Method</td><td style="color:var(--text2); font-family:var(--sans);">gettingthingsdone.com</td></tr>
+                  <tr><td>n8n</td><td style="color:var(--text2); font-family:var(--sans);">n8n.io (self-hostable)</td></tr>
+                  <tr><td>Google APIs</td><td style="color:var(--text2); font-family:var(--sans);">developers.google.com/workspace</td></tr>
+                </tbody>
+              </table>
+              <div class="card">
+                <div class="card-label">Start Here</div>
+                <h3>Pick one automation</h3>
+                <p>Don't try to automate everything. Pick the most painful manual task you do every week. Build the smallest possible AI agent that handles it. Then iterate.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── 19 THANK YOU ──────────────────────────────────── -->
+        <section class="hero-slide">
+          <p class="hero-eyebrow">FOSSASIA Summit 2026</p>
+          <h1 class="hero-title" style="font-size: 2.8em !important;">Thank You</h1>
+          <p class="hero-subtitle">
+            Questions, feedback, and war stories welcome.<br/>
+            Let's build the AI-powered future — one automation at a time.
+          </p>
+          <div class="hero-meta" style="flex-direction: column; align-items: flex-start; gap: 16px;">
+            <div class="hero-author">
+              <div class="hero-avatar">AMK</div>
+              <div class="hero-author-text">
+                <h4>Aung Myo Kyaw</h4>
+                <p>Software Engineer</p>
+              </div>
+            </div>
+            <div class="pills" style="margin: 0;">
+              <span class="pill accent">GitHub: MgAungMyoKyaw</span>
+              <span class="pill accent">Telegram: @MgAungMyoKyaw</span>
+              <span class="pill accent">realaungmyokyaw@gmail.com</span>
+            </div>
+          </div>
+        </section>
+
+      </div>
     </div>
-  </div>
 
-  <!-- Load reveal.js and plugins -->
-  <script src="dist/reveal.js"></script>
-  <script src="plugin/markdown/markdown.js"></script>
-  <script src="plugin/highlight/highlight.js"></script>
-  <script src="plugin/notes/notes.js"></script>
-  <script src="plugin/zoom/zoom.js"></script>
-  <script src="plugin/search/search.js"></script>
-
-  <script>
-    Reveal.initialize({
-      // Display
-      width: 1280,
-      height: 720,
-      margin: 0.04,
-      minScale: 0.2,
-      maxScale: 2.0,
-      center: true,
-      
-      // Navigation
-      hash: true,
-      slideNumber: 'c/t',
-      showSlideNumber: 'all',
-      controls: true,
-      controlsLayout: 'bottom-right',
-      progress: true,
-      
-      // Transitions
-      transition: 'slide',
-      transitionSpeed: 'default',
-      backgroundTransition: 'fade',
-      
-      // Features
-      autoAnimate: true,
-      overview: true,
-      touch: true,
-      keyboard: true,
-      
-      // Plugins
-      plugins: [
-        RevealMarkdown,
-        RevealHighlight,
-        RevealNotes,
-        RevealZoom,
-        RevealSearch
-      ]
-    });
-  </script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.js"></script>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        slideNumber: 'c/t',
+        progress: true,
+        controls: true,
+        center: false,
+        transition: 'none',
+        backgroundTransition: 'none',
+        fragments: false,
+        width: 1280,
+        height: 720,
+        margin: 0,
+        minScale: 0.3,
+        maxScale: 2.0,
+      });
+    </script>
+  </body>
 </html>
