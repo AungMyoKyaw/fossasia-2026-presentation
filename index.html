@@ -504,23 +504,7 @@
         overflow: hidden;
       }
 
-      .hero-slide::before {
-        content: '';
-        position: absolute;
-        top: -200px; right: -200px;
-        width: 600px; height: 600px;
-        background: radial-gradient(circle, rgba(122,162,247,0.08) 0%, transparent 70%);
-        pointer-events: none;
-      }
 
-      .hero-slide::after {
-        content: '';
-        position: absolute;
-        bottom: -150px; left: -100px;
-        width: 400px; height: 400px;
-        background: radial-gradient(circle, rgba(187,154,247,0.06) 0%, transparent 70%);
-        pointer-events: none;
-      }
 
       .hero-eyebrow {
         font-family: var(--mono);
@@ -849,7 +833,7 @@
               <div class="card-label">Moonshot AI</div>
               <h3>Kimi CLI</h3>
               <p>256K token context window. Agent Swarm: up to 100 parallel sub-agents. Excellent for large codebases and long context tasks.</p>
-              <span class="price">Pay-per-use API</span>
+              <span class="price">From $19/mo</span>
             </div>
             <div class="card">
               <div class="card-label">Charmbracelet</div>
@@ -858,10 +842,10 @@
               <span class="price free">Free + Open Source</span>
             </div>
             <div class="card">
-              <div class="card-label">Community</div>
+              <div class="card-label green">Community</div>
               <h3>OpenCode</h3>
-              <p>The original open-source coding agent (archived late 2025). Its DNA lives on in Crush. Extensible via Oh My OpenCode plugin system.</p>
-              <span class="price free">Archived / MIT</span>
+              <p>The original open-source coding agent. Now supercharged with the <strong>Oh My OpenCode plugin system</strong> — full MCP support, skills ecosystem, and powerful subagents. My preferred daily driver.</p>
+              <span class="price free">Open Source + MIT</span>
             </div>
             <div class="card">
               <div class="card-label">Self-hosted</div>
@@ -911,20 +895,20 @@
               </table>
             </div>
             <div>
-              <div class="callout" style="margin-top: 0;">
-                <span class="callout-icon">💡</span>
+              <div class="callout green" style="margin-top: 0;">
+                <span class="callout-icon">🌟</span>
                 <div class="callout-body">
-                  <h4>There is no winner</h4>
-                  <p>Each tool is optimized for its own context. Senior engineers switch tools like surgeons switch instruments.</p>
+                  <h4>My Choice: OpenCode + Oh My OpenCode</h4>
+                  <p>With full MCP support, subagents, and a rich skills ecosystem, OpenCode matches or exceeds paid alternatives. It's now my primary driver despite having active subscriptions to Copilot Pro, Kimi, and Claude Code.</p>
                 </div>
               </div>
               <div class="card" style="margin-top: 14px;">
-                <div class="card-label">My Daily Stack</div>
+                <div class="card-label green">My Daily Stack</div>
                 <ul class="checklist" style="margin-top: 8px;">
-                  <li><span class="icon yes">→</span> <span><strong>Primary:</strong> Claude Code + Pro</span></li>
-                  <li><span class="icon yes">→</span> <span><strong>Fallback:</strong> Copilot CLI</span></li>
-                  <li><span class="icon yes">→</span> <span><strong>Long context:</strong> Kimi CLI</span></li>
-                  <li><span class="icon yes">→</span> <span><strong>OSS experiment:</strong> Crush</span></li>
+                  <li><span class="icon yes">→</span> <span><strong class="text-green">Primary:</strong> OpenCode + Oh My OpenCode</span></li>
+                  <li><span class="icon yes">→</span> <span><strong>Alternative:</strong> Claude Code Pro ($20/mo)</span></li>
+                  <li><span class="icon yes">→</span> <span><strong>Alternative:</strong> Copilot CLI ($10/mo)</span></li>
+                                    <li><span class="icon yes">→</span> <span><strong>Alternative:</strong> Kimi CLI (subscription from $19/mo)</span></li>
                 </ul>
               </div>
             </div>
@@ -1037,17 +1021,17 @@
           <div class="slide-label cyan">Part 02 — Live Demo</div>
           <h2>Porting Eventyay to Mobile</h2>
           <div class="divider"></div>
-          <div class="two-col" style="margin-top: 8px;">
+          <div class="two-col wide" style="margin-top: 4px;">
             <div>
-              <p style="font-size:0.78em; color:var(--text); margin-bottom: 20px;">A real project: taking the FOSSASIA Eventyay event management system and building a mobile client from scratch — driven entirely by AI agents.</p>
-              <div class="callout green" style="margin-bottom: 14px;">
+              <p style="font-size:0.72em; color:var(--text); margin-bottom: 12px;">A real project: taking the FOSSASIA Eventyay event management system and building a mobile client from scratch — driven entirely by AI agents.</p>
+              <div class="callout green" style="margin-bottom: 10px; padding: 12px 16px;">
                 <span class="callout-icon">🛠</span>
                 <div class="callout-body">
-                  <h4>Tools Used</h4>
-                  <p>Kimi 2.5 CLI + OpenCode (Oh My OpenCode plugin system)</p>
+                  <h4 style="margin-bottom: 2px;">Tools Used</h4>
+                  <p style="font-size: 0.9em;"><strong class="text-green">OpenCode + Oh My OpenCode plugin</strong> — MCP servers, subagents, and custom skills</p>
                 </div>
               </div>
-              <div class="steps" style="gap: 14px;">
+              <div class="steps" style="gap: 8px;">
                 <div class="step">
                   <div class="step-num">1</div>
                   <div class="step-body">
@@ -1079,17 +1063,22 @@
               </div>
             </div>
             <div>
-              <div class="card" style="margin-bottom: 12px;">
+              <div class="card" style="margin-bottom: 10px; padding: 16px 20px;">
                 <div class="card-label">Methodology</div>
-                <h3>SDD + TDD</h3>
-                <p><strong>Spec-Driven Development:</strong> intent defines the what before the how. Specs are executable artifacts.<br/><br/><strong>Test-Driven Development:</strong> Red → Green → Refactor. Quality baked in from the start.</p>
+                <h3 style="font-size: 0.85em;">SDD + TDD</h3>
+                <p style="font-size: 0.68em;"><strong>Spec-Driven Development:</strong> intent defines the what before the how. Specs are executable artifacts.<br/><br/><strong>Test-Driven Development:</strong> Red → Green → Refactor. Quality baked in from the start.</p>
               </div>
-              <div class="callout orange">
+              <div class="callout orange" style="margin-bottom: 10px; padding: 12px 16px;">
                 <span class="callout-icon">⚠️</span>
                 <div class="callout-body">
-                  <h4>Key insight</h4>
-                  <p>AI doesn't replace human judgment — it accelerates execution. You still own every architectural decision.</p>
+                  <h4 style="margin-bottom: 2px;">Key insight</h4>
+                  <p style="font-size: 0.9em;">AI doesn't replace human judgment — it accelerates execution. You still own every architectural decision.</p>
                 </div>
+              </div>
+              <div class="card" style="padding: 16px 20px;">
+                <div class="card-label">Demo Repo</div>
+                <h3 style="font-size: 0.85em;"><a href="https://github.com/AungMyoKyaw/eventyay-mobile-expo-demo" target="_blank" style="color: var(--accent);">eventyay-mobile-expo-demo</a></h3>
+                <p style="font-size: 0.68em;">The actual mobile app built by AI agents. Expo + React Native implementation of Eventyay API client.</p>
               </div>
             </div>
           </div>
@@ -1485,18 +1474,25 @@ $ gws calendar create \
               <h3 style="font-size: 0.85em; color: var(--text2); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.08em;">AI Coding Tools</h3>
               <table class="compare" style="margin-bottom: 24px;">
                 <tbody>
-                  <tr><td>GitHub Copilot</td><td style="color:var(--text2); font-family:var(--sans);">github.com/features/copilot</td></tr>
+                  <tr><td>OpenCode</td><td style="color:var(--text2); font-family:var(--sans);">github.com/opencode-ai/opencode</td></tr>
+                  <tr><td>Oh My OpenCode</td><td style="color:var(--text2); font-family:var(--sans);">github.com/fooooooooooooooo/oh-my-opencode</td></tr>
                   <tr><td>Claude Code</td><td style="color:var(--text2); font-family:var(--sans);">claude.ai/code</td></tr>
                   <tr><td>Kimi CLI</td><td style="color:var(--text2); font-family:var(--sans);">platform.moonshot.cn</td></tr>
-                  <tr><td>Crush</td><td style="color:var(--text2); font-family:var(--sans);">charm.sh/crush</td></tr>
+                  <tr><td>GitHub Copilot</td><td style="color:var(--text2); font-family:var(--sans);">github.com/features/copilot</td></tr>
                 </tbody>
               </table>
               <h3 style="font-size: 0.85em; color: var(--text2); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.08em;">MCP Ecosystem</h3>
-              <table class="compare">
+              <table class="compare" style="margin-bottom: 24px;">
                 <tbody>
                   <tr><td>MCP Spec</td><td style="color:var(--text2); font-family:var(--sans);">modelcontextprotocol.io</td></tr>
                   <tr><td>Context7</td><td style="color:var(--text2); font-family:var(--sans);">github.com/upstash/context7</td></tr>
                   <tr><td>MCP Servers</td><td style="color:var(--text2); font-family:var(--sans);">github.com/modelcontextprotocol/servers</td></tr>
+                </tbody>
+              </table>
+              <h3 style="font-size: 0.85em; color: var(--text2); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.08em;">Hosting</h3>
+              <table class="compare">
+                <tbody>
+                  <tr><td>OpenClaw</td><td style="color:var(--text2); font-family:var(--sans);">kimi-claw.com</td></tr>
                 </tbody>
               </table>
             </div>
