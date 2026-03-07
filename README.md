@@ -2,6 +2,8 @@
 
 A presentation for FOSSASIA Summit 2026.
 
+**Live Demo:** https://aungmyokyaw.github.io/fossasia-2026-presentation/
+
 ## Quick Start
 
 Open `index.html` in your browser:
