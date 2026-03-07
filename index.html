@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Think It For Me - FOSSASIA 2026</title>
+  
+  <!-- Core reveal.js styles -->
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/dracula.css">
+  
+  <!-- Plugin styles -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
+  
+  <!-- Custom styles -->
+  <style>
+    :root {
+      --fossasia-orange: #ff6b35;
+      --fossasia-blue: #00a9e0;
+      --fossasia-green: #00c853;
+    }
+    
+    .reveal h1, .reveal h2, .reveal h3 {
+      text-transform: none;
+      font-weight: 700;
+    }
+    
+    .reveal h1 {
+      font-size: 2.2em;
+      color: var(--fossasia-orange);
+    }
+    
+    .reveal h2 {
+      font-size: 1.6em;
+      color: var(--fossasia-blue);
+    }
+    
+    .reveal h3 {
+      font-size: 1.3em;
+      color: var(--fossasia-green);
+    }
+    
+    .reveal .speaker-info {
+      font-size: 0.8em;
+      color: #888;
+      margin-top: 20px;
+    }
+    
+    .reveal table {
+      font-size: 0.6em;
+      width: 100%;
+    }
+    
+    .reveal table th {
+      background: rgba(255,255,255,0.1);
+      padding: 10px;
+    }
+    
+    .reveal table td {
+      padding: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .reveal code {
+      background: rgba(0,0,0,0.3);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.85em;
+    }
+    
+    .reveal pre {
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      border-radius: 8px;
+    }
+    
+    .reveal blockquote {
+      background: rgba(255,255,255,0.05);
+      border-left: 5px solid var(--fossasia-orange);
+      padding: 20px;
+      font-style: italic;
+    }
+    
+    .reveal .highlight-box {
+      background: rgba(0, 169, 224, 0.15);
+      border: 1px solid var(--fossasia-blue);
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    
+    .reveal .two-column {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+    }
+    
+    .reveal .two-column > div {
+      flex: 1;
+    }
+    
+    .reveal ul {
+      font-size: 0.85em;
+    }
+    
+    .reveal li {
+      margin-bottom: 10px;
+    }
+    
+    .reveal .emoji-large {
+      font-size: 3em;
+      display: block;
+      margin: 20px 0;
+    }
+    
+    .reveal .demo-badge {
+      background: var(--fossasia-green);
+      color: #000;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.7em;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    
+    .reveal .architecture-diagram {
+      font-family: monospace;
+      font-size: 0.5em;
+      background: rgba(0,0,0,0.3);
+      padding: 20px;
+      border-radius: 8px;
+      line-height: 1.6;
+    }
+    
+    .reveal .step-list {
+      counter-reset: step;
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    .reveal .step-list li {
+      counter-increment: step;
+      position: relative;
+      padding-left: 50px;
+      margin-bottom: 20px;
+    }
+    
+    .reveal .step-list li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: var(--fossasia-orange);
+      color: #000;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    
+    .reveal .success { color: var(--fossasia-green); }
+    .reveal .error { color: #ff5252; }
+    
+    .reveal section.has-light-background h1,
+    .reveal section.has-light-background h2 {
+      color: #333;
+    }
+    
+    .reveal .title-slide h1 {
+      font-size: 3em;
+      margin-bottom: 0.3em;
+    }
+    
+    .reveal .title-slide h2 {
+      font-size: 1.4em;
+      color: #fff;
+      font-weight: 300;
+    }
+    
+    .reveal .fragment.highlight-current-blue {
+      color: var(--fossasia-blue);
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      
+      <!-- SLIDE 1: Title -->
+      <section class="title-slide" data-background-gradient="linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)">
+        <h1>🚀 Think It For Me</h1>
+        <h2>Bridging Vibe Coding & AI-Powered Productivity</h2>
+        <div class="speaker-info">
+          <p><strong>Aung Myo Kyaw</strong> | FOSSASIA Summit 2026</p>
+          <p style="font-size: 0.7em; margin-top: 30px;">
+            <span class="fragment">💻 Vibe Coding</span> 
+            <span class="fragment"> 🤖 AI Agents</span> 
+            <span class="fragment"> ⚡ Life Automation</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- SLIDE 2: The Journey -->
+      <section>
+        <h2>📍 The Journey</h2>
+        <p style="font-size: 0.8em; margin-bottom: 30px;">My presentation evolved through three phases:</p>
+        
+        <div class="step-list">
+          <li class="fragment"><strong>Original Plan:</strong> Vibe coding & CLI setup demonstration</li>
+          <li class="fragment"><strong>The Pivot:</strong> OpenClaw as agent orchestrator for full automation</li>
+          <li class="fragment"><strong>Final Focus:</strong> Practical workflow combining both worlds</li>
+        </div>
+        
+        <div class="highlight-box fragment">
+          <strong>💡 Key Insight:</strong> OpenClaw (personal assistant) + Vibe Coding CLI (builder) = Complete AI workflow
+        </div>
+      </section>
+
+      <!-- SLIDE 3: My Vibe Coding Setup -->
+      <section>
+        <h2>🎯 My Vibe Coding Setup</h2>
+        <div class="highlight-box">
+          <h3>How I Enter the Flow:</h3>
+          <ul>
+            <li class="fragment">📟 <strong>Terminal-first</strong> approach</li>
+            <li class="fragment">🔧 <strong>CLI tools</strong> for everything</li>
+            <li class="fragment">🎯 <strong>Minimal</strong> context switching</li>
+            <li class="fragment">⚡ <strong>Maximum</strong> efficiency</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SLIDE 4: Complete Tool Stack -->
+      <section>
+        <h2>🛠️ My Complete Tool Stack</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Tool</th>
+              <th>Purpose</th>
+              <th>Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="fragment">
+              <td><strong>GitHub Copilot CLI</strong></td>
+              <td>Fast CLI coding</td>
+              <td>$10/month</td>
+            </tr>
+            <tr class="fragment">
+              <td><strong>Claude Code</strong></td>
+              <td>Complex architecture</td>
+              <td>Pro subscription</td>
+            </tr>
+            <tr class="fragment">
+              <td><strong>Kimi CLI</strong></td>
+              <td>Web interface power</td>
+              <td>Coding plan</td>
+            </tr>
+            <tr class="fragment">
+              <td><strong>OpenCode</strong></td>
+              <td>Open-source alternative</td>
+              <td><span class="success">FREE</span></td>
+            </tr>
+            <tr class="fragment">
+              <td><strong>Crush CLI</strong></td>
+              <td>Lightweight tasks</td>
+              <td><span class="success">FREE</span></td>
+            </tr>
+            <tr class="fragment">
+              <td><strong>Pi Coding Agent</strong></td>
+              <td>Token-efficient coding</td>
+              <td>Self-hosted (<span class="success">FREE</span>)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- SLIDE 5: Coding Agents Compared -->
+      <section>
+        <section>
+          <h2>🤖 Coding Agents Compared</h2>
+          <p style="font-size: 0.8em;">Press <strong>↓</strong> for detailed breakdown</p>
+        </section>
+        
+        <section>
+          <h3>1️⃣ GitHub Copilot CLI</h3>
+          <ul>
+            <li class="fragment"><strong>Why:</strong> Fast, token-efficient, native GitHub integration</li>
+            <li class="fragment"><strong>Best for:</strong> Quick edits, familiar codebases</li>
+            <li class="fragment"><strong>💡 Tip:</strong> Craft prompts carefully - aim for 15+ minutes per request</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h3>2️⃣ Claude Code (Anthropic)</h3>
+          <ul>
+            <li class="fragment"><strong>Why:</strong> Best for complex architecture and reasoning</li>
+            <li class="fragment"><strong>Requirements:</strong> Claude Pro subscription</li>
+            <li class="fragment"><strong>Alternative:</strong> Use with GLM or Kimi coding plans</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h3>3️⃣ Kimi CLI</h3>
+          <ul>
+            <li class="fragment"><strong>Why:</strong> Excellent web interface, amazing for long documents</li>
+            <li class="fragment"><strong>Best for:</strong> Context up to 200K tokens</li>
+            <li class="fragment"><strong>Speed:</strong> Very fast response time</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h3>4️⃣ OpenCode</h3>
+          <ul>
+            <li class="fragment"><strong>Why:</strong> Open-source, highly extensible</li>
+            <li class="fragment"><strong>Power-up:</strong> Oh My OpenCode plugin</li>
+            <li class="fragment">🔗 <code>github.com/code-yeongyu/oh-my-openagent</code></li>
+          </ul>
+        </section>
+        
+        <section>
+          <h3>5️⃣ Crush CLI & 6️⃣ Pi Coding Agent</h3>
+          <div class="two-column">
+            <div>
+              <h4>Crush CLI</h4>
+              <ul style="font-size: 0.8em;">
+                <li>Lightning fast</li>
+                <li>Minimal overhead</li>
+                <li>Quick queries</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Pi Coding Agent</h4>
+              <ul style="font-size: 0.8em;">
+                <li>Token-efficient</li>
+                <li>Highly configurable</li>
+                <li>Power users choice</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- SLIDE 6: The Winner Is... -->
+      <section>
+        <h2>🏆 The Winner Is...</h2>
+        <div class="highlight-box fragment">
+          <h3>No Single Winner - Each Excels Differently!</h3>
+        </div>
+        <table class="fragment">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Best Environment</th>
+              <th>Why</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Claude models</strong></td>
+              <td>Claude Code CLI</td>
+              <td>Optimized for it</td>
+            </tr>
+            <tr>
+              <td><strong>Kimi models</strong></td>
+              <td>Kimi CLI</td>
+              <td>Native integration</td>
+            </tr>
+            <tr>
+              <td><strong>GPT-4 models</strong></td>
+              <td>Copilot CLI</td>
+              <td>Microsoft's tuning</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="fragment" style="margin-top: 30px; font-size: 0.75em; background: rgba(0,0,0,0.3); padding: 15px; border-radius: 8px;">
+          <strong>My Current Daily Setup:</strong><br>
+          Primary: Claude CLI + Pro | Fallback: GitHub Copilot CLI | Experiment: Kimi + OpenCode
+        </div>
+      </section>
+
+      <!-- SLIDE 7: Live Demo -->
+      <section>
+        <h2>📱 Live Demo</h2>
+        <div class="demo-badge">DEMO</div>
+        <h3>Porting Eventyay to Mobile</h3>
+        
+        <div class="two-column">
+          <div>
+            <h4>Approach:</h4>
+            <ol style="font-size: 0.75em;">
+              <li class="fragment">Provide URL + credentials</li>
+              <li class="fragment">Agent analyzes API structure</li>
+              <li class="fragment">Agent ports with tests</li>
+              <li class="fragment">Human reviews decisions</li>
+            </ol>
+          </div>
+          <div>
+            <h4>Methodology:</h4>
+            <ul style="font-size: 0.75em;">
+              <li class="fragment"><strong>SDD</strong> - docs before code</li>
+              <li class="fragment"><strong>TDD</strong> - tests first</li>
+              <li class="fragment"><strong>Human-in-the-loop</strong></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="highlight-box fragment" style="font-size: 0.75em;">
+          <strong>Tools:</strong> Kimi 2.5 + OpenCode + Oh My OpenCode | <strong>Results:</strong> github.com/yourusername/eventyay-mobile
+        </div>
+      </section>
+
+      <!-- SLIDE 8: Coding Agent Setup -->
+      <section>
+        <h2>⚙️ My Coding Agent Setup</h2>
+        
+        <div class="step-list">
+          <li class="fragment">
+            <strong>Step 1: Install MCP Servers</strong><br>
+            <span style="font-size: 0.8em;">Context7 • Sequential thinking • Exa.ai • Chrome DevTools</span>
+          </li>
+          <li class="fragment">
+            <strong>Step 2: Install Skills</strong><br>
+            <span style="font-size: 0.8em;">Frontend Design • Azure DevOps CLI • SDD + TDD workflow</span>
+          </li>
+          <li class="fragment">
+            <strong>Step 3: Configure Agent</strong><br>
+            <span style="font-size: 0.8em;">"Create a skill for [your workflow]" → Auto-generated!</span>
+          </li>
+        </div>
+      </section>
+
+      <!-- SLIDE 9: The Gap -->
+      <section>
+        <h2>🔍 The Gap - What's Missing?</h2>
+        
+        <div class="two-column">
+          <div>
+            <h3>✅ Coding Tools Excel At:</h3>
+            <ul style="font-size: 0.8em;">
+              <li class="fragment">Writing code efficiently</li>
+              <li class="fragment">Debugging complex issues</li>
+              <li class="fragment">Architecture and design</li>
+            </ul>
+          </div>
+          <div>
+            <h3>❌ But What About Life?</h3>
+            <ul style="font-size: 0.8em;">
+              <li class="fragment">Managing emails</li>
+              <li class="fragment">Calendar scheduling</li>
+              <li class="fragment">Task organization</li>
+              <li class="fragment">Server backups</li>
+              <li class="fragment">Meeting follow-ups</li>
+            </ul>
+          </div>
+        </div>
+        
+        <blockquote class="fragment" style="margin-top: 30px;">
+          No AI bridge exists between coding productivity tools and life productivity management
+        </blockquote>
+      </section>
+
+      <!-- SLIDE 10: Enter OpenClaw -->
+      <section>
+        <h2>🦾 Enter OpenClaw</h2>
+        <h3>The Missing Link</h3>
+        
+        <div class="highlight-box fragment">
+          <strong>What is OpenClaw?</strong><br>
+          An AI agent framework that extends coding AI assistants to manage your <strong>entire digital life</strong>.
+        </div>
+        
+        <blockquote class="fragment">
+          "If AI can help write code via CLI, why not manage life via chat?"
+        </blockquote>
+        
+        <div class="architecture-diagram fragment">
+┌─────────────┐     ┌──────────────┐     ┌─────────────────┐
+│  Telegram   │────▶│  OpenClaw    │────▶│   Google APIs   │
+│  (Chat UI)  │     │  (AI Agent)  │     │  (Workspace)    │
+└─────────────┘     └──────────────┘     └─────────────────┘
+                              │
+                              ▼
+                       ┌──────────────┐
+                       │ Google Drive │
+                       │   Calendar   │
+                       │    Tasks     │
+                       │    Gmail     │
+                       └──────────────┘
+        </div>
+      </section>
+
+      <!-- SLIDE 11-13: Live Demos -->
+      <section>
+        <section>
+          <h2>🎬 Live Demos</h2>
+          <p style="font-size: 0.8em;">Press <strong>↓</strong> to see three demos</p>
+        </section>
+        
+        <section>
+          <div class="demo-badge">DEMO 1</div>
+          <h3>Task Management Automation</h3>
+          <ul>
+            <li class="fragment">Migrated <strong>511 tasks</strong> from Apple Reminders</li>
+            <li class="fragment">Created full <strong>GTD system</strong> in Google Tasks</li>
+            <li class="fragment"><strong>7 organized lists:</strong> Inbox, Next Actions, Scheduled, Waiting For, Projects, Someday, Done</li>
+          </ul>
+        </section>
+        
+        <section>
+          <div class="demo-badge">DEMO 2</div>
+          <h3>Calendar Integration</h3>
+          <ul>
+            <li class="fragment">Auto-created FOSSASIA prep tasks</li>
+            <li class="fragment">Time blocked <strong>2-hour focus sessions</strong></li>
+            <li class="fragment">Automatically rescheduled non-urgent tasks</li>
+          </ul>
+        </section>
+        
+        <section>
+          <div class="demo-badge">DEMO 3</div>
+          <h3>Server Automation</h3>
+          <ul>
+            <li class="fragment">Created backup script running every <strong>3 hours</strong></li>
+            <li class="fragment">Automatically uploads to Google Drive</li>
+            <li class="fragment">Retention policy: keeps last <strong>10 versions</strong></li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- SLIDE 14: Architecture Deep Dive -->
+      <section>
+        <h2>🔧 Architecture Deep Dive</h2>
+        
+        <h3 class="fragment">How It Works - Step by Step:</h3>
+        <div class="architecture-diagram fragment" style="text-align: left; font-size: 0.55em;">
+1. USER sends natural language message via Telegram
+              ↓
+2. OPENCLAW receives webhook and parses intent
+              ↓
+3. GWS CLI executes the appropriate command
+              ↓
+4. GOOGLE APIs perform the requested action
+              ↓
+5. RESPONSE sent back to user with results
+        </div>
+        
+        <div class="highlight-box fragment">
+          <strong>Key Technical Insight:</strong> <code>gws CLI</code> acts as the bridge between natural language and Google Workspace APIs
+        </div>
+      </section>
+
+      <!-- SLIDE 15: Before & After -->
+      <section>
+        <h2>📊 Real Results</h2>
+        <h3>Before & After</h3>
+        
+        <div class="two-column" style="font-size: 0.65em;">
+          <div>
+            <h4>❌ Before OpenClaw</h4>
+            <table>
+              <tr><td>Tasks</td><td class="error">500+ scattered across 5 apps</td></tr>
+              <tr><td>Organization</td><td class="error">No prioritization</td></tr>
+              <tr><td>Backups</td><td class="error">Manual (forgotten)</td></tr>
+              <tr><td>Calendar</td><td class="error">Empty but overwhelmed</td></tr>
+              <tr><td>Context</td><td class="error">Constant tool switching</td></tr>
+            </table>
+          </div>
+          <div>
+            <h4>✅ After OpenClaw</h4>
+            <table>
+              <tr><td>Interface</td><td class="success">Single unified (Telegram)</td></tr>
+              <tr><td>Methodology</td><td class="success">GTD enforced</td></tr>
+              <tr><td>Backups</td><td class="success">Automated every 3h</td></tr>
+              <tr><td>Calendar</td><td class="success">Time-blocked priorities</td></tr>
+              <tr><td>Commands</td><td class="success">Natural language</td></tr>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 16: Extending The System -->
+      <section>
+        <h2>🚀 Extending The System</h2>
+        
+        <h3 class="fragment">Current Stack:</h3>
+        <p class="fragment" style="font-size: 0.8em;">
+          Google Workspace • Telegram • Cron jobs • gws CLI
+        </p>
+        
+        <h3 class="fragment" style="margin-top: 30px;">Future Extensions:</h3>
+        <table class="fragment" style="font-size: 0.65em;">
+          <thead>
+            <tr><th>Category</th><th>Current</th><th>Future</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Workspace</strong></td><td>Google</td><td>+Notion, +Feishu, +Slack</td></tr>
+            <tr><td><strong>Chat</strong></td><td>Telegram</td><td>+WhatsApp, +Discord, +Signal</td></tr>
+            <tr><td><strong>Automation</strong></td><td>Cron</td><td>+n8n, +Zapier</td></tr>
+            <tr><td><strong>AI</strong></td><td>gws CLI</td><td>+Custom MCP servers</td></tr>
+          </tbody>
+        </table>
+        
+        <div class="highlight-box fragment" style="font-size: 0.8em;">
+          <strong>Core Pattern:</strong> <code>Natural Language → AI Agent → Tool Execution</code>
+        </div>
+      </section>
+
+      <!-- SLIDE 17: Security & Privacy -->
+      <section>
+        <h2>🔒 Security & Privacy First</h2>
+        
+        <h3>Privacy-First Design:</h3>
+        <table style="font-size: 0.7em;">
+          <thead>
+            <tr><th>Feature</th><th>Benefit</th></tr>
+          </thead>
+          <tbody>
+            <tr class="fragment">
+              <td>✅ <strong>Self-Hosted</strong></td>
+              <td>Your server, your data, complete control</td>
+            </tr>
+            <tr class="fragment">
+              <td>✅ <strong>Local Tokens</strong></td>
+              <td>OAuth stored locally, never cloud-synced</td>
+            </tr>
+            <tr class="fragment">
+              <td>✅ <strong>No Third-Party AI</strong></td>
+              <td>Data never leaves your infrastructure</td>
+            </tr>
+            <tr class="fragment">
+              <td>✅ <strong>Audit Trail</strong></td>
+              <td>Every command logged for transparency</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <blockquote class="fragment" style="font-size: 0.8em; margin-top: 30px;">
+          <strong>Bottom Line:</strong> You own everything. Always.
+        </blockquote>
+      </section>
+
+      <!-- SLIDE 18: 5 Key Lessons -->
+      <section>
+        <h2>💡 5 Key Lessons Learned</h2>
+        
+        <div class="step-list" style="font-size: 0.85em;">
+          <li class="fragment"><strong>Terminal is King</strong><br><span style="font-size: 0.8em; color: #888;">CLI-first works for coding AND productivity</span></li>
+          <li class="fragment"><strong>AI is the Interface</strong><br><span style="font-size: 0.8em; color: #888;">Natural language beats endless menus</span></li>
+          <li class="fragment"><strong>Integration Beats Features</strong><br><span style="font-size: 0.8em; color: #888;">One connected system > 10 isolated apps</span></li>
+          <li class="fragment"><strong>Automation is Compounding</strong><br><span style="font-size: 0.8em; color: #888;">10 minutes setup saves hours every week</span></li>
+          <li class="fragment"><strong>Coding Tools Inspired Life Tools</strong><br><span style="font-size: 0.8em; color: #888;">If <code>gh copilot</code> works for code, why can't <code>gws</code> work for life?</span></li>
+        </div>
+      </section>
+
+      <!-- SLIDE 19: Resources & Links -->
+      <section>
+        <h2>📚 Resources & Links</h2>
+        
+        <h3>Essential Links:</h3>
+        <table style="font-size: 0.6em;">
+          <tr class="fragment"><td><strong>OpenClaw</strong></td><td>github.com/openclaw/openclaw</td></tr>
+          <tr class="fragment"><td><strong>Google Workspace CLI</strong></td><td>github.com/googleworkspace/cli</td></tr>
+          <tr class="fragment"><td><strong>Skill Repository</strong></td><td>skills.sh</td></tr>
+        </table>
+        
+        <h3 style="margin-top: 30px;">Tools Mentioned:</h3>
+        <table style="font-size: 0.5em;">
+          <tr class="fragment">
+            <td>GitHub Copilot CLI</td>
+            <td>Claude Code</td>
+            <td>Kimi CLI</td>
+            <td>OpenCode</td>
+          </tr>
+          <tr class="fragment">
+            <td>Oh My OpenCode</td>
+            <td>Crush CLI</td>
+            <td>Context7</td>
+            <td>Exa.ai</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- SLIDE 20: Thank You -->
+      <section data-background-gradient="linear-gradient(135deg, #0f3460 0%, #16213e 50%, #1a1a2e 100%)">
+        <h1>🙏 Thank You!</h1>
+        <h2>Questions? Let's Connect!</h2>
+        
+        <table style="font-size: 0.8em; margin-top: 40px;">
+          <tr class="fragment">
+            <td>🐙 <strong>GitHub</strong></td>
+            <td>github.com/MgAungMyoKyaw</td>
+          </tr>
+          <tr class="fragment">
+            <td>✈️ <strong>Telegram</strong></td>
+            <td>@MgAungMyoKyaw</td>
+          </tr>
+          <tr class="fragment">
+            <td>📧 <strong>Email</strong></td>
+            <td>realaungmyokyaw@gmail.com</td>
+          </tr>
+        </table>
+        
+        <div style="margin-top: 50px; font-size: 0.7em; color: #888;">
+          <p>FOSSASIA Summit 2026 | Think It For Me</p>
+          <p style="font-size: 0.8em;">From Vibe Coding to AI-Powered Life Automation</p>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Load reveal.js and plugins -->
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/zoom/zoom.js"></script>
+  <script src="plugin/search/search.js"></script>
+
+  <script>
+    Reveal.initialize({
+      // Display
+      width: 1280,
+      height: 720,
+      margin: 0.04,
+      minScale: 0.2,
+      maxScale: 2.0,
+      center: true,
+      
+      // Navigation
+      hash: true,
+      slideNumber: 'c/t',
+      showSlideNumber: 'all',
+      controls: true,
+      controlsLayout: 'bottom-right',
+      progress: true,
+      
+      // Transitions
+      transition: 'slide',
+      transitionSpeed: 'default',
+      backgroundTransition: 'fade',
+      
+      // Features
+      autoAnimate: true,
+      overview: true,
+      touch: true,
+      keyboard: true,
+      
+      // Plugins
+      plugins: [
+        RevealMarkdown,
+        RevealHighlight,
+        RevealNotes,
+        RevealZoom,
+        RevealSearch
+      ]
+    });
+  </script>
+</body>
+</html>
