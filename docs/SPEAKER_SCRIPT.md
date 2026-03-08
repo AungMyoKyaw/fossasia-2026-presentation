@@ -478,18 +478,18 @@
 | 3 | Journey | 2:00 | 1:30 |
 | 4 | Vibe Coding | 3:30 | 1:30 |
 | 5 | Tools | 5:00 | 1:30 |
-| 6 | Eventyay | 6:30 | 1:30 |
-| 7 | Agent Skills | 8:00 | 1:15 |
-| 8 | OpenClaw | 9:15 | 1:30 |
-| 9 | GTD Migration | 10:45 | 0:45 |
-| 10 | Calendar | 11:30 | 0:45 |
-| 11 | Backups | 12:15 | 0:35 |
-| 12 | How It Works | 12:50 | 0:55 |
-| 13 | Before & After | 13:45 | 0:45 |
-| 14 | Five Lessons | 14:30 | 1:15 |
-| 15 | Resources | 15:45 | 0:45 |
-| 16 | Thank You | 16:30 | 0:30 |
-| | **TOTAL** | | **~17:00** |
+| 6 | Eventyay | 6:30 | 2:30 |
+| 7 | Agent Skills | 9:00 | 1:15 |
+| 8 | OpenClaw | 10:15 | 1:30 |
+| 9 | GTD Migration | 11:45 | 0:45 |
+| 10 | Calendar | 12:30 | 0:45 |
+| 11 | Backups | 13:15 | 0:35 |
+| 12 | How It Works | 13:50 | 0:55 |
+| 13 | Before & After | 14:45 | 0:45 |
+| 14 | Live Setup | 15:30 | 1:00 |
+| 15 | Resources | 16:30 | 0:45 |
+| 16 | Thank You | 17:15 | 0:30 |
+| | **TOTAL** | | **~17:45** |
 
 ---
 

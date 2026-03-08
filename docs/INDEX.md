@@ -21,9 +21,9 @@
 |-----|--------|----------|-------|
 | **I: Problem** | 1–2 | 0:00–2:00 | AI conquered coding, why not life? |
 | **II: Journey** | 3–5 | 2:00–6:30 | Philosophy → Tools → Vibe coding |
-| **III: Proof** | 6–7 | 6:30–9:15 | Eventyay case study |
-| **IV: Solution** | 8–13 | 9:15–13:45 | OpenClaw + 3 real automations |
-| **V: Takeaways** | 14–17 | 13:45–15:45 | 5 lessons + call to action |
+| **III: Leadership** | 6–7 | 6:30–9:15 | Eventyay case study + Agent Skills |
+| **IV: Life Automation** | 8–13 | 9:15–13:45 | OpenClaw + 3 real automations + Before/After |
+| **V: Production & Close** | 14–17 | 13:45–15:45 | Live setup + Resources + Thank You |
 
 ---
 

@@ -3,7 +3,7 @@
 A presentation for [FOSSASIA Summit 2026](https://fossasia.org/) exploring the journey from AI-powered coding to full-stack personal automation.
 
 **Live Demo:** https://aungmyokyaw.github.io/fossasia-2026-presentation/  
-**Duration:** 15 minutes | **Slides:** 17
+**Duration:** 15 minutes | **Slides:** 17 (Reveal.js presentation)
 
 ---
 
@@ -19,13 +19,13 @@ This talk is about closing that gap.
 
 ## What We'll Cover
 
-| Act | Focus | Key Topics |
-|-----|-------|------------|
-| **I** | **The Problem** | We've automated everything except ourselves. The disconnect between AI coding and manual life management. |
-| **II** | **The Journey** | From coder to leader. Vibe coding philosophy. My complete tool stack after 6 months of experimentation. |
-| **III** | **The Proof** | Eventyay case study: How I led AI agents to ship a production React Native app in 2 weeks. |
-| **IV** | **The Solution** | OpenClaw — A personal AI assistant that runs on your own devices. Self-hosted, local data, full control. |
-| **V** | **Real Automations** | 3 working examples: GTD migration (511 tasks), calendar scheduling, backup automation. |
+| Act | Focus | Slides | Key Topics |
+|-----|-------|--------|------------|
+| **I** | **The Problem** | 1–2 | We've automated everything except ourselves. The disconnect between AI coding and manual life management. |
+| **II** | **Vibe Coding** | 3–5 | Philosophy, tools, and the complete stack after 6 months of experimentation. |
+| **III** | **Leadership** | 6–7 | Eventyay case study + Agent Skills architecture. Leading AI agents to ship production code. |
+| **IV** | **Life Automation** | 8–13 | OpenClaw system + 3 real automations (GTD, Calendar, Backups) + Before/After impact. |
+| **V** | **Production & Close** | 14–17 | Live setup, resources, and call to action. |
 
 ---
 
@@ -96,8 +96,8 @@ The same pattern that revolutionized coding can now automate your entire digital
 
 - **Context7** — Always-fresh library documentation
 - **Sequential Thinking** — Structured reasoning for complex tasks
-- **Chrome DevTools** — Browser automation and debugging
-- **Exa Search** — AI-powered web search
+- **Chrome DevTools MCP** — Browser automation and debugging
+- **Exa Search MCP** — AI-powered web search
 
 ### Life Automation Stack
 

@@ -1,7 +1,7 @@
 # Speaker Cheatsheet — Quick Reference
 
 **FOSSASIA 2026 | "From Vibe Coding to Life Automation"**  
-*Duration: 15:00–15:30 | 17 slides*
+*Duration: 15:00–17:45 | 17 slides*
 
 ---
 
@@ -33,8 +33,8 @@ Everything ties back to this question.
 | 5 | "There is no silver bullet" |
 | 6 | "I defined specs. AI wrote code. I led the team." |
 | 8 | "Self-hosted. Your data. Your control." |
-| 14 | "AI has conquered coding. Now conquer life." |
-| 14 | "Stop waiting. Go automate something. Today." |
+| 14 | "My live setup at kimi-claw.com" |
+| 16 | "AI has conquered coding. Now conquer life." |
 
 ---
 
@@ -88,8 +88,9 @@ Everything ties back to this question.
 | 6 | Pride | Smile, chest out |
 | 8 | Resolution | Calm, assured |
 | 9–11 | Excitement | Point at screens, energy |
-| 14 | Inspiration | Pause, lean forward |
-| 16 | Gratitude | Smile, hold the moment |
+| 14 | Production | Confident, established |
+| 16 | Inspiration | Pause, lean forward |
+| 17 | Gratitude | Smile, hold the moment |
 
 ---
 
@@ -103,8 +104,8 @@ Everything ties back to this question.
 - **Skills → OpenClaw:** "This is OpenClaw. My answer to the gap."
 - **Automations → How:** "Let me walk you through how it works"
 - **How → Impact:** "Here's the real impact"
-- **Impact → Lessons:** "Five lessons. Worth taking home."
-- **Lessons → Resources:** "Here are the tools if you want to build this"
+- **Impact → Live Setup:** "Here's my production setup."
+- **Live Setup → Resources:** "Here are the tools if you want to build this"
 
 ---
 
