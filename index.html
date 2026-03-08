@@ -1331,25 +1331,35 @@ $ gws calendar create \
             Questions, feedback, and war stories welcome.<br/>
             Let's build the AI-powered future — one automation at a time.
           </p>
-           <div class="hero-meta" style="flex-direction: column; align-items: flex-start; gap: 16px;">
-             <div class="hero-author">
-               <img src="https://avatars.githubusercontent.com/u/9404824?v=4" class="hero-avatar" style="object-fit: cover;" />
-               <div class="hero-author-text">
-                 <h4>Aung Myo Kyaw</h4>
-                 <p>Tech Lead</p>
-               </div>
-             </div>
-             <div class="pills" style="margin: 0;">
-               <a href="https://github.com/AungMyoKyaw" target="_blank" style="text-decoration:none;"><span class="pill accent">github.com/AungMyoKyaw</span></a>
-               <a href="https://www.linkedin.com/in/aungmyokyaw/" target="_blank" style="text-decoration:none;"><span class="pill accent">linkedin.com/in/aungmyokyaw</span></a>
-             </div>
-           </div>
+          <div class="hero-meta" style="flex-direction: column; align-items: flex-start; gap: 32px;">
+            <div class="hero-author">
+              <img src="https://avatars.githubusercontent.com/u/9404824?v=4" class="hero-avatar" style="object-fit: cover;" />
+              <div class="hero-author-text">
+                <h4>Aung Myo Kyaw</h4>
+                <p>Tech Lead</p>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 24px;">
+              <div class="pills" style="margin: 0;">
+                <a href="https://github.com/AungMyoKyaw" target="_blank" style="text-decoration:none;"><span class="pill accent">github.com/AungMyoKyaw</span></a>
+                <a href="https://www.linkedin.com/in/aungmyokyaw/" target="_blank" style="text-decoration:none;"><span class="pill accent">linkedin.com/in/aungmyokyaw</span></a>
+              </div>
+              <div style="display: flex; align-items: center; gap: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 16px 20px;">
+                <div id="qrcode" style="background: white; padding: 8px; border-radius: 8px; flex-shrink: 0;"></div>
+                <div style="display: flex; flex-direction: column; gap: 4px;">
+                  <p style="font-size: 0.65em; color: var(--text); margin: 0; font-weight: 600;">View these slides</p>
+                  <p style="font-size: 0.55em; color: var(--text2); margin: 0;">Scan to open on your phone</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
       </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script>
       Reveal.initialize({
         hash: true,
@@ -1384,6 +1394,16 @@ $ gws calendar create \
           e.stopPropagation();
           openLightbox(this.src);
         };
+      });
+
+      // Generate QR code
+      new QRCode(document.getElementById("qrcode"), {
+        text: "https://aungmyokyaw.github.io/fossasia-2026-presentation/",
+        width: 120,
+        height: 120,
+        colorDark : "#0d1117",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.M
       });
     </script>
   </body>
