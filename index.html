@@ -73,7 +73,7 @@
       /* ─── SLIDE BASE ───────────────────────────────────────── */
       .reveal .slides section {
         height: 100%;
-        padding: 36px 60px;
+        padding: 28px 48px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -114,13 +114,13 @@
         height: 3px;
         background: linear-gradient(90deg, var(--accent), var(--accent2));
         border-radius: 999px;
-        margin: 20px 0 32px;
+        margin: 12px 0 20px;
       }
 
       /* ─── CARDS GRID ───────────────────────────────────────── */
       .cards {
         display: grid;
-        gap: 16px;
+        gap: 12px;
       }
       .cards.col2 { grid-template-columns: 1fr 1fr; }
       .cards.col3 { grid-template-columns: 1fr 1fr 1fr; }
@@ -129,7 +129,7 @@
         background: var(--surface);
         border: 1px solid var(--border);
         border-radius: 12px;
-        padding: 24px 28px;
+        padding: 16px 20px;
         position: relative;
         overflow: hidden;
       }
@@ -157,16 +157,16 @@
       }
 
       .card h3 {
-        font-size: 0.95em;
-        margin-bottom: 8px;
+        font-size: 0.9em;
+        margin-bottom: 6px;
         color: var(--text);
       }
 
       .card p {
-        font-size: 0.72em;
+        font-size: 0.68em;
         margin: 0;
         color: var(--text2);
-        line-height: 1.6;
+        line-height: 1.5;
       }
 
       .card .price {
@@ -191,7 +191,7 @@
       .two-col {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 40px;
+        gap: 28px;
         align-items: start;
       }
 
@@ -201,20 +201,20 @@
       .stats {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
-        margin: 24px 0;
+        gap: 12px;
+        margin: 16px 0;
       }
 
       .stat {
         background: var(--surface);
         border: 1px solid var(--border);
         border-radius: 12px;
-        padding: 24px 20px;
+        padding: 16px 12px;
         text-align: center;
       }
 
       .stat-num {
-        font-size: 1.8em;
+        font-size: 1.5em;
         font-weight: 800;
         color: var(--accent);
         line-height: 1;
@@ -222,9 +222,9 @@
       }
 
       .stat-label {
-        font-size: 0.55em;
+        font-size: 0.5em;
         color: var(--text2);
-        margin-top: 8px;
+        margin-top: 4px;
         text-transform: uppercase;
         letter-spacing: 0.08em;
       }
@@ -233,26 +233,26 @@
       .steps {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 14px;
         counter-reset: step;
       }
 
       .step {
         display: flex;
         align-items: flex-start;
-        gap: 20px;
+        gap: 12px;
         counter-increment: step;
       }
 
       .step-num {
         flex-shrink: 0;
-        width: 36px;
-        height: 36px;
+        width: 32px;
+        height: 32px;
         border-radius: 50%;
         background: linear-gradient(135deg, var(--accent), var(--accent2));
         color: var(--bg);
         font-family: var(--mono);
-        font-size: 0.6em;
+        font-size: 0.55em;
         font-weight: 700;
         display: flex;
         align-items: center;
@@ -260,17 +260,17 @@
       }
 
       .step-body h4 {
-        font-size: 0.8em;
+        font-size: 0.75em;
         font-weight: 600;
         color: var(--text);
-        margin: 0 0 4px;
+        margin: 0 0 2px;
       }
 
       .step-body p {
-        font-size: 0.68em;
+        font-size: 0.63em;
         color: var(--text2);
         margin: 0;
-        line-height: 1.5;
+        line-height: 1.4;
       }
 
       /* ─── PILL LIST ────────────────────────────────────────── */
@@ -299,12 +299,12 @@
         background: var(--surface);
         border: 1px solid var(--border);
         border-radius: 10px;
-        padding: 22px 28px;
+        padding: 16px 20px;
         font-family: var(--mono);
-        font-size: 0.58em;
-        line-height: 1.75;
+        font-size: 0.52em;
+        line-height: 1.6;
         color: var(--text2);
-        overflow: auto;
+        overflow: hidden;
         white-space: pre-wrap;
         word-wrap: break-word;
       }
@@ -320,17 +320,17 @@
       /* ─── QUOTE ────────────────────────────────────────────── */
       .quote {
         border-left: 3px solid var(--accent);
-        padding: 18px 28px;
+        padding: 14px 20px;
         background: rgba(122,162,247,0.05);
         border-radius: 0 10px 10px 0;
-        margin: 24px 0;
+        margin: 16px 0;
       }
 
       .quote p {
-        font-size: 0.85em;
+        font-size: 0.78em;
         color: var(--text);
         font-style: italic;
-        line-height: 1.65;
+        line-height: 1.5;
         margin: 0;
       }
 
@@ -338,33 +338,35 @@
       .compare {
         width: 100%;
         border-collapse: collapse;
-        font-size: 0.65em;
+        font-size: 0.58em;
       }
 
       .compare th {
         text-align: left;
-        padding: 10px 16px;
+        padding: 8px 12px;
         font-weight: 600;
         color: var(--text2);
         text-transform: uppercase;
         letter-spacing: 0.06em;
-        font-size: 0.85em;
+        font-size: 0.8em;
         border-bottom: 1px solid var(--border);
       }
 
       .compare td {
-        padding: 12px 16px;
+        padding: 8px 12px;
         border-bottom: 1px solid rgba(48,54,61,0.5);
         color: var(--text2);
         vertical-align: top;
-        line-height: 1.5;
+        line-height: 1.4;
       }
 
       .compare td:first-child {
         color: var(--text);
         font-weight: 600;
         font-family: var(--mono);
-        white-space: nowrap;
+        white-space: normal;
+        word-break: break-word;
+        width: 120px;
       }
 
       .compare tr:last-child td { border-bottom: none; }
@@ -592,31 +594,31 @@
         background: rgba(122,162,247,0.06);
         border: 1px solid rgba(122,162,247,0.2);
         border-radius: 12px;
-        padding: 20px 24px;
-        margin: 20px 0;
+        padding: 14px 18px;
+        margin: 12px 0;
         display: flex;
         align-items: flex-start;
-        gap: 14px;
+        gap: 10px;
       }
 
       .callout-icon {
-        font-size: 0.9em;
+        font-size: 0.8em;
         flex-shrink: 0;
         margin-top: 1px;
       }
 
       .callout-body h4 {
-        font-size: 0.72em;
+        font-size: 0.66em;
         font-weight: 600;
         color: var(--text);
-        margin: 0 0 6px;
+        margin: 0 0 3px;
       }
 
       .callout-body p {
-        font-size: 0.65em;
+        font-size: 0.6em;
         color: var(--text2);
         margin: 0;
-        line-height: 1.55;
+        line-height: 1.4;
       }
 
       .callout.green  { background: rgba(158,206,106,0.06); border-color: rgba(158,206,106,0.2); }
@@ -642,6 +644,9 @@
         border: none;
         box-shadow: none;
         background: transparent;
+        object-fit: contain;
+        max-width: 100%;
+        height: auto;
       }
 
       /* ─── UTILITY ──────────────────────────────────────────── */
@@ -699,7 +704,7 @@
                 <li><span class="icon yes">✓</span> <span><strong>Writing code</strong> — fully automated</span></li>
                 <li><span class="icon yes">✓</span> <span><strong>Code review</strong> — AI handles it</span></li>
                 <li><span class="icon yes">✓</span> <span><strong>Deployments</strong> — scripted & running</span></li>
-                <li><span class="icon no">✗</span> <span><strong>Your inbox</strong> — still manual</span></li>
+                <li><span class="icon no">✗</span> <span><strong>Azure DevOps sprint boards</strong> — still manual</span></li>
                 <li><span class="icon no">✗</span> <span><strong>Your calendar</strong> — still manual</span></li>
                 <li><span class="icon no">✗</span> <span><strong>Your tasks</strong> — still manual</span></li>
               </ul>
@@ -724,40 +729,87 @@
           <div class="slide-label green">Act I — The Journey</div>
           <h2>From Coder to Leader</h2>
           <div class="divider"></div>
+          <div class="pills" style="margin: 0 0 16px 0;">
+            <span class="pill" style="background: rgba(158,206,106,0.15); border-color: rgba(158,206,106,0.3); color: var(--green);">1. Original Plan</span>
+            <span class="pill" style="background: rgba(255,158,100,0.15); border-color: rgba(255,158,100,0.3); color: var(--orange);">2. The Pivot</span>
+            <span class="pill" style="background: rgba(122,162,247,0.15); border-color: rgba(122,162,247,0.3); color: var(--accent);">3. Final Focus</span>
+          </div>
           <div class="timeline" style="margin-top: 8px;">
             <div class="timeline-item">
               <div class="timeline-line">
-                <div class="timeline-dot"></div>
+                <div class="timeline-dot" style="background: var(--green); box-shadow: 0 0 0 4px rgba(158,206,106,0.2);"></div>
                 <div class="timeline-bar"></div>
               </div>
               <div class="timeline-body">
-                <h4>Phase 1: The Question</h4>
-                <p>AI agents can write code. I'm spending 3 hours/day in email, calendar, and task apps. Why can't the same AI run my digital life?</p>
+                <h4 style="color: var(--green);">Phase 1: Vibe Coding & CLI</h4>
+                <p><strong>Original plan:</strong> Demonstrate vibe coding and CLI setup. Focus on terminal-first productivity and AI coding agents.</p>
               </div>
             </div>
             <div class="timeline-item">
               <div class="timeline-line">
-                <div class="timeline-dot"></div>
+                <div class="timeline-dot" style="background: var(--orange); box-shadow: 0 0 0 4px rgba(255,158,100,0.2);"></div>
                 <div class="timeline-bar"></div>
               </div>
               <div class="timeline-body">
-                <h4>Phase 2: The Experiment</h4>
-                <p>Built OpenClaw: an AI agent that translates natural language into Google Workspace API calls. Migrated 511 tasks into GTD system in 3 minutes.</p>
+                <h4 style="color: var(--orange);">Phase 2: The Pivot</h4>
+                <p><strong>The realization:</strong> OpenClaw as agent orchestrator for full automation. Why stop at code when life needs automation too?</p>
               </div>
             </div>
             <div class="timeline-item">
               <div class="timeline-line">
-                <div class="timeline-dot"></div>
+                <div class="timeline-dot" style="background: var(--accent); box-shadow: 0 0 0 4px rgba(122,162,247,0.2);"></div>
               </div>
               <div class="timeline-body">
-                <h4>Phase 3: The Pattern</h4>
-                <p>Same pattern that revolutionized coding can automate any domain. Natural language → AI agent → action. That's the future.</p>
+                <h4 style="color: var(--accent);">Phase 3: The Pattern</h4>
+                <p><strong>Final focus:</strong> Practical workflow combining both worlds. OpenClaw (personal assistant) + Vibe Coding CLI (builder) = Complete AI workflow.</p>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- SLIDE 04: VIBE CODING PHILOSOPHY ──────────────────── -->
+        <!-- SLIDE 04: THE PIVOT ──────────────────────────────── -->
+        <section>
+          <div class="slide-label orange">The Pivot</div>
+          <h2>I Was Vibe Coding My Code,<br>But Living Manually</h2>
+          <div class="divider"></div>
+          <div class="two-col" style="margin-top: 8px;">
+            <div>
+              <p style="font-size:0.78em; color:var(--text); margin-bottom: 20px;">The moment of realization: I had AI writing my code, but I was still manually dragging tasks between apps, copy-pasting calendar invites, and forgetting backups.</p>
+              <div class="callout orange" style="margin-bottom: 12px;">
+                <span class="callout-icon">💡</span>
+                <div class="callout-body">
+                  <h4>The Question</h4>
+                  <p>If AI can help write code via CLI, why can't it manage my life via chat?</p>
+                </div>
+              </div>
+              <ul class="checklist">
+                <li><span class="icon yes">✓</span> <span><strong>Code:</strong> Fully automated with agents</span></li>
+                <li><span class="icon no">✗</span> <span><strong>Tasks:</strong> Manual drag-and-drop</span></li>
+                <li><span class="icon no">✗</span> <span><strong>Calendar:</span></strong> Still clicking through views</li>
+                <li><span class="icon no">✗</span> <span><strong>Backups:</strong> Forgotten half the time</span></li>
+              </ul>
+            </div>
+            <div class="code-block">
+<span class="c-dim"># The disconnect</span>
+
+<span class="c-cyan">$</span> <span class="c-green">claude</span> "Add auth to API"
+<span class="c-dim">  ✓ Agent writes code</span>
+<span class="c-dim">  ✓ Tests pass</span>
+<span class="c-dim">  ✓ Deployed in 5 min</span>
+
+<span class="c-cyan">$</span> <span class="c-red">manually</span> "Schedule meeting"
+<span class="c-dim">  → Open calendar app</span>
+<span class="c-dim">  → Check 3 people's availability</span>
+<span class="c-dim">  → Copy Zoom link</span>
+<span class="c-dim">  → Send invites</span>
+<span class="c-dim">  → 15 minutes gone</span>
+
+<span class="c-accent"># Same AI. Same CLI. Different domain.</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- SLIDE 05: VIBE CODING PHILOSOPHY ──────────────────── -->
         <section>
           <div class="slide-label green">Act II — Vibe Coding</div>
           <h2>The Terminal-First Philosophy</h2>
@@ -810,54 +862,65 @@
           </div>
         </section>
 
-        <!-- SLIDE 05: TOOLS LANDSCAPE & MY CHOICE ──────────────– -->
+        <!-- SLIDE 05: MY COMPLETE TOOL STACK ─────────────────── -->
         <section>
           <div class="slide-label green">Act II — Tooling</div>
-          <h2>The AI CLI Landscape</h2>
+          <h2>My Complete Tool Stack</h2>
           <div class="divider"></div>
-          <div class="two-col" style="margin-top: 8px;">
-            <div>
-              <p style="font-size:0.78em; color:var(--text); margin-bottom:16px;">There's no silver bullet. Each tool excels in different contexts. Here's what I tried and why I picked OpenCode.</p>
-              <div class="cards col2" style="gap: 10px;">
-                <div class="card" style="padding: 16px 20px;">
-                  <div class="card-label">OpenCode</div>
-                  <h3 style="font-size: 0.9em;">Extensible agent system</h3>
-                  <span class="price free">Free</span>
-                </div>
-                <div class="card" style="padding: 16px 20px;">
-                  <div class="card-label">Claude Code</div>
-                  <h3 style="font-size: 0.9em;">Agentic reasoning</h3>
-                  <span class="price">$20/mo</span>
-                </div>
-                <div class="card" style="padding: 16px 20px;">
-                  <div class="card-label">Kimi CLI</div>
-                  <h3 style="font-size: 0.9em;">Huge contexts (256K)</h3>
-                  <span class="price">$19/mo</span>
-                </div>
-                <div class="card" style="padding: 16px 20px;">
-                  <div class="card-label">Copilot CLI</div>
-                  <h3 style="font-size: 0.9em;">Fast inline changes</h3>
-                  <span class="price">$10/mo</span>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="callout green" style="margin-bottom: 12px;">
-                <span class="callout-icon">⭐</span>
-                <div class="callout-body">
-                  <h4>My Daily Driver: OpenCode + Oh My OpenCode</h4>
-                  <p>Open-source. Free. Skills ecosystem via Oh My OpenCode plugin system. Full extensibility. After trying everything, this is my primary tool.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-label">Why OpenCode?</div>
-                <h3 style="font-size: 0.85em;">Honest reasoning</h3>
-                <ul class="checklist" style="margin-top: 8px; gap: 6px;">
-                  <li><span class="icon yes">→</span> <span><strong>It's free</strong> — no subscription</span></li>
-                  <li><span class="icon yes">→</span> <span><strong>Extensible</strong> — Oh My OpenCode plugin system</span></li>
-                  <li><span class="icon yes">→</span> <span><strong>It's mine</strong> — if broken, I fix it</span></li>
-                </ul>
-              </div>
+          <p style="font-size:0.68em; color:var(--text); margin-bottom:12px;">No silver bullet. Each excels differently. Here's my real setup after 6 months of experimentation.</p>
+          <table class="compare" style="font-size: 0.52em;">
+            <thead>
+              <tr>
+                <th style="width: 140px;">Tool</th>
+                <th style="width: 100px;">Purpose</th>
+                <th>Best For</th>
+                <th style="width: 70px;">Cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong class="text-accent">GitHub Copilot CLI</strong></td>
+                <td>Fast CLI coding</td>
+                <td>Quick edits, familiar codebases. Craft prompts carefully — aim for 15+ min per request.</td>
+                <td style="color:var(--accent);">$10/mo</td>
+              </tr>
+              <tr>
+                <td><strong class="text-accent">Claude Code</strong></td>
+                <td>Complex architecture</td>
+                <td>Deep reasoning, system design. Requires Claude Pro. Can use with GLM/Kimi coding plans.</td>
+                <td style="color:var(--accent);">$20/mo</td>
+              </tr>
+              <tr>
+                <td><strong class="text-accent">Kimi CLI</strong></td>
+                <td>Web interface power</td>
+                <td>256K context, excellent for long documents. Very fast response time.</td>
+                <td style="color:var(--accent);">$19/mo</td>
+              </tr>
+              <tr>
+                <td><strong class="text-green">OpenCode</strong></td>
+                <td>Open-source alternative</td>
+                <td><strong class="text-green">My daily driver.</strong> Extensible via Oh My OpenCode plugin system. Open source.</td>
+                <td style="color:var(--text3);">—</td>
+              </tr>
+              <tr>
+                <td><strong class="text-accent">Crush CLI</strong></td>
+                <td>Lightweight tasks</td>
+                <td>Lightning fast, minimal overhead. Quick queries and simple tasks.</td>
+                <td style="color:var(--text3);">—</td>
+              </tr>
+              <tr>
+                <td><strong class="text-accent">Pi Coding Agent</strong></td>
+                <td>Token-efficient</td>
+                <td>Highly configurable, self-hosted. MCP not enabled by default. For power users.</td>
+                <td style="color:var(--text3);">—</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="callout green" style="margin-top: 16px;">
+            <span class="callout-icon">⭐</span>
+            <div class="callout-body">
+              <h4 style="margin-bottom: 2px;">My Current Daily Setup</h4>
+              <p style="font-size: 0.6em;"><strong class="text-green">Primary:</strong> OpenCode + Oh My OpenCode &nbsp;|&nbsp; <strong class="text-accent">Fallback:</strong> Copilot CLI (careful prompting) &nbsp;|&nbsp; <strong class="text-purple">Experiment:</strong> Kimi + Claude hybrid</p>
             </div>
           </div>
         </section>
@@ -869,7 +932,13 @@
           <div class="divider"></div>
           <div class="two-col wide" style="margin-top: 4px;">
             <div>
-               <p style="font-size:0.72em; color:var(--text); margin-bottom: 12px;">As tech lead, I wrote specs and architecture decisions. AI agents handled the implementation. I reviewed, approved, and guided every critical choice. Production React Native app shipped in 2 weeks. <a href="https://github.com/AungMyoKyaw/eventyay-mobile-expo-demo" target="_blank">See the code →</a></p>
+               <p style="font-size:0.68em; color:var(--text); margin-bottom: 10px;">As tech lead, I wrote specs and architecture decisions. AI agents handled the implementation. I reviewed, approved, and guided every critical choice. Production React Native app shipped in 2 weeks. <a href="https://github.com/AungMyoKyaw/eventyay-mobile-expo-demo" target="_blank">See the code →</a></p>
+               <div class="callout" style="margin-bottom: 10px; padding: 8px 12px;">
+                 <span class="callout-icon" style="font-size: 0.7em;">🎬</span>
+                 <div class="callout-body">
+                   <p style="font-size: 0.55em; margin: 0;"><em>Demos shown are recorded — live coding in 15 min is risky business.</em></p>
+                 </div>
+               </div>
               <div class="callout green" style="margin-bottom: 10px; padding: 12px 16px;">
                 <span class="callout-icon">🎯</span>
                 <div class="callout-body">
@@ -908,25 +977,14 @@
                 </div>
               </div>
             </div>
-            <div>
-              <div class="card" style="margin-bottom: 10px; padding: 16px 20px;">
-                <div class="card-label">Methodology</div>
-                <h3 style="font-size: 0.85em;">SDD + TDD</h3>
-                <p style="font-size: 0.68em;"><strong>Spec-Driven:</strong> Intent first. Specs are the contract.<br/><br/><strong>Test-Driven:</strong> Tests first. Red → Green → Refactor.</p>
-              </div>
-              <div class="callout orange" style="margin-bottom: 10px; padding: 12px 16px;">
-                <span class="callout-icon">👥</span>
-                <div class="callout-body">
-                  <h4 style="margin-bottom: 2px;">Tech Lead + AI Agents</h4>
-                  <p style="font-size: 0.9em;">I made decisions. Agents executed. 100% test coverage. Zero tech debt.</p>
-                </div>
-              </div>
-              <div class="card" style="padding: 16px 20px;">
-                <div class="card-label">Results</div>
-                <h3 style="font-size: 0.85em;">Production App in 2 Weeks</h3>
-                <p style="font-size: 0.68em;">✓ 24 passing tests<br/>✓ Clean architecture<br/>✓ Zero tech debt<br/>✓ Self-documenting code</p>
-              </div>
-            </div>
+             <div>
+               <div class="card" style="margin-bottom: 10px; padding: 16px 20px;">
+                 <div class="card-label">Methodology</div>
+                 <h3 style="font-size: 0.85em;">SDD + TDD</h3>
+                 <p style="font-size: 0.68em;"><strong>Spec-Driven:</strong> Intent first. Specs are the contract.<br/><br/><strong>Test-Driven:</strong> Tests first. Red → Green → Refactor.</p>
+               </div>
+               <img src="screenshot/demo-discover.png" style="max-height: 180px; max-width: 100%; height: auto; width: auto; object-fit: contain; border-radius: 10px; border: 1px solid var(--border);" />
+             </div>
           </div>
         </section>
 
@@ -953,6 +1011,7 @@
                 <span class="pill accent">Chrome DevTools</span>
                 <span class="pill accent">Sequential Thinking</span>
               </div>
+              <img src="screenshot/04-system-gws-demo-01.png" style="max-height: 140px; max-width: 100%; height: auto; width: auto; object-fit: contain; border-radius: 10px; border: 1px solid var(--border); margin-top: 16px;" />
             </div>
             <div>
               <div class="card" style="margin-bottom: 12px;">
@@ -965,104 +1024,107 @@
                 <h3>Structured reasoning</h3>
                 <p>Forces agents to think step-by-step before acting. Reduces hallucination on complex tasks.</p>
               </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- SLIDE 08: OPENCLAW SYSTEM ─────────────────────────── -->
-         <section>
-           <div class="slide-label orange">Act III — Life Automation</div>
-           <h2>OpenClaw: Your Personal AI Assistant</h2>
-           <div class="divider"></div>
-           <div class="two-col wide" style="margin-top: 8px;">
-             <div>
-                <p style="font-size:0.78em; color:var(--text); margin-bottom: 20px;">
-                  OpenClaw is a personal AI assistant that runs on your own devices. Integrates with messaging platforms you already use (Telegram, WhatsApp, Slack, Discord, iMessage, Signal). Your data stays local. You own the infrastructure. <a href="https://github.com/openclaw/openclaw" target="_blank">GitHub →</a>
-                </p>
-                <div class="flow" style="flex-direction: column; align-items: flex-start; gap: 10px; margin-bottom: 20px;">
-                  <div class="flow" style="margin: 0;">
-                    <div class="flow-node accent">Telegram<small>Your channel</small></div>
-                    <span class="flow-arrow">⟶</span>
-                    <div class="flow-node accent">OpenClaw Gateway<small>Always-on, self-hosted</small></div>
-                  </div>
-                 <div style="padding-left: 60px;">
-                   <span class="flow-arrow" style="transform: rotate(90deg); display:inline-block;">⟶</span>
-                 </div>
-                 <div class="flow" style="margin: 0;">
-                   <div class="flow-node">AI Agent<small>Parses intent</small></div>
-                   <span class="flow-arrow">⟶</span>
-                   <div class="flow-node">APIs & Tools<small>Google Workspace, Slack, custom</small></div>
-                 </div>
-               </div>
-               <div class="callout green">
-                 <span class="callout-icon">🔑</span>
-                 <div class="callout-body">
-                   <h4>Self-hosted, fully yours</h4>
-                   <p>Runs on your machine. Choose your AI model (Claude, GPT, local). Connect to any service via plugins and integrations. All data stays local. You control the trust boundary.</p>
-                 </div>
-               </div>
-             </div>
-             <div style="display: flex; flex-direction: column; gap: 14px;">
-               <div class="stats" style="grid-template-columns: 1fr 1fr; gap: 12px; margin: 0;">
-                 <div class="stat">
-                   <div class="stat-num">511</div>
-                   <div class="stat-label">Tasks migrated</div>
-                 </div>
-                 <div class="stat">
-                   <div class="stat-num">7</div>
-                   <div class="stat-label">GTD lists</div>
-                 </div>
-                 <div class="stat">
-                   <div class="stat-num">1</div>
-                   <div class="stat-label">Interface</div>
-                 </div>
-               </div>
-               <img src="screenshot/04-system-gws-demo-01.png" style="max-height: 240px; width: auto; border-radius: 10px; border: 1px solid var(--border);" />
-                <div class="code-block" style="font-size: 0.52em;">
-<span class="c-dim"># Natural language commands</span>
-
-<span class="c-cyan">You:</span> "Schedule my FOSSASIA prep"
-<span class="c-green">Agent:</span> Created 3 focus blocks this week
-
-<span class="c-cyan">You:</span> "What's on my plate today?"
-<span class="c-green">Agent:</span> 4 next actions, 1 waiting-for
+              <div class="callout" style="margin-top: 12px; padding: 10px 14px;">
+                <span class="callout-icon" style="font-size: 0.7em;">📋</span>
+                <div class="callout-body">
+                  <p style="font-size: 0.55em; margin: 0;"><a href="https://github.github.com/spec-kit/" target="_blank" style="color: var(--accent);">GitHub Spec Kit →</a> Spec-Driven Development methodology</p>
                 </div>
-             </div>
+              </div>
+            </div>
           </div>
         </section>
 
-         <!-- SLIDE 09: REAL AUTOMATION 1 - GTD ────────────────── -->
+         <!-- SLIDE 08: OPENCLAW SYSTEM ─────────────────────────── -->
           <section>
-            <div class="slide-label orange">Act III — Automation 1</div>
-            <h2>GTD Migration: 511 Tasks in 3 Minutes</h2>
+            <div class="slide-label orange">Act III — Life Automation</div>
+            <h2>OpenClaw: Your Personal AI Assistant</h2>
             <div class="divider"></div>
-            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1; margin-top: 0; min-height: 0;">
-              <img src="screenshot/01-telegram-gtd-migration.png" style="max-height: 360px; width: auto; border-radius: 12px; border: 1px solid var(--border); flex-shrink: 1;" />
-              <p style="font-size: 0.62em; color: var(--text2); margin-top: 12px; line-height: 1.4; max-width: 90%;">511 Apple Reminders → Google Tasks GTD system with proper lists, task counts, and classifications.</p>
-            </div>
-          </section>
+            <div class="two-col wide" style="margin-top: 8px;">
+              <div>
+                 <p style="font-size:0.72em; color:var(--text); margin-bottom: 14px;">
+                   OpenClaw is a personal AI assistant that runs on your own devices. Integrates with messaging platforms you already use (Telegram, WhatsApp, Slack, Discord, iMessage, Signal). Your data stays local. You own the infrastructure. <a href="https://github.com/openclaw/openclaw" target="_blank">GitHub →</a>
+                 </p>
+                 <div class="flow" style="flex-direction: column; align-items: flex-start; gap: 8px; margin-bottom: 14px;">
+                   <div class="flow" style="margin: 0; gap: 4px;">
+                     <div class="flow-node" style="padding: 10px 14px; font-size: 0.55em;">Telegram<small>Your channel</small></div>
+                     <span class="flow-arrow">⟶</span>
+                     <div class="flow-node accent" style="padding: 10px 14px; font-size: 0.55em;">OpenClaw Gateway<small>Self-hosted</small></div>
+                   </div>
+                  <div style="padding-left: 40px;">
+                    <span class="flow-arrow" style="transform: rotate(90deg); display:inline-block;">⟶</span>
+                  </div>
+                  <div class="flow" style="margin: 0; gap: 4px;">
+                    <div class="flow-node" style="padding: 10px 14px; font-size: 0.55em;">AI Agent<small>Parse</small></div>
+                    <span class="flow-arrow">⟶</span>
+                    <div class="flow-node" style="padding: 10px 14px; font-size: 0.55em;">APIs & Tools<small>GWS, Slack</small></div>
+                  </div>
+                </div>
+                <div class="callout green" style="padding: 10px 14px; gap: 8px;">
+                  <span class="callout-icon" style="font-size: 0.7em;">🔑</span>
+                  <div class="callout-body">
+                    <h4 style="margin-bottom: 2px;">Self-hosted, fully yours</h4>
+                    <p style="font-size: 0.55em;">Runs on your machine. Choose your AI model. All data stays local.</p>
+                  </div>
+                </div>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 8px;">
+                <div class="stats" style="grid-template-columns: 1fr 1fr; gap: 8px; margin: 0;">
+                  <div class="stat" style="padding: 12px 10px;">
+                    <div class="stat-num" style="font-size: 1.3em;">511</div>
+                    <div class="stat-label">Tasks migrated</div>
+                  </div>
+                  <div class="stat" style="padding: 12px 10px;">
+                    <div class="stat-num" style="font-size: 1.3em;">7</div>
+                    <div class="stat-label">GTD lists</div>
+                  </div>
+                  <div class="stat" style="padding: 12px 10px; grid-column: 1 / -1;">
+                    <div class="stat-num" style="font-size: 1.3em;">1</div>
+                    <div class="stat-label">Interface</div>
+                  </div>
+                </div>
+                  <div class="code-block" style="font-size: 0.48em; padding: 12px 16px; line-height: 1.4;">
+<span class="c-cyan">You:</span> "Schedule FOSSASIA prep"
+<span class="c-green">Agent:</span> Created 3 focus blocks
 
-          <!-- SLIDE 10: REAL AUTOMATION 2 - CALENDAR ──────────────– -->
-          <section>
-            <div class="slide-label orange">Act III — Automation 2</div>
-            <h2>Calendar Scheduling: Zero Manual Work</h2>
-            <div class="divider"></div>
-            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1; margin-top: 0; min-height: 0;">
-              <img src="screenshot/02-telegram-calendar-scheduling.png" style="max-height: 360px; width: auto; border-radius: 12px; border: 1px solid var(--border); flex-shrink: 1;" />
-              <p style="font-size: 0.62em; color: var(--text2); margin-top: 12px; line-height: 1.4; max-width: 90%;">"Plan FOSSASIA prep" → 3h emergency session + 2h focus blocks automatically scheduled.</p>
-            </div>
-          </section>
+<span class="c-cyan">You:</span> "What's on my plate?"
+<span class="c-green">Agent:</span> 4 next actions
+                 </div>
+              </div>
+           </div>
+         </section>
 
-          <!-- SLIDE 11: REAL AUTOMATION 3 - BACKUPS ──────────────– -->
-          <section>
-            <div class="slide-label orange">Act III — Automation 3</div>
-            <h2>Backup Automation: Fully Automated</h2>
-            <div class="divider"></div>
-            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1; margin-top: 0; min-height: 0;">
-              <img src="screenshot/03-telegram-backup-automation.png" style="max-height: 360px; width: auto; border-radius: 12px; border: 1px solid var(--border); flex-shrink: 1;" />
-              <p style="font-size: 0.62em; color: var(--text2); margin-top: 12px; line-height: 1.4; max-width: 90%;">Backup every 3h. Compression, upload to Drive, retention cleanup — all automated.</p>
-            </div>
-          </section>
+           <!-- SLIDE 09: REAL AUTOMATION 1 - GTD ────────────────── -->
+           <section>
+             <div class="slide-label orange">Act III — Automation 1</div>
+             <h2>GTD Migration: 511 Tasks in 3 Minutes</h2>
+             <div class="divider"></div>
+             <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1; margin-top: 0;">
+               <img src="screenshot/01-telegram-gtd-migration.png" style="max-height: 320px; max-width: 100%; height: auto; width: auto; object-fit: contain; border-radius: 12px; border: 1px solid var(--border);" />
+               <p style="font-size: 0.58em; color: var(--text2); margin-top: 8px; line-height: 1.3; max-width: 90%;">511 Apple Reminders → Google Tasks GTD system with proper lists, task counts, and classifications.</p>
+             </div>
+           </section>
+
+           <!-- SLIDE 10: REAL AUTOMATION 2 - CALENDAR ──────────────– -->
+           <section>
+             <div class="slide-label orange">Act III — Automation 2</div>
+             <h2>Calendar Scheduling: Zero Manual Work</h2>
+             <div class="divider"></div>
+             <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1; margin-top: 0;">
+               <img src="screenshot/02-telegram-calendar-scheduling.png" style="max-height: 320px; max-width: 100%; height: auto; width: auto; object-fit: contain; border-radius: 12px; border: 1px solid var(--border);" />
+               <p style="font-size: 0.58em; color: var(--text2); margin-top: 8px; line-height: 1.3; max-width: 90%;">"Plan FOSSASIA prep" → 3h emergency session + 2h focus blocks automatically scheduled.</p>
+             </div>
+           </section>
+
+           <!-- SLIDE 11: REAL AUTOMATION 3 - BACKUPS ──────────────– -->
+           <section>
+             <div class="slide-label orange">Act III — Automation 3</div>
+             <h2>Backup Automation: Fully Automated</h2>
+             <div class="divider"></div>
+             <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1; margin-top: 0;">
+               <img src="screenshot/03-telegram-backup-automation.png" style="max-height: 320px; max-width: 100%; height: auto; width: auto; object-fit: contain; border-radius: 12px; border: 1px solid var(--border);" />
+               <p style="font-size: 0.58em; color: var(--text2); margin-top: 8px; line-height: 1.3; max-width: 90%;">Backup every 3h. Compression, upload to Drive, retention cleanup — all automated.</p>
+             </div>
+           </section>
 
         <!-- SLIDE 12: HOW IT WORKS ────────────────────────────── -->
         <section>
@@ -1087,12 +1149,12 @@
                   </div>
                 </div>
                 <div class="step">
-                  <div class="step-num">3</div>
-                  <div class="step-body">
-                    <h4>GWS CLI executes the command</h4>
-                    <p>The CLI translates the agent's plan into real Google Workspace API calls.</p>
-                  </div>
-                </div>
+                   <div class="step-num">3</div>
+                   <div class="step-body">
+                     <h4><a href="https://github.com/googleworkspace/cli" target="_blank" style="color: var(--text);">GWS CLI</a> executes the command</h4>
+                     <p>The CLI translates the agent's plan into real Google Workspace API calls.</p>
+                   </div>
+                 </div>
                 <div class="step">
                    <div class="step-num">4</div>
                    <div class="step-body">
@@ -1165,93 +1227,78 @@ $ gws calendar create \
           </div>
         </section>
 
-        <!-- SLIDE 14: SECURITY & PRIVACY ──────────────────────── -->
+        <!-- SLIDE 14: MY CURRENT SETUP ──────────────────────── -->
         <section>
-          <div class="slide-label red">Act III — Trust</div>
-          <h2>Privacy by Design</h2>
+          <div class="slide-label green">Act III — Production</div>
+          <h2>My Live Setup</h2>
           <div class="divider"></div>
           <div class="two-col" style="margin-top: 8px;">
             <div>
-              <p style="font-size:0.78em; color:var(--text); margin-bottom: 20px;">Giving an AI access to your entire life's data is a serious commitment. The architecture is designed to keep you in full control.</p>
-              <div class="steps" style="gap: 16px;">
+              <div class="callout green" style="margin-bottom: 16px;">
+                <span class="callout-icon">🚀</span>
+                <div class="callout-body">
+                  <h4>Live Instance</h4>
+                  <p><a href="https://kimi-claw.com/" target="_blank" style="color: var(--accent);">kimi-claw.com</a> — Production deployment handling daily automation</p>
+                </div>
+              </div>
+              <div class="steps" style="gap: 14px;">
                 <div class="step">
-                  <div class="step-num">1</div>
+                  <div class="step-num" style="background: linear-gradient(135deg, var(--green), var(--cyan));">📱</div>
                   <div class="step-body">
-                    <h4>Self-hosted</h4>
-                    <p>Your server, your hardware. No data ever touches a third-party cloud.</p>
+                    <h4>Telegram</h4>
+                    <p>Primary interface. Natural language commands from any device.</p>
                   </div>
                 </div>
                 <div class="step">
-                  <div class="step-num">2</div>
+                  <div class="step-num" style="background: linear-gradient(135deg, var(--accent), var(--accent2));">🔧</div>
                   <div class="step-body">
-                    <h4>Local OAuth tokens</h4>
-                    <p>Google credentials stored on-device only. Never cloud-synced.</p>
+                    <h4><a href="https://github.com/googleworkspace/cli" target="_blank" style="color: var(--text);">GWS CLI</a></h4>
+                    <p>Google Workspace automation — Calendar, Tasks, Drive, Gmail.</p>
                   </div>
                 </div>
                 <div class="step">
-                  <div class="step-num">3</div>
+                  <div class="step-num" style="background: linear-gradient(135deg, var(--orange), var(--red));">⚡</div>
                   <div class="step-body">
-                    <h4>No external AI calls for your data</h4>
-                    <p>Intent parsing runs locally. Personal data never leaves your infrastructure.</p>
+                    <h4>Azure DevOps CLI</h4>
+                    <p>Sprint board management, work items, pipeline triggers.</p>
                   </div>
                 </div>
                 <div class="step">
-                  <div class="step-num">4</div>
+                  <div class="step-num" style="background: linear-gradient(135deg, var(--text2), var(--text));">🐙</div>
                   <div class="step-body">
-                    <h4>Full audit trail</h4>
-                    <p>Every command logged. Replay the exact history of what the agent did and when.</p>
+                    <h4><a href="https://cli.github.com/" target="_blank" style="color: var(--text);">GitHub CLI</a></h4>
+                    <p>Repo management, PR reviews, issue tracking, releases.</p>
                   </div>
                 </div>
               </div>
             </div>
             <div>
-              <div class="quote">
-                <p>"You should own every byte of your personal data. Not rent it from a SaaS. Not trust a vendor not to get breached.<br/><br/>Own it."</p>
+              <div class="card" style="margin-bottom: 12px;">
+                <div class="card-label">Architecture</div>
+                <h3>Unified CLI Gateway</h3>
+                <p>One natural language interface → multiple CLI backends. Same pattern, different domains.</p>
               </div>
-              <div class="card" style="margin-top: 14px;">
-                <div class="card-label">Bottom Line</div>
-                <h3>You own everything. Always.</h3>
-                <p>The agent has access because you gave it access. You can revoke instantly. You control the logs. You control the retention. You control the hardware.</p>
+              <div class="code-block" style="font-size: 0.52em;">
+<span class="c-cyan">Telegram:</span> "Move sprint 23 tickets to review"
+
+<span class="c-accent">Agent:</span> 
+→ azure boards query --sprint 23
+→ github pr list --author @me
+→ Move matching items
+
+<span class="c-green">Result:</span> ✓ 12 tickets updated
+              </div>
+              <div class="pills" style="margin-top: 12px;">
+                <span class="pill accent">Calendar</span>
+                <span class="pill accent">Tasks</span>
+                <span class="pill accent">Sprints</span>
+                <span class="pill accent">Repos</span>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- SLIDE 15: 5 LESSONS ────────────────────────────────– -->
-        <section>
-          <div class="slide-label purple">Act IV — Lessons</div>
-          <h2>5 Lessons Worth Taking Home</h2>
-          <div class="divider"></div>
-          <div class="cards col2" style="margin-top: 8px; gap: 12px;">
-            <div class="card">
-              <div class="card-label">Lesson 01</div>
-              <h3>The terminal is the best UI</h3>
-              <p>Every tool you build, wrap in a CLI first. Scriptable, composable, automatable. GUIs are for discovery. CLIs are for production.</p>
-            </div>
-            <div class="card">
-              <div class="card-label">Lesson 02</div>
-              <h3>Language is the interface</h3>
-              <p>Natural language commands beat menus, forms, and dashboards. If you can describe what you want, you can automate it.</p>
-            </div>
-            <div class="card">
-              <div class="card-label">Lesson 03</div>
-              <h3>Integration beats features</h3>
-              <p>One connected system that does 80% is worth more than 10 perfect apps that don't talk to each other.</p>
-            </div>
-            <div class="card">
-              <div class="card-label">Lesson 04</div>
-              <h3>Automation compounds</h3>
-              <p>10 minutes of setup saves 10 minutes every week. That's 8+ hours a year — per automation. Stack 20 automations.</p>
-            </div>
-             <div class="card" style="grid-column: 1 / -1;">
-               <div class="card-label">Lesson 05</div>
-               <h3>AI has conquered coding — now conquer life</h3>
-               <p>             If AI can write your code, it can run your life. Same pattern: <strong class="mono text-accent">natural language → AI agent → action</strong>. OpenCode + Oh My OpenCode + gws CLI + a unified interface is all you need. Stop waiting. Automate.</p>
-             </div>
-          </div>
-        </section>
-
-        <!-- SLIDE 16: RESOURCES ────────────────────────────────– -->
+        <!-- SLIDE 15: RESOURCES ───────────────────────────────– -->
         <section>
           <div class="slide-label">Resources</div>
           <h2>Go Build Something</h2>
