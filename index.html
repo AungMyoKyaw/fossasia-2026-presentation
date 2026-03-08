@@ -665,10 +665,48 @@
 
       .w-full { width: 100%; }
       .small  { font-size: 0.65em; color: var(--text2); line-height: 1.5; }
+
+      /* ─── LIGHTBOX ─────────────────────────────────────────── */
+      .lightbox {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(13, 17, 23, 0.95);
+        backdrop-filter: blur(8px);
+        align-items: center;
+        justify-content: center;
+        cursor: zoom-out;
+      }
+      .lightbox.active { display: flex; }
+      .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 8px;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      }
+      .lightbox-close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 2em;
+        color: var(--text2);
+        cursor: pointer;
+        z-index: 10000;
+      }
+      .lightbox-close:hover { color: var(--text); }
+      .zoomable { cursor: zoom-in; }
     </style>
   </head>
 
   <body>
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+      <span class="lightbox-close">×</span>
+      <img src="" alt="Screenshot" id="lightbox-img">
+    </div>
     <div class="reveal">
       <div class="slides">
 
@@ -682,7 +720,7 @@
           </p>
           <div class="hero-meta">
               <div class="hero-author">
-                <div class="hero-avatar">AMK</div>
+                <img src="https://avatars.githubusercontent.com/u/9404824?v=4" class="hero-avatar" style="object-fit: cover;" />
                 <div class="hero-author-text">
                   <h4>Aung Myo Kyaw</h4>
                   <p>Tech Lead</p>
@@ -1295,7 +1333,7 @@ $ gws calendar create \
           </p>
            <div class="hero-meta" style="flex-direction: column; align-items: flex-start; gap: 16px;">
              <div class="hero-author">
-               <div class="hero-avatar">AMK</div>
+               <img src="https://avatars.githubusercontent.com/u/9404824?v=4" class="hero-avatar" style="object-fit: cover;" />
                <div class="hero-author-text">
                  <h4>Aung Myo Kyaw</h4>
                  <p>Tech Lead</p>
@@ -1303,7 +1341,7 @@ $ gws calendar create \
              </div>
              <div class="pills" style="margin: 0;">
                <a href="https://github.com/AungMyoKyaw" target="_blank" style="text-decoration:none;"><span class="pill accent">github.com/AungMyoKyaw</span></a>
-               <a href="https://www.linkedin.com/in/aungmyokyaw/" target="_blank" style="text-decoration:none;"><span class="pill accent">LinkedIn Profile</span></a>
+               <a href="https://www.linkedin.com/in/aungmyokyaw/" target="_blank" style="text-decoration:none;"><span class="pill accent">linkedin.com/in/aungmyokyaw</span></a>
              </div>
            </div>
         </section>
@@ -1327,6 +1365,25 @@ $ gws calendar create \
         margin: 0,
         minScale: 0.3,
         maxScale: 2.0,
+      });
+
+      // Lightbox functionality
+      function openLightbox(src) {
+        document.getElementById('lightbox-img').src = src;
+        document.getElementById('lightbox').classList.add('active');
+      }
+      function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('active');
+      }
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeLightbox();
+      });
+      document.querySelectorAll('img[src*="screenshot/"]').forEach(function(img) {
+        img.classList.add('zoomable');
+        img.onclick = function(e) {
+          e.stopPropagation();
+          openLightbox(this.src);
+        };
       });
     </script>
   </body>
