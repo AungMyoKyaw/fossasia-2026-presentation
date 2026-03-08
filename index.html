@@ -724,50 +724,7 @@
           </div>
         </section>
 
-        <!-- SLIDE 03: MY JOURNEY ────────────────────────────────– -->
-        <section>
-          <div class="slide-label green">Act I — The Journey</div>
-          <h2>From Coder to Leader</h2>
-          <div class="divider"></div>
-          <div class="pills" style="margin: 0 0 16px 0;">
-            <span class="pill" style="background: rgba(158,206,106,0.15); border-color: rgba(158,206,106,0.3); color: var(--green);">1. Original Plan</span>
-            <span class="pill" style="background: rgba(255,158,100,0.15); border-color: rgba(255,158,100,0.3); color: var(--orange);">2. The Pivot</span>
-            <span class="pill" style="background: rgba(122,162,247,0.15); border-color: rgba(122,162,247,0.3); color: var(--accent);">3. Final Focus</span>
-          </div>
-          <div class="timeline" style="margin-top: 8px;">
-            <div class="timeline-item">
-              <div class="timeline-line">
-                <div class="timeline-dot" style="background: var(--green); box-shadow: 0 0 0 4px rgba(158,206,106,0.2);"></div>
-                <div class="timeline-bar"></div>
-              </div>
-              <div class="timeline-body">
-                <h4 style="color: var(--green);">Phase 1: Vibe Coding & CLI</h4>
-                <p><strong>Original plan:</strong> Demonstrate vibe coding and CLI setup. Focus on terminal-first productivity and AI coding agents.</p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-line">
-                <div class="timeline-dot" style="background: var(--orange); box-shadow: 0 0 0 4px rgba(255,158,100,0.2);"></div>
-                <div class="timeline-bar"></div>
-              </div>
-              <div class="timeline-body">
-                <h4 style="color: var(--orange);">Phase 2: The Pivot</h4>
-                <p><strong>The realization:</strong> OpenClaw as agent orchestrator for full automation. Why stop at code when life needs automation too?</p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-line">
-                <div class="timeline-dot" style="background: var(--accent); box-shadow: 0 0 0 4px rgba(122,162,247,0.2);"></div>
-              </div>
-              <div class="timeline-body">
-                <h4 style="color: var(--accent);">Phase 3: The Pattern</h4>
-                <p><strong>Final focus:</strong> Practical workflow combining both worlds. OpenClaw (personal assistant) + Vibe Coding CLI (builder) = Complete AI workflow.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- SLIDE 04: THE PIVOT ──────────────────────────────── -->
+        <!-- SLIDE 03: THE PIVOT ──────────────────────────────── -->
         <section>
           <div class="slide-label orange">The Pivot</div>
           <h2>I Was Vibe Coding My Code,<br>But Living Manually</h2>
@@ -812,7 +769,7 @@
         <!-- SLIDE 05: VIBE CODING PHILOSOPHY ──────────────────── -->
         <section>
           <div class="slide-label green">Act II — Vibe Coding</div>
-          <h2>The Terminal-First Philosophy</h2>
+          <h2>The Vibe Coding Loop</h2>
           <div class="divider"></div>
           <div class="two-col" style="margin-top: 8px;">
             <div>
@@ -822,7 +779,7 @@
                   <div class="step-num">1</div>
                   <div class="step-body">
                     <h4>Stay in the terminal</h4>
-                    <p>No mouse. No GUI switching. Everything you need is 80 characters wide.</p>
+                    <p>No mouse. No GUI switching. <span class="mono">neovim</span> + <span class="mono">tmux</span> + <span class="mono">ghostty</span> — everything you need is 80 characters wide.</p>
                   </div>
                 </div>
                 <div class="step">
@@ -862,65 +819,48 @@
           </div>
         </section>
 
-        <!-- SLIDE 06: MY COMPLETE TOOL STACK ─────────────────── -->
+        <!-- SLIDE 05: MY COMPLETE TOOL STACK ─────────────────── -->
         <section>
           <div class="slide-label green">Act II — Tooling</div>
           <h2>My Complete Tool Stack</h2>
           <div class="divider"></div>
           <p style="font-size:0.68em; color:var(--text); margin-bottom:12px;">No silver bullet. Each excels differently. Here's my real setup after 6 months of experimentation.</p>
-          <table class="compare" style="font-size: 0.52em;">
-            <thead>
-              <tr>
-                <th style="width: 140px;">Tool</th>
-                <th style="width: 100px;">Purpose</th>
-                <th>Best For</th>
-                <th style="width: 70px;">Cost</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong class="text-accent">GitHub Copilot CLI</strong></td>
-                <td>Fast CLI coding</td>
-                <td>Quick edits, familiar codebases. Craft prompts carefully — aim for 15+ min per request.</td>
-                <td style="color:var(--accent);">$10/mo</td>
-              </tr>
-              <tr>
-                <td><strong class="text-accent">Claude Code</strong></td>
-                <td>Complex architecture</td>
-                <td>Deep reasoning, system design. Requires Claude Pro. Can use with GLM/Kimi coding plans.</td>
-                <td style="color:var(--accent);">$20/mo</td>
-              </tr>
-              <tr>
-                <td><strong class="text-accent">Kimi CLI</strong></td>
-                <td>Web interface power</td>
-                <td>256K context, excellent for long documents. Very fast response time.</td>
-                <td style="color:var(--accent);">$19/mo</td>
-              </tr>
-              <tr>
-                <td><strong class="text-green">OpenCode</strong></td>
-                <td>Open-source alternative</td>
-                <td><strong class="text-green">My daily driver.</strong> Extensible via Oh My OpenCode plugin system. Open source.</td>
-                <td style="color:var(--text3);">—</td>
-              </tr>
-              <tr>
-                <td><strong class="text-accent">Crush CLI</strong></td>
-                <td>Lightweight tasks</td>
-                <td>Lightning fast, minimal overhead. Quick queries and simple tasks.</td>
-                <td style="color:var(--text3);">—</td>
-              </tr>
-              <tr>
-                <td><strong class="text-accent">Pi Coding Agent</strong></td>
-                <td>Token-efficient</td>
-                <td>Highly configurable, self-hosted. MCP not enabled by default. For power users.</td>
-                <td style="color:var(--text3);">—</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="callout green" style="margin-top: 16px;">
-            <span class="callout-icon">⭐</span>
-            <div class="callout-body">
-              <h4 style="margin-bottom: 2px;">My Current Daily Setup</h4>
-              <p style="font-size: 0.6em;"><strong class="text-green">Primary:</strong> OpenCode + Oh My OpenCode &nbsp;|&nbsp; <strong class="text-accent">Fallback:</strong> Copilot CLI (careful prompting) &nbsp;|&nbsp; <strong class="text-purple">Experiment:</strong> Kimi + Claude hybrid</p>
+          <div class="cards col3" style="margin-top: 8px;">
+            <div class="card" style="padding: 12px;">
+              <div class="card-label" style="margin-bottom: 8px;">$10/mo · Fast CLI</div>
+              <img src="screenshot/copilot.png" style="max-height: 100px; max-width: 100%; height: auto; width: auto; object-fit: contain; border-radius: 6px; border: 1px solid var(--border); margin-bottom: 8px;" />
+              <h3 style="font-size: 0.75em; margin-bottom: 4px;">GitHub Copilot CLI</h3>
+              <p style="font-size: 0.55em;">Quick edits, familiar codebases. Careful prompting required.</p>
+            </div>
+            <div class="card" style="padding: 12px;">
+              <div class="card-label" style="margin-bottom: 8px;">$20/mo · Deep Reasoning</div>
+              <img src="screenshot/claude-code.png" style="max-height: 100px; max-width: 100%; height: auto; width: auto; object-fit: contain; border-radius: 6px; border: 1px solid var(--border); margin-bottom: 8px;" />
+              <h3 style="font-size: 0.75em; margin-bottom: 4px;">Claude Code</h3>
+              <p style="font-size: 0.55em;">Complex architecture, system design. Requires Claude Pro.</p>
+            </div>
+            <div class="card" style="padding: 12px;">
+              <div class="card-label" style="margin-bottom: 8px;">$19/mo · 256K Context</div>
+              <img src="screenshot/kimi-cli.png" style="max-height: 100px; max-width: 100%; height: auto; width: auto; object-fit: contain; border-radius: 6px; border: 1px solid var(--border); margin-bottom: 8px;" />
+              <h3 style="font-size: 0.75em; margin-bottom: 4px;">Kimi CLI</h3>
+              <p style="font-size: 0.55em;">Long documents, very fast response. Agent swarm capable.</p>
+            </div>
+            <div class="card" style="padding: 12px; border-color: var(--green);">
+              <div class="card-label" style="margin-bottom: 8px; color: var(--green);">FREE · Daily Driver</div>
+              <img src="screenshot/opencode.png" style="max-height: 100px; max-width: 100%; height: auto; width: auto; object-fit: contain; border-radius: 6px; border: 1px solid var(--border); margin-bottom: 8px;" />
+              <h3 style="font-size: 0.75em; margin-bottom: 4px; color: var(--green);">OpenCode</h3>
+              <p style="font-size: 0.55em;"><strong>My daily driver.</strong> Extensible via Oh My OpenCode plugin system.</p>
+            </div>
+            <div class="card" style="padding: 12px;">
+              <div class="card-label" style="margin-bottom: 8px;">FREE · Lightweight</div>
+              <img src="screenshot/crush.png" style="max-height: 100px; max-width: 100%; height: auto; width: auto; object-fit: contain; border-radius: 6px; border: 1px solid var(--border); margin-bottom: 8px;" />
+              <h3 style="font-size: 0.75em; margin-bottom: 4px;">Crush CLI</h3>
+              <p style="font-size: 0.55em;">Lightning fast, minimal overhead. Quick queries and simple tasks.</p>
+            </div>
+            <div class="card" style="padding: 12px;">
+              <div class="card-label" style="margin-bottom: 8px;">FREE · Self-Hosted</div>
+              <img src="screenshot/pi.png" style="max-height: 100px; max-width: 100%; height: auto; width: auto; object-fit: contain; border-radius: 6px; border: 1px solid var(--border); margin-bottom: 8px;" />
+              <h3 style="font-size: 0.75em; margin-bottom: 4px;">Pi Coding Agent</h3>
+              <p style="font-size: 0.55em;">Token-efficient, highly configurable. For power users.</p>
             </div>
           </div>
         </section>
