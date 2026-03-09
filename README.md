@@ -11,21 +11,20 @@ A presentation for [FOSSASIA Summit 2026](https://fossasia.org/) exploring the j
 
 > **"If AI can run my code, why can't it run my life?"**
 
-AI agents conquered software development. We automated code review, testing, deployment. But the moment you close your terminal, you're back to manual mode — juggling Gmail, 500+ scattered tasks, calendar conflicts, and forgotten backups.
+AI agents conquered software development. They write code, review PRs, debug issues, and deploy. But the moment you close the terminal, you're back to manual mode — dragging tasks between apps, copy-pasting calendar invites, and forgetting backups.
 
-This talk is about closing that gap.
+This talk bridges that gap.
 
 ---
 
-## What We'll Cover
+## What You'll Learn
 
 | Act | Focus | Slides | Key Topics |
 |-----|-------|--------|------------|
-| **I** | **The Problem** | 1–2 | We've automated everything except ourselves. The disconnect between AI coding and manual life management. |
-| **II** | **Vibe Coding** | 3–5 | Philosophy, tools, and the complete stack after 6 months of experimentation. |
-| **III** | **Leadership** | 6–7 | Eventyay case study + Agent Skills architecture. Leading AI agents to ship production code. |
-| **IV** | **Life Automation** | 8–13 | OpenClaw system + 3 real automations (GTD, Calendar, Backups) + Before/After impact. |
-| **V** | **Production & Close** | 14–17 | Live setup, resources, and call to action. |
+| **I** | **The Problem** | 1–2 | We've automated code but not our lives. The disconnect between AI-powered coding and manual life management. |
+| **II** | **Vibe Coding** | 3–8 | Philosophy, tool stack (6 agents tested), Eventyay case study, Agent Skills architecture, Open-weight models. |
+| **III** | **Life Automation** | 9–15 | OpenClaw system, GWS CLI, 3 real automations (GTD, Calendar, Backups), Before/After impact. |
+| **IV** | **Production & Close** | 16–18 | Live setup, resources, and call to action. |
 
 ---
 
@@ -83,14 +82,16 @@ The same pattern that revolutionized coding can now automate your entire digital
 
 ## Tool Stack
 
-### AI Coding Agents
+### AI Coding Agents (6 tools tested)
 
 | Tool | Best For | Cost |
 |------|----------|------|
-| [OpenCode](https://github.com/opencode-ai/opencode) | Open-source daily driver | Free |
+| [OpenCode](https://github.com/opencode-ai/opencode) | Daily driver, extensible | **Free** |
 | [Claude Code](https://claude.ai/code) | Complex architecture, deep reasoning | $20/mo |
-| [GitHub Copilot CLI](https://github.com/features/copilot) | Fast CLI edits | $10/mo |
 | [Kimi CLI](https://github.com/MoonshotAI/kimi-cli) | 256K context, agent swarm | $19/mo |
+| [GitHub Copilot CLI](https://github.com/features/copilot) | Quick edits, familiar codebases | $10/mo |
+| Crush CLI | Lightning fast, minimal overhead | **Free** |
+| Pi Coding Agent | Token-efficient, self-hosted | **Free** |
 
 ### Agent Skills (Oh My OpenCode)
 
@@ -110,13 +111,39 @@ The same pattern that revolutionized coding can now automate your entire digital
 ## Real Automations Demonstrated
 
 ### 1. GTD Migration — 511 Tasks in 3 Minutes
-One message to OpenClaw → Complete GTD system with organized lists, task counts, and classifications.
+
+**The Problem:** 500+ tasks scattered across Apple Reminders with no consistent system.  
+**The Solution:** One natural language message to OpenClaw.
+
+```
+Input:  "I want to migrate my tasks from Apple Reminders to Google Tasks with GTD methodology"
+Output: 7 organized lists (Inbox, Next Actions, Waiting For, Someday/Maybe, Projects, Reference, Done)
+        511 tasks categorized and migrated
+        Ready for GTD workflow immediately
+```
 
 ### 2. Calendar Scheduling — Zero Manual Work
-"Plan my FOSSASIA prep" → 3-hour emergency session + 2-hour focus blocks automatically scheduled.
 
-### 3. Backup Automation — Fully Automated
-Every 3 hours: compression, upload to Drive, retention cleanup. Set once, run forever.
+**Before:** Open calendar app → Check availability → Copy Zoom link → Send invites = 15 minutes.  
+**After:** One sentence.
+
+```
+Input:  "Plan my FOSSASIA prep"
+Output: 3-hour emergency session + 2-hour focus blocks scheduled at optimal times
+        Time blocked and protected from conflicts
+```
+
+### 3. Backup Automation — Set Once, Run Forever
+
+**The Schedule:** Every 3 hours, automatically.
+
+```
+Pipeline:
+├── Compress important directories
+├── Upload to Google Drive  
+├── Apply retention policy (clean old backups)
+└── Send confirmation to Telegram
+```
 
 ---
 
