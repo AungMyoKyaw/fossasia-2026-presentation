@@ -6,29 +6,30 @@
     <title>From Vibe Coding to Life Automation — FOSSASIA 2026</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/theme/black.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/theme/white.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
     <style>
       /* ─── RESET & BASE ─────────────────────────────────────── */
       :root {
-        --bg:        #0d1117;
-        --surface:   #161b22;
-        --surface2:  #21262d;
-        --border:    #30363d;
-        --accent:    #7aa2f7;
-        --accent2:   #bb9af7;
-        --green:     #9ece6a;
-        --orange:    #ff9e64;
-        --red:       #f7768e;
-        --cyan:      #7dcfff;
-        --text:      #e6edf3;
-        --text2:     #8b949e;
-        --text3:     #484f58;
+        --bg:        #ffffff;
+        --surface:   #f5f5f5;
+        --surface2:  #ebebeb;
+        --border:    #e0e0e0;
+        --accent:    #d40000;
+        --accent2:   #e12b00;
+        --green:     #2e7d32;
+        --orange:    #e65100;
+        --red:       #b71c1c;
+        --cyan:      #0277bd;
+        --purple:    #6a1b9a;
+        --text:      #1a1a1a;
+        --text2:     #555555;
+        --text3:     #999999;
         --mono:      'JetBrains Mono', monospace;
-        --sans:      'Outfit', system-ui, sans-serif;
+        --sans:      'Roboto', system-ui, sans-serif;
       }
 
       .reveal-viewport { background: var(--bg); }
@@ -94,19 +95,19 @@
         letter-spacing: 0.12em;
         text-transform: uppercase;
         color: var(--accent);
-        background: rgba(122,162,247,0.08);
-        border: 1px solid rgba(122,162,247,0.2);
+        background: rgba(212,0,0,0.08);
+        border: 1px solid rgba(212,0,0,0.2);
         padding: 6px 14px;
         border-radius: 999px;
         margin-bottom: 28px;
         width: fit-content;
       }
 
-      .slide-label.green  { color: var(--green);  background: rgba(158,206,106,0.08);  border-color: rgba(158,206,106,0.2);  }
-      .slide-label.orange { color: var(--orange); background: rgba(255,158,100,0.08); border-color: rgba(255,158,100,0.2); }
-      .slide-label.purple { color: var(--accent2); background: rgba(187,154,247,0.08); border-color: rgba(187,154,247,0.2); }
-      .slide-label.red    { color: var(--red);    background: rgba(247,118,142,0.08);  border-color: rgba(247,118,142,0.2);  }
-      .slide-label.cyan   { color: var(--cyan);   background: rgba(125,207,255,0.08);  border-color: rgba(125,207,255,0.2);  }
+      .slide-label.green  { color: var(--green);  background: rgba(46,125,50,0.08);   border-color: rgba(46,125,50,0.2);   }
+      .slide-label.orange { color: var(--orange); background: rgba(230,81,0,0.08);    border-color: rgba(230,81,0,0.2);    }
+      .slide-label.purple { color: var(--purple); background: rgba(106,27,154,0.08);  border-color: rgba(106,27,154,0.2);  }
+      .slide-label.red    { color: var(--red);    background: rgba(183,28,28,0.08);   border-color: rgba(183,28,28,0.2);   }
+      .slide-label.cyan   { color: var(--cyan);   background: rgba(2,119,189,0.08);   border-color: rgba(2,119,189,0.2);   }
 
       /* ─── DIVIDER ──────────────────────────────────────────── */
       .divider {
@@ -176,14 +177,14 @@
         font-size: 0.6em;
         padding: 3px 10px;
         border-radius: 999px;
-        background: rgba(122,162,247,0.1);
-        border: 1px solid rgba(122,162,247,0.2);
+        background: rgba(212,0,0,0.08);
+        border: 1px solid rgba(212,0,0,0.2);
         color: var(--accent);
       }
 
       .card .price.free {
-        background: rgba(158,206,106,0.1);
-        border-color: rgba(158,206,106,0.2);
+        background: rgba(46,125,50,0.1);
+        border-color: rgba(46,125,50,0.2);
         color: var(--green);
       }
 
@@ -292,36 +293,36 @@
         letter-spacing: 0.03em;
       }
 
-      .pill.accent { background: rgba(122,162,247,0.1); border-color: rgba(122,162,247,0.25); color: var(--accent); }
+      .pill.accent { background: rgba(212,0,0,0.08); border-color: rgba(212,0,0,0.25); color: var(--accent); }
 
       /* ─── CODE BLOCK ───────────────────────────────────────── */
       .code-block {
-        background: var(--surface);
-        border: 1px solid var(--border);
+        background: #1e1e1e;
+        border: 1px solid #333333;
         border-radius: 10px;
         padding: 16px 20px;
         font-family: var(--mono);
         font-size: 0.52em;
         line-height: 1.6;
-        color: var(--text2);
+        color: #cdd6f4;
         overflow: hidden;
         white-space: pre-wrap;
         word-wrap: break-word;
       }
 
-      .code-block .c-accent { color: var(--accent); }
-      .code-block .c-green  { color: var(--green);  }
-      .code-block .c-orange { color: var(--orange); }
-      .code-block .c-purple { color: var(--accent2); }
-      .code-block .c-cyan   { color: var(--cyan);   }
-      .code-block .c-red    { color: var(--red);    }
-      .code-block .c-dim    { color: var(--text3);  }
+      .code-block .c-accent { color: #89b4fa; }
+      .code-block .c-green  { color: #a6e3a1; }
+      .code-block .c-orange { color: #fab387; }
+      .code-block .c-purple { color: #cba6f7; }
+      .code-block .c-cyan   { color: #89dceb; }
+      .code-block .c-red    { color: #f38ba8; }
+      .code-block .c-dim    { color: #585b70; }
 
       /* ─── QUOTE ────────────────────────────────────────────── */
       .quote {
         border-left: 3px solid var(--accent);
         padding: 14px 20px;
-        background: rgba(122,162,247,0.05);
+        background: rgba(212,0,0,0.04);
         border-radius: 0 10px 10px 0;
         margin: 16px 0;
       }
@@ -354,7 +355,7 @@
 
       .compare td {
         padding: 8px 12px;
-        border-bottom: 1px solid rgba(48,54,61,0.5);
+        border-bottom: 1px solid rgba(200,200,200,0.8);
         color: var(--text2);
         vertical-align: top;
         line-height: 1.4;
@@ -395,8 +396,8 @@
       }
 
       .flow-node.accent {
-        background: rgba(122,162,247,0.12);
-        border-color: rgba(122,162,247,0.35);
+        background: rgba(212,0,0,0.08);
+        border-color: rgba(212,0,0,0.3);
         color: var(--accent);
       }
 
@@ -583,16 +584,16 @@
         font-size: 0.42em;
         padding: 6px 14px;
         border-radius: 999px;
-        background: rgba(158,206,106,0.1);
-        border: 1px solid rgba(158,206,106,0.25);
-        color: var(--green);
+        background: rgba(212,0,0,0.08);
+        border: 1px solid rgba(212,0,0,0.25);
+        color: var(--accent);
         letter-spacing: 0.05em;
       }
 
       /* ─── CALLOUT BOX ──────────────────────────────────────── */
       .callout {
-        background: rgba(122,162,247,0.06);
-        border: 1px solid rgba(122,162,247,0.2);
+        background: rgba(212,0,0,0.04);
+        border: 1px solid rgba(212,0,0,0.15);
         border-radius: 12px;
         padding: 14px 18px;
         margin: 12px 0;
@@ -621,11 +622,11 @@
         line-height: 1.4;
       }
 
-      .callout.green  { background: rgba(158,206,106,0.06); border-color: rgba(158,206,106,0.2); }
-      .callout.orange { background: rgba(255,158,100,0.06); border-color: rgba(255,158,100,0.2); }
+      .callout.green  { background: rgba(46,125,50,0.06);  border-color: rgba(46,125,50,0.2);  }
+      .callout.orange { background: rgba(230,81,0,0.06);   border-color: rgba(230,81,0,0.2);   }
 
       /* ─── REVEAL OVERRIDES ─────────────────────────────────── */
-      .reveal .progress { background: rgba(255,255,255,0.05); height: 3px; }
+      .reveal .progress { background: rgba(0,0,0,0.08); height: 3px; }
       .reveal .progress span { background: var(--accent); }
 
       .reveal .controls button { color: var(--text3); }
@@ -1558,7 +1559,7 @@ $ gws calendar create \
         text: "https://aungmyokyaw.github.io/fossasia-2026-presentation/",
         width: 120,
         height: 120,
-        colorDark : "#0d1117",
+        colorDark : "#1a1a1a",
         colorLight : "#ffffff",
         correctLevel : QRCode.CorrectLevel.M
       });
