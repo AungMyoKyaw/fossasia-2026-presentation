@@ -1,7 +1,7 @@
 # Speaker Notes — FOSSASIA 2026 Presentation
 
 > "From Vibe Coding to Life Automation"  
-> Speaker: Aung Myo Kyaw | Duration: 15 minutes | 18 slides
+> Speaker: Aung Myo Kyaw | Duration: 15 minutes | 18 slides (FOSSASIA red theme)
 
 ---
 
@@ -31,7 +31,25 @@ These notes provide guidance for delivering this presentation effectively. They 
 
 ---
 
-### SLIDE 02: The Problem (0:30–1:30)
+### SLIDE 02: Behind the Talk (0:30–1:00)
+
+**Visual:** Timeline showing three phases of presentation evolution
+
+**Narrative:**
+- This talk evolved through three distinct phases
+- Phase 1: Original plan was just vibe coding & CLI setup
+- Phase 2: Realized coding tools are only half the story — need AI managing digital life
+- Phase 3: Final focus on practical workflow combining both worlds
+
+**Key Insight:**
+- "OpenClaw (personal assistant) + Vibe Coding CLI (builder) = Complete AI workflow"
+- From code to calendar, terminal to Telegram
+
+**Timing:** 30 seconds. Sets up the journey.
+
+---
+
+### SLIDE 03: The Problem (1:00–2:00)
 
 **Visual:** Checkmarks for automated coding tasks, X marks for manual life tasks
 
@@ -52,7 +70,7 @@ These notes provide guidance for delivering this presentation effectively. They 
 
 ---
 
-### SLIDE 03: The Pivot (1:30–2:30)
+### SLIDE 04: The Pivot (2:00–3:00)
 
 **Visual:** Two-column layout showing the disconnect — code automated vs life manual
 
@@ -74,7 +92,7 @@ These notes provide guidance for delivering this presentation effectively. They 
 
 ---
 
-### SLIDE 04: Vibe Coding Philosophy (2:30–4:00)
+### SLIDE 05: Vibe Coding Philosophy (3:00–4:30)
 
 **Visual:** Three-step process diagram
 
@@ -96,7 +114,7 @@ These notes provide guidance for delivering this presentation effectively. They 
 
 ---
 
-### SLIDE 05: Complete Tool Stack (4:00–5:30)
+### SLIDE 06: Complete Tool Stack (4:30–6:00)
 
 **Visual:** 6 cards showing all tools tested
 
@@ -120,7 +138,7 @@ These notes provide guidance for delivering this presentation effectively. They 
 
 ---
 
-### SLIDE 06: Eventyay Case Study (5:30–7:00)
+### SLIDE 07: Eventyay Case Study (6:00–7:30)
 
 **Visual:** Two-column layout with methodology card and demo screenshot
 
@@ -148,7 +166,7 @@ These notes provide guidance for delivering this presentation effectively. They 
 
 ---
 
-### SLIDE 07: Agent Architecture (7:00–8:00)
+### SLIDE 08: Agent Architecture (7:30–8:30)
 
 **Visual:** Architecture diagram with flow nodes, industrial standards callouts
 
@@ -177,7 +195,7 @@ OpenCode Agent → Oh My OpenCode → Tool/API
 
 ---
 
-### SLIDE 08: Open-Weight Revolution (8:00–9:00)
+### SLIDE 09: Open-Weight Revolution (8:30–9:30)
 
 **Visual:** 3 model comparison cards with stats
 
@@ -208,7 +226,7 @@ OpenCode Agent → Oh My OpenCode → Tool/API
 
 ---
 
-### SLIDE 09: OpenClaw System (9:00–10:00)
+### SLIDE 10: OpenClaw System (9:30–10:30)
 
 **Visual:** Architecture flow + stats + GWS CLI bridge
 
@@ -236,7 +254,7 @@ Telegram → OpenClaw Gateway (self-hosted) → AI Agent → APIs & Tools
 
 ---
 
-### SLIDE 10–12: Real Automations (10:00–11:30)
+### SLIDE 11–13: Real Automations (10:30–12:00)
 
 **Visual:** Full-screen screenshot for each automation
 
@@ -259,7 +277,7 @@ Telegram → OpenClaw Gateway (self-hosted) → AI Agent → APIs & Tools
 
 ---
 
-### SLIDE 13: How It Works (11:30–12:00)
+### SLIDE 14: How It Works (12:00–12:30)
 
 **Visual:** 4-step process + code block
 
@@ -282,7 +300,7 @@ Result: ✓ Blocked, ✓ Tasks created, ✓ Reminder set
 
 ---
 
-### SLIDE 14: Before & After (12:00–12:45)
+### SLIDE 15: Before & After (12:30–13:15)
 
 **Visual:** Two-column comparison
 
@@ -309,7 +327,7 @@ Result: ✓ Blocked, ✓ Tasks created, ✓ Reminder set
 
 ---
 
-### SLIDE 15: Live Setup (12:45–13:30)
+### SLIDE 16: Live Setup (13:15–14:00)
 
 **Visual:** Current production architecture
 
@@ -341,7 +359,7 @@ Result: ✓ 12 tickets updated
 
 ---
 
-### SLIDE 16: Resources (13:30–14:15)
+### SLIDE 17: Resources (14:00–14:45)
 
 **Visual:** Two-column links
 
@@ -361,7 +379,7 @@ Result: ✓ 12 tickets updated
 
 ---
 
-### SLIDE 17: Thank You (14:15–15:00)
+### SLIDE 18: Thank You (14:45–15:00)
 
 **Visual:** Clean title slide with QR code
 
@@ -388,12 +406,12 @@ Result: ✓ 12 tickets updated
 | Section | Energy Level | Notes |
 |---------|-------------|-------|
 | Opening (Slides 1-3) | High | Hook them with the problem |
-| Vibe Coding (Slides 4-5) | Medium | Educational, foundational |
-| Eventyay (Slide 6) | High | Real results, credibility |
-| Architecture (Slides 7-9) | Medium | Technical depth |
-| Automations (Slides 10-12) | High | The payoff — show, don't tell |
-| Impact (Slides 13-15) | High | Before/after, live demo |
-| Close (Slides 16-17) | Medium-High | Resources, Q&A setup |
+| Vibe Coding (Slides 5-6) | Medium | Educational, foundational |
+| Eventyay (Slide 7) | High | Real results, credibility |
+| Architecture (Slides 8-9) | Medium | Technical depth |
+| Automations (Slides 11-13) | High | The payoff — show, don't tell |
+| Impact (Slides 14-16) | High | Before/after, live demo |
+| Close (Slides 17-18) | Medium-High | Resources, Q&A setup |
 
 ### Key Phrases to Emphasize
 
@@ -412,14 +430,14 @@ Result: ✓ 12 tickets updated
 ### Troubleshooting
 
 **If running short on time:**
-- Skip details on slides 7-8 (deep architecture)
-- Move quickly through screenshots (slides 10-12)
-- Keep the Before/After (slide 14) — it's the payoff
+- Skip details on slides 8-9 (deep architecture)
+- Move quickly through screenshots (slides 11-13)
+- Keep the Before/After (slide 15) — it's the payoff
 
 **If running long:**
-- Shorten the tool stack discussion (slide 5)
-- Skip open-weight models (slide 8) if needed
-- Compress the "How It Works" (slide 13)
+- Shorten the tool stack discussion (slide 6)
+- Skip open-weight models (slide 9) if needed
+- Compress the "How It Works" (slide 14)
 
 ### Technical Setup
 
@@ -465,4 +483,4 @@ Result: ✓ 12 tickets updated
 
 ---
 
-*Last updated: March 2026*
+*Last updated: March 9, 2026*

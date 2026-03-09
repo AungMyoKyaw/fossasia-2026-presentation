@@ -3,7 +3,7 @@
 A presentation for [FOSSASIA Summit 2026](https://fossasia.org/) exploring the journey from AI-powered coding to full-stack personal automation.
 
 **Live Demo:** https://aungmyokyaw.github.io/fossasia-2026-presentation/  
-**Duration:** 15 minutes | **Slides:** 18 (Reveal.js presentation)
+**Duration:** 15 minutes | **Slides:** 18 (Reveal.js presentation with FOSSASIA red theme)
 
 ---
 
@@ -21,10 +21,10 @@ This talk bridges that gap.
 
 | Act | Focus | Slides | Key Topics |
 |-----|-------|--------|------------|
-| **I** | **The Problem** | 1–2 | We've automated code but not our lives. The disconnect between AI-powered coding and manual life management. |
-| **II** | **Vibe Coding** | 3–8 | Philosophy, tool stack (6 agents tested), Eventyay case study, Agent Skills architecture, Open-weight models. |
-| **III** | **Life Automation** | 9–15 | OpenClaw system, GWS CLI, 3 real automations (GTD, Calendar, Backups), Before/After impact. |
-| **IV** | **Production & Close** | 16–18 | Live setup, resources, and call to action. |
+| **I** | **The Problem** | 3–4 | We've automated code but not our lives. The disconnect between AI-powered coding and manual life management. |
+| **II** | **Vibe Coding** | 5–9 | Philosophy, tool stack (6 agents tested), Eventyay case study, Agent Skills architecture, Open-weight models. |
+| **III** | **Life Automation** | 10–16 | OpenClaw system, GWS CLI, 3 real automations (GTD, Calendar, Backups), Before/After impact. |
+| **IV** | **Resources & Close** | 17–18 | Tools, resources, and call to action. |
 
 ---
 
@@ -46,14 +46,11 @@ python3 -m http.server 8000
 
 ### Speaker Documentation
 
-Presenting this talk? Check the speaker docs:
+Presenting this talk? Check the speaker notes:
 
 | Document | Purpose |
 |----------|---------|
-| [`docs/INDEX.md`](./docs/INDEX.md) | Quick navigation to all speaker materials |
-| [`docs/README_FOR_SPEAKER.md`](./docs/README_FOR_SPEAKER.md) | Delivery strategy and preparation guide |
-| [`docs/SPEAKER_SCRIPT.md`](./docs/SPEAKER_SCRIPT.md) | Full word-for-word script (~15 min) |
-| [`docs/SPEAKER_CHEATSHEET.md`](./docs/SPEAKER_CHEATSHEET.md) | One-page emergency reference (print this) |
+| [`docs/SPEAKER_NOTES.md`](./docs/SPEAKER_NOTES.md) | Complete speaker guide with timing, talking points, and delivery tips |
 
 ---
 
@@ -172,7 +169,7 @@ Production React Native app built with AI agents in 2 weeks. SDD + TDD methodolo
 ## Built With
 
 - [reveal.js](https://revealjs.com/) — HTML presentation framework
-- Custom dark theme with GitHub-inspired color palette
+- Custom FOSSASIA red theme
 - Self-contained (no build step required)
 
 ---
