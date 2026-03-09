@@ -1067,8 +1067,35 @@
 <span class="c-cyan">You:</span> "What's on my plate?"
 <span class="c-green">Agent:</span> 4 next actions
                  </div>
+               </div>
+            </div>
+            <!-- Google Workspace CLI Section -->
+            <div class="card" style="margin-top: 16px; border: 1px solid var(--border); position: relative;">
+              <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--cyan), var(--accent));"></div>
+              <div style="display: flex; align-items: flex-start; gap: 16px;">
+                <div style="flex: 1;">
+                  <div class="card-label cyan">The Bridge</div>
+                  <h3 style="font-size: 0.85em; margin-bottom: 6px;">Google Workspace CLI (gws)</h3>
+                  <p style="font-size: 0.62em; color: var(--text2); line-height: 1.4; margin-bottom: 10px;">
+                    One CLI for Drive, Gmail, Calendar, Sheets, Docs, Chat, and more. Dynamically built from Google's Discovery Service — automatically stays current as APIs evolve. Built for both humans and AI agents with structured JSON output.
+                  </p>
+                  <div style="display: flex; gap: 12px; font-size: 0.52em; color: var(--text2);">
+                    <span style="display: flex; align-items: center; gap: 4px;"><span style="color: var(--cyan);">●</span> 40+ agent skills</span>
+                    <span style="display: flex; align-items: center; gap: 4px;"><span style="color: var(--green);">●</span> Structured JSON</span>
+                    <span style="display: flex; align-items: center; gap: 4px;"><span style="color: var(--purple);">●</span> Auto-updating</span>
+                  </div>
+                </div>
+                <div style="flex: 0 0 280px;">
+                  <div class="code-block" style="font-size: 0.42em; padding: 10px 12px; line-height: 1.5; margin: 0;">
+<span class="c-dim"># Install & auth once</span>
+<span class="c-cyan">$</span> <span class="c-green">npm install -g @googleworkspace/cli</span>
+<span class="c-cyan">$</span> <span class="c-green">gws auth setup</span>
+<span class="c-dim"># Your AI agent now controls Workspace</span>
+<span class="c-cyan">$</span> <span class="c-green">gws</span> <span class="c-accent">drive files list</span> <span class="c-orange">--params '{"pageSize": 10}'</span>
+                  </div>
+                </div>
               </div>
-           </div>
+            </div>
          </section>
 
            <!-- SLIDE 10: REAL AUTOMATION 1 - GTD ────────────────── -->
