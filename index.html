@@ -700,6 +700,61 @@
       }
       .lightbox-close:hover { color: var(--text); }
       .zoomable { cursor: zoom-in; }
+
+      /* ─── PRESENTATION TIMER ─────────────────────────────── */
+      .presentation-timer {
+        position: fixed;
+        top: 16px;
+        right: 16px;
+        z-index: 100;
+        font-family: var(--mono);
+        font-size: 0.65em;
+        font-weight: 600;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: var(--surface);
+        border: 2px solid var(--accent);
+        color: var(--accent);
+        cursor: pointer;
+        user-select: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        letter-spacing: 0.05em;
+      }
+      .presentation-timer:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(212,0,0,0.15);
+      }
+      .presentation-timer.warning {
+        border-color: var(--orange);
+        color: var(--orange);
+        background: rgba(230,81,0,0.08);
+        animation: pulse 1s ease-in-out infinite;
+      }
+      .presentation-timer.critical {
+        border-color: var(--red);
+        color: var(--red);
+        background: rgba(183,28,28,0.12);
+        animation: pulse 0.6s ease-in-out infinite;
+      }
+      .presentation-timer.paused {
+        border-color: var(--text3);
+        color: var(--text3);
+        background: var(--surface2);
+        animation: none;
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.6; }
+      }
+      .timer-label {
+        font-size: 0.7em;
+        opacity: 0.7;
+        margin-right: 6px;
+      }
+      .timer-display {
+        font-variant-numeric: tabular-nums;
+      }
     </style>
   </head>
 
@@ -707,6 +762,10 @@
     <div class="lightbox" id="lightbox" onclick="closeLightbox()">
       <span class="lightbox-close">×</span>
       <img src="" alt="Screenshot" id="lightbox-img">
+    </div>
+    <div class="presentation-timer" id="timer" onclick="toggleTimer()" title="Click to pause/resume, press R to reset">
+      <span class="timer-label">⏱</span>
+      <span class="timer-display" id="timer-display">15:00</span>
     </div>
     <div class="reveal">
       <div class="slides">
@@ -1544,6 +1603,80 @@
         colorLight : "#ffffff",
         correctLevel : QRCode.CorrectLevel.M
       });
+
+      // Presentation Timer
+      (function() {
+        const TOTAL_TIME = 15 * 60; // 15 minutes in seconds
+        let timeRemaining = TOTAL_TIME;
+        let isRunning = true;
+        let timerInterval = null;
+
+        const timerEl = document.getElementById('timer');
+        const displayEl = document.getElementById('timer-display');
+
+        function formatTime(seconds) {
+          const mins = Math.floor(seconds / 60);
+          const secs = seconds % 60;
+          return `${mins}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        function updateDisplay() {
+          displayEl.textContent = formatTime(timeRemaining);
+
+          // Remove all state classes
+          timerEl.classList.remove('warning', 'critical', 'paused');
+
+          if (!isRunning) {
+            timerEl.classList.add('paused');
+          } else if (timeRemaining <= 0) {
+            timerEl.classList.add('critical');
+            displayEl.textContent = "00:00";
+          } else if (timeRemaining <= 60) {
+            timerEl.classList.add('critical');
+          } else if (timeRemaining <= 180) {
+            timerEl.classList.add('warning');
+          }
+        }
+
+        function tick() {
+          if (isRunning && timeRemaining > 0) {
+            timeRemaining--;
+            updateDisplay();
+          }
+        }
+
+        function toggleTimer() {
+          isRunning = !isRunning;
+          updateDisplay();
+        }
+
+        function resetTimer() {
+          timeRemaining = TOTAL_TIME;
+          isRunning = true;
+          updateDisplay();
+        }
+
+        // Start the timer
+        timerInterval = setInterval(tick, 1000);
+        updateDisplay();
+
+        // Make toggle function global for onclick
+        window.toggleTimer = toggleTimer;
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+          // 'T' key to toggle pause/resume
+          if (e.key === 't' || e.key === 'T') {
+            e.preventDefault();
+            toggleTimer();
+          }
+          // 'R' key to reset
+          if (e.key === 'r' || e.key === 'R') {
+            e.preventDefault();
+            resetTimer();
+          }
+        });
+      })();
     </script>
   </body>
 </html>
