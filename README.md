@@ -3,7 +3,7 @@
 A presentation for [FOSSASIA Summit 2026](https://fossasia.org/) exploring the journey from AI-powered coding to full-stack personal automation.
 
 **Live Demo:** https://aungmyokyaw.github.io/fossasia-2026-presentation/  
-**Duration:** 15 minutes | **Slides:** 18 (Reveal.js presentation with FOSSASIA red theme)
+**Duration:** 15 minutes | **Slides:** 17 (Reveal.js presentation with FOSSASIA red theme)
 
 ---
 
@@ -22,9 +22,9 @@ This talk bridges that gap.
 | Act | Focus | Slides | Key Topics |
 |-----|-------|--------|------------|
 | **I** | **The Problem** | 3–4 | We've automated code but not our lives. The disconnect between AI-powered coding and manual life management. |
-| **II** | **Vibe Coding** | 5–9 | Philosophy, tool stack (6 agents tested), Eventyay case study, Agent Skills architecture, Open-weight models. |
-| **III** | **Life Automation** | 10–16 | OpenClaw system, GWS CLI, 3 real automations (GTD, Calendar, Backups), Before/After impact. |
-| **IV** | **Resources & Close** | 17–18 | Tools, resources, and call to action. |
+| **II** | **Vibe Coding** | 5–9 | Philosophy, tool stack (6 agents tested), Open-weight models, Eventyay case study, Agent Skills architecture. |
+| **III** | **Life Automation** | 10–15 | OpenClaw system, GWS CLI, 3 real automations (GTD, Calendar, Backups), Before/After impact, Live setup. |
+| **IV** | **Resources & Close** | 16–17 | Tools, resources, and call to action. |
 
 ---
 
@@ -101,7 +101,7 @@ The same pattern that revolutionized coding can now automate your entire digital
 
 - [OpenClaw](https://github.com/openclaw/openclaw) — Personal AI assistant (self-hosted)
 - [GWS CLI](https://github.com/googleworkspace/cli) — Google Workspace command-line interface
-- **Telegram/WhatsApp** — Natural language interface to your digital life
+- **Telegram/WhatsApp/Slack/Discord** — Natural language interface to your digital life
 
 ---
 

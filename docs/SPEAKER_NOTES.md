@@ -1,7 +1,7 @@
 # Speaker Notes — FOSSASIA 2026 Presentation
 
 > "From Vibe Coding to Life Automation"  
-> Speaker: Aung Myo Kyaw | Duration: 15 minutes | 18 slides (FOSSASIA red theme)
+> Speaker: Aung Myo Kyaw | Duration: 15 minutes | 17 slides (FOSSASIA red theme)
 
 ---
 
@@ -138,27 +138,27 @@ These notes provide guidance for delivering this presentation effectively. They 
 
 ---
 
-### SLIDE 07: Eventyay Case Study (6:00–7:30)
+### SLIDE 08: Eventyay Case Study (6:00–7:30)
 
 **Visual:** Two-column layout with methodology card and demo screenshot
 
 **Context:**
-- Real production app: Eventyay Mobile
-- Built with AI agents in 2 weeks
-- My role: Tech lead, not implementer
-
-**My Role (Emphasize):**
-- "I wrote specs and architecture decisions"
-- "AI agents handled implementation"
-- "I reviewed, approved, and guided every critical choice"
+- Demo app: Eventyay Mobile (not affiliated with the organization)
+- Built with AI agents to demonstrate vibe coding workflow
+- Prototype app — half-baked but shows the workflow
 
 **The Methodology:**
-- **SDD** (Spec-Driven Development) — Specs first
-- **TDD** (Test-Driven Development) — 24 tests passing
+- **SDD** (Spec-Driven Development) — Specs first, agents understand exactly what to build
+- **TDD** (Test-Driven Development) — Tests written first, 24 tests passing, quality built in
 
 **Key Numbers:**
-- 2 weeks, 24 tests, 7 atomic commits
-- Full traceability — no black box
+- 24 tests passing
+- 7 atomic commits
+- Full traceability via Git history — no black box
+
+**My Role (Emphasize):**
+- "I reviewed architecture decisions" (REST vs GraphQL, state management, auth flow)
+- "I approved each change" — leadership, not replacement
 
 **Link:** `github.com/AungMyoKyaw/eventyay-mobile-expo-demo`
 
@@ -166,13 +166,13 @@ These notes provide guidance for delivering this presentation effectively. They 
 
 ---
 
-### SLIDE 08: Agent Architecture (7:30–8:30)
+### SLIDE 09: Agent Architecture (7:30–8:30)
 
 **Visual:** Architecture diagram with flow nodes, industrial standards callouts
 
 **Oh My OpenCode Plugin System:**
 - Extends OpenCode with specialized skills
-- Connect to tools, databases, APIs
+- Connect to tools, databases, APIs, file systems
 
 **The Flow:**
 ```
@@ -180,22 +180,22 @@ OpenCode Agent → Oh My OpenCode → Tool/API
 ```
 
 **Key Skills:**
-- Context7 — Always-fresh docs
+- Context7 — Always-fresh library docs
 - Exa Search — AI-powered web search
-- Chrome DevTools — Browser automation
-- Sequential Thinking — Structured reasoning
+- Chrome DevTools MCP — Browser automation and debugging
+- Sequential Thinking — Structured reasoning for complex tasks
 
 **Industrial Standards:**
-1. **MCP (Model Context Protocol)** — Anthropic's "USB-C for AI apps"
+1. **MCP (Model Context Protocol)** — Anthropic's "USB-C for AI applications"
    - Resources (Read), Tools (Act), Prompts (Template)
-2. **Agent Skills** — Portable via SKILL.md
-   - Discovery → Activation → Execution
+2. **Agent Skills** — Portable, self-documenting via SKILL.md
+   - Discovery (Load meta) → Activation (Read skill) → Execution
 
 **Timing:** 1 minute. Technical depth for engineers.
 
 ---
 
-### SLIDE 09: Open-Weight Revolution (8:30–9:30)
+### SLIDE 07: Open-Weight Revolution (5:30–6:00)
 
 **Visual:** 3 model comparison cards with stats
 
@@ -205,39 +205,41 @@ OpenCode Agent → Oh My OpenCode → Tool/API
 
 **Three Models:**
 
-1. **Kimi K2.5** (Recommended) — Swarm specialist
+1. **Kimi K2.5** (Recommended 🐝 SWARM) — Swarm specialist
    - 100 sub-agents, 1T params (32B active)
    - 1,500 tool calls, 4.5x faster parallel
+   - Native multimodal
 
-2. **GLM-5** — Reliability king
-   - 77.8% SWE-Bench, lowest hallucination
-   - Huawei Ascend chips, MIT License
+2. **GLM-5** (Reliable 🧠) — Reliability king
+   - 77.8% SWE-Bench, lowest hallucination (-1 index)
+   - 744B params (40B active), Huawei Ascend chips, MIT License
 
-3. **MiniMax M2.5** — Coding champion
-   - 80.2% SWE-Bench (#1 Multi-SWE-Bench)
-   - Only $0.30/M tokens
+3. **MiniMax M2.5** (Coding King 🏆) — Coding champion
+   - 80.2% SWE-Bench, #1 Multi-SWE-Bench (51.3%)
+   - 229B params (10B active), 37% faster than M2.1
+   - Only $0.30/M tokens vs Claude Opus ~$75/M
 
 **Cost Comparison:**
-- Claude Opus 4.6: ~$75/M tokens
-- MiniMax M2.5: $1.20/M tokens
+- Claude Opus 4.6: ~$75/M output tokens
+- MiniMax M2.5: $1.20/M output tokens
 - **Savings: 98.4%**
 
-**Timing:** 1 minute. This is fresh, exciting content.
+**Timing:** 30 seconds. Fresh, exciting content.
 
 ---
 
-### SLIDE 10: OpenClaw System (9:30–10:30)
+### SLIDE 10: OpenClaw System (9:00–10:00)
 
 **Visual:** Architecture flow + stats + GWS CLI bridge
 
 **What is OpenClaw?**
 - Personal AI assistant that runs on YOUR devices
-- Integrates with messaging platforms (Telegram, WhatsApp, Slack, etc.)
+- Integrates with messaging platforms (Telegram, WhatsApp, Slack, Discord, iMessage, Signal)
 - Your data stays local. You own the infrastructure.
 
 **Architecture:**
 ```
-Telegram → OpenClaw Gateway (self-hosted) → AI Agent → APIs & Tools
+Telegram → OpenClaw Gateway (self-hosted) → AI Agent → APIs & Tools (GWS, Slack)
 ```
 
 **Key Stats:**
@@ -246,77 +248,58 @@ Telegram → OpenClaw Gateway (self-hosted) → AI Agent → APIs & Tools
 - 1 interface for everything
 
 **Google Workspace CLI (The Bridge):**
-- One CLI for Drive, Gmail, Calendar, Sheets, Docs, Chat
-- Dynamically built from Google's Discovery Service
-- Auto-updates as APIs evolve
+- One CLI for Drive, Gmail, Calendar, Sheets, Docs, Chat, and more
+- Dynamically built from Google's Discovery Service — auto-updates as APIs evolve
+- Built for both humans and AI agents with structured JSON output
+- 40+ agent skills
 
 **Timing:** 1 minute. The bridge from coding to life.
 
 ---
 
-### SLIDE 11–13: Real Automations (10:30–12:00)
+### SLIDE 11–13: Real Automations (10:00–11:30)
 
 **Visual:** Full-screen screenshot for each automation
 
-**GTD Migration (Slide 10):**
+**GTD Migration (Slide 11):**
 - "511 Tasks in 3 Minutes"
 - Walk through the screenshot
-- One message → Complete GTD system
+- 511 Apple Reminders → Google Tasks with GTD methodology
+- 7 organized lists (Inbox, Next Actions, Waiting For, Someday/Maybe, Projects, Reference, Done)
 
-**Calendar Scheduling (Slide 11):**
+**Calendar Scheduling (Slide 12):**
 - "Zero Manual Work"
-- "Plan my FOSSASIA prep" → Events scheduled
+- "Plan my FOSSASIA prep" → 3h emergency session + 2h focus blocks
 - No clicking, no availability checking, no copy-paste
+- Time blocked and protected from conflicts
 
-**Backup Automation (Slide 12):**
+**Backup Automation (Slide 13):**
 - "Fully Automated"
 - Every 3 hours: compress, upload, cleanup
+- Pipeline: compress → upload to Drive → retention policy → Telegram confirmation
 - Set once, run forever
 
 **Timing:** 30 seconds each. Let the screenshots tell the story.
 
 ---
 
-### SLIDE 14: How It Works (12:00–12:30)
-
-**Visual:** 4-step process + code block
-
-**The Pipeline:**
-1. Send natural language message
-2. Agent parses intent
-3. GWS CLI executes
-4. Confirmation returned
-
-**Code Example:**
-Walk through the example:
-```
-Input: "Schedule my FOSSASIA talk prep"
-Agent: intent=calendar_schedule, context=FOSSASIA
-CLI: gws calendar create --title "FOSSASIA Prep" --duration 2h
-Result: ✓ Blocked, ✓ Tasks created, ✓ Reminder set
-```
-
-**Timing:** 30 seconds. Make the architecture concrete.
-
----
-
-### SLIDE 15: Before & After (12:30–13:15)
+### SLIDE 14: Before & After (11:30–12:15)
 
 **Visual:** Two-column comparison
 
 **Before (The Pain):**
-- 500+ tasks across 5 apps
-- No prioritization system
-- Calendar conflicts, no focus time
-- Constant context switching
-- Separate logins, UIs, mental models
+- 500+ tasks across 5 different apps
+- No consistent prioritization system
+- Calendar full of conflicts, no focus time
+- Constant context switching between tools
+- Separate logins, separate UIs, separate mental models
 
 **After (The Solution):**
-- One unified interface
+- One unified interface for everything
 - GTD enforced by system
-- Time-blocked calendar
+- Time-blocked calendar with deep work protected
 - Natural language commands
-- Self-hosted, data stays local
+- Self-hosted, all data stays local
 
 **The Compounding Effect:**
 - "Setup took one weekend"
@@ -327,24 +310,20 @@ Result: ✓ Blocked, ✓ Tasks created, ✓ Reminder set
 
 ---
 
-### SLIDE 16: Live Setup (13:15–14:00)
+### SLIDE 15: My Live Setup (12:15–13:00)
 
 **Visual:** Current production architecture
 
 **Live Instance:**
-- `kimi-claw.com` — Production deployment
-- Handling daily automation right now
+- `kimi-claw.com` — Production deployment handling daily automation right now
 
-**Connected Tools:**
-1. Telegram — Primary interface
-2. GWS CLI — Google Workspace automation
-3. Azure DevOps CLI — Sprint boards, work items
-4. GitHub CLI — Repos, PRs, issues
+**Connected Tools (Unified CLI Gateway):**
+1. **Telegram** — Primary interface. Natural language commands from any device.
+2. **GWS CLI** — Google Workspace automation (Calendar, Tasks, Drive, Gmail)
+3. **Azure DevOps CLI** — Sprint board management, work items, pipeline triggers
+4. **GitHub CLI** — Repo management, PR reviews, issue tracking, releases
 
-**Unified CLI Gateway:**
-- One natural language interface
-- Multiple CLI backends
-- Same pattern, different domains
+**Pattern:** One natural language interface → multiple CLI backends
 
 **Example:**
 ```
@@ -359,27 +338,27 @@ Result: ✓ 12 tickets updated
 
 ---
 
-### SLIDE 17: Resources (14:00–14:45)
+### SLIDE 16: Resources (13:00–14:30)
 
 **Visual:** Two-column links
 
 **Categories:**
-- AI Coding Tools (OpenCode, Claude, Kimi, Copilot)
-- Skills Ecosystem (Context7)
-- Life Automation (OpenClaw)
-- Resources (GTD, Google APIs)
+- **AI Coding Tools** — OpenCode (daily driver), Claude Code, Kimi CLI, Copilot CLI, Crush CLI, Pi Coding Agent
+- **Skills Ecosystem** — Oh My OpenCode, Context7
+- **Life Automation** — OpenClaw, GTD Method, Google Workspace APIs
+- **Hosting** — OpenClaw (self-hosted)
 
-**Start Here Card:**
+**Start Here Message:**
 - "Don't try to automate everything"
-- "Pick the most painful manual task"
+- "Pick the most painful manual task you do every week"
 - "Build the smallest AI agent that handles it"
 - "Iterate"
 
-**Timing:** 45 seconds. Give them actionable next steps.
+**Timing:** 1.5 minutes. Give them actionable next steps.
 
 ---
 
-### SLIDE 18: Thank You (14:45–15:00)
+### SLIDE 17: Thank You (14:30–15:00)
 
 **Visual:** Clean title slide with QR code
 
@@ -395,7 +374,7 @@ Result: ✓ 12 tickets updated
 - GitHub: `github.com/AungMyoKyaw`
 - LinkedIn: `linkedin.com/in/aungmyokyaw`
 
-**Timing:** 45 seconds. End strong, invite engagement.
+**Timing:** 30 seconds. End strong, invite engagement.
 
 ---
 
@@ -407,11 +386,12 @@ Result: ✓ 12 tickets updated
 |---------|-------------|-------|
 | Opening (Slides 1-3) | High | Hook them with the problem |
 | Vibe Coding (Slides 5-6) | Medium | Educational, foundational |
-| Eventyay (Slide 7) | High | Real results, credibility |
-| Architecture (Slides 8-9) | Medium | Technical depth |
+| Open-Weight Models (Slide 7) | High | Fresh, exciting content |
+| Eventyay (Slide 8) | High | Demo results, credibility |
+| Architecture (Slide 9) | Medium | Technical depth |
 | Automations (Slides 11-13) | High | The payoff — show, don't tell |
-| Impact (Slides 14-16) | High | Before/after, live demo |
-| Close (Slides 17-18) | Medium-High | Resources, Q&A setup |
+| Impact (Slides 14-15) | High | Before/after, live setup |
+| Close (Slides 16-17) | Medium-High | Resources, Q&A setup |
 
 ### Key Phrases to Emphasize
 
@@ -430,14 +410,14 @@ Result: ✓ 12 tickets updated
 ### Troubleshooting
 
 **If running short on time:**
-- Skip details on slides 8-9 (deep architecture)
+- Skip details on slide 9 (deep architecture)
 - Move quickly through screenshots (slides 11-13)
-- Keep the Before/After (slide 15) — it's the payoff
+- Keep the Before/After (slide 14) — it's the payoff
 
 **If running long:**
 - Shorten the tool stack discussion (slide 6)
-- Skip open-weight models (slide 9) if needed
-- Compress the "How It Works" (slide 14)
+- Skip open-weight models (slide 7) if needed
+- Compress the Live Setup (slide 15)
 
 ### Technical Setup
 
