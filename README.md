@@ -3,7 +3,7 @@
 A presentation for [FOSSASIA Summit 2026](https://fossasia.org/) exploring the journey from AI-powered coding to full-stack personal automation.
 
 **Live Demo:** https://aungmyokyaw.github.io/fossasia-2026-presentation/  
-**Duration:** 15 minutes | **Slides:** 17 (Reveal.js presentation)
+**Duration:** 15 minutes | **Slides:** 18 (Reveal.js presentation)
 
 ---
 
